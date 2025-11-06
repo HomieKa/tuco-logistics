@@ -491,6 +491,9 @@ async function triggerFetch(connote: string) {
       {
         method: "GET",
         signal: activeController.signal,
+        headers: {
+          Accept: "application/json",
+        },
       },
     );
     if (!response.ok) {
