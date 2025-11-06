@@ -398,6 +398,15 @@ type TrackingEvent = {
 const route = useRoute();
 const router = useRouter();
 
+const TRACK_API_BASE = (() => {
+  const raw =
+    import.meta.env.VITE_TRACK_API_BASE ||
+    (import.meta.env.PROD
+      ? "https://api.freightmate.com/external/t/"
+      : "/api/track/");
+  return raw.endsWith("/") ? raw : `${raw}/`;
+})();
+
 const query = ref("");
 const trackingData = ref<TrackingRecord | null>(null);
 const loading = ref(false);
@@ -477,10 +486,13 @@ async function triggerFetch(connote: string) {
 
   activeController = new AbortController();
   try {
-    const response = await fetch(`/api/track/${encodeURIComponent(connote)}`, {
-      method: "GET",
-      signal: activeController.signal,
-    });
+    const response = await fetch(
+      `${TRACK_API_BASE}${encodeURIComponent(connote)}`,
+      {
+        method: "GET",
+        signal: activeController.signal,
+      },
+    );
     if (!response.ok) {
       throw new Error(
         response.status === 404
