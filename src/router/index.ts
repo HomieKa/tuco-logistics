@@ -56,24 +56,6 @@ const routes: RouteRecordRaw[] = [
     meta: { title: "Freightmate Platform - TUCO Logistics" },
   },
   {
-    path: "/industries/enterprise",
-    name: "industries-enterprise",
-    component: () => import("@/pages/industries/EnterprisePage.vue"),
-    meta: { title: "Enterprise Logistics - TUCO" },
-  },
-  {
-    path: "/industries/b2b",
-    name: "industries-b2b",
-    component: () => import("@/pages/industries/B2BPage.vue"),
-    meta: { title: "B2B Solutions - TUCO" },
-  },
-  {
-    path: "/industries/ecommerce",
-    name: "industries-ecommerce",
-    component: () => import("@/pages/industries/EcommercePage.vue"),
-    meta: { title: "Ecommerce Logistics - TUCO" },
-  },
-  {
     path: "/our-difference",
     name: "our-difference",
     component: () => import("@/pages/company/OurDifferencePage.vue"),

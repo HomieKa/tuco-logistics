@@ -10,9 +10,6 @@
 | `/services/tracking-reporting` | - | redirect | Redirect to `/services#tracking-reporting` |
 | `/services/integration-automation` | - | redirect | Redirect to `/services#integration-automation` |
 | `/technology` | technology | `pages/technology/TechnologyPage.vue` | Freightmate platform deep dive |
-| `/industries/enterprise` | industries-enterprise | `pages/industries/EnterprisePage.vue` | Enterprise customer vertical |
-| `/industries/b2b` | industries-b2b | `pages/industries/B2BPage.vue` | B2B vertical |
-| `/industries/ecommerce` | industries-ecommerce | `pages/industries/EcommercePage.vue` | Ecommerce vertical |
 | `/resources/insights` | resources-insights | `pages/resources/InsightsPage.vue` | Insights listing |
 | `/resources/blog/:slug` | resources-blog-post | `pages/resources/BlogPostPage.vue` | Individual blog posts |
 | `/faq` | faq | `pages/resources/FAQPage.vue` | Accordion FAQ |

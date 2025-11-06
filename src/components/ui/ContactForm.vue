@@ -78,7 +78,7 @@
 <script setup lang="ts">
 import { reactive, ref } from "vue";
 
-import Button from "@/components/common/Button.vue";
+import Button from "@/components/ui/Button.vue";
 
 const isSubmitting = ref(false);
 

@@ -42,6 +42,6 @@
 </template>
 
 <script setup lang="ts">
-import Button from "@/components/common/Button.vue";
+import Button from "@/components/ui/Button.vue";
 import heroIllustration from "@/assets/images/hero_page_img.webp";
 </script>

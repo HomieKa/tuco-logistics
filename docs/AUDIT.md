@@ -90,25 +90,23 @@ assets/
   - videos/
     - freightmate_video.mp4
 components/
-  - common/
+  - sections/
+    - home/
+      - CustomerStories.vue
+      - ImpactSnapshot.vue
+      - OurApproach.vue
+      - OurDifference.vue
+      - TechnologySummary.vue
+    - resources/
+      - TucoFaqAccordion.vue
+  - ui/
     - Button.vue
     - CallToAction.vue
+    - ContactForm.vue
     - Footer.vue
     - Header.vue
     - Hero.vue
     - PageHeader.vue
-  - forms/
-    - ContactForm.vue
-  - home/
-    - CustomerStories.vue
-    - ImpactSnapshot.vue
-    - OurApproach.vue
-    - OurDifference.vue
-    - TechnologySummary.vue
-  - resources/
-    - BlogCard.vue
-    - FAQAccordion.vue
-  - TucoFaqAccordion.vue
 composables/
   - useSEO.ts
 env.d.ts
@@ -121,10 +119,6 @@ pages/
     - ContactPage.vue
   - home/
     - HomePage.vue
-  - industries/
-    - B2BPage.vue
-    - EcommercePage.vue
-    - EnterprisePage.vue
   - legal/
     - PrivacyPage.vue
     - TermsPage.vue
@@ -156,9 +150,6 @@ router/
 | /services/tracking-reporting | - | redirect: path: "/services", hash: "#tracking-reporting" |
 | /services/integration-automation | - | redirect: path: "/services", hash: "#integration-automation" |
 | /technology | technology | @/pages/technology/TechnologyPage.vue |
-| /industries/enterprise | industries-enterprise | @/pages/industries/EnterprisePage.vue |
-| /industries/b2b | industries-b2b | @/pages/industries/B2BPage.vue |
-| /industries/ecommerce | industries-ecommerce | @/pages/industries/EcommercePage.vue |
 | /our-difference | our-difference | @/pages/company/OurDifferencePage.vue |
 | /resources/insights | resources-insights | @/pages/resources/InsightsPage.vue |
 | /resources/blog/:slug | resources-blog-post | @/pages/resources/BlogPostPage.vue |

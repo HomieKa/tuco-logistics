@@ -10,14 +10,44 @@
     <section class="bg-white py-16">
       <div class="container mx-auto px-4">
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <BlogCard
+          <article
             v-for="article in articles"
             :key="article.title"
-            :title="article.title"
-            :excerpt="article.excerpt"
-            :category="article.category"
-            :to="article.to"
-          />
+            class="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            <div class="flex flex-1 flex-col p-6">
+              <p
+                class="text-sm font-semibold uppercase tracking-wide text-teal-500"
+              >
+                {{ article.category }}
+              </p>
+              <h3 class="mt-2 text-xl font-semibold text-navy-500">
+                {{ article.title }}
+              </h3>
+              <p class="mt-3 flex-1 text-gray-600">
+                {{ article.excerpt }}
+              </p>
+              <RouterLink
+                :to="article.to"
+                class="mt-6 inline-flex items-center text-sm font-semibold text-sky-500 transition hover:text-sky-600"
+              >
+                Read article
+                <svg
+                  class="ml-2 h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </RouterLink>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -38,10 +68,10 @@
 </template>
 
 <script setup lang="ts">
-import Button from "@/components/common/Button.vue";
-import CallToAction from "@/components/common/CallToAction.vue";
-import PageHeader from "@/components/common/PageHeader.vue";
-import BlogCard from "@/components/resources/BlogCard.vue";
+import Button from "@/components/ui/Button.vue";
+import CallToAction from "@/components/ui/CallToAction.vue";
+import PageHeader from "@/components/ui/PageHeader.vue";
+import { RouterLink } from "vue-router";
 import { useSEO } from "@/composables/useSEO";
 
 useSEO({

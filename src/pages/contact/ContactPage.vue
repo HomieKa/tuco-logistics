@@ -235,9 +235,9 @@
 </template>
 
 <script setup lang="ts">
-import Button from "@/components/common/Button.vue";
-import PageHeader from "@/components/common/PageHeader.vue";
-import ContactForm from "@/components/forms/ContactForm.vue";
+import Button from "@/components/ui/Button.vue";
+import PageHeader from "@/components/ui/PageHeader.vue";
+import ContactForm from "@/components/ui/ContactForm.vue";
 import { useSEO } from "@/composables/useSEO";
 import {
   ClockIcon,

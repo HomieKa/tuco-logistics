@@ -12,8 +12,8 @@
 </template>
 
 <script setup lang="ts">
-import PageHeader from "@/components/common/PageHeader.vue";
-import TucoFaqAccordion from "@/components/TucoFaqAccordion.vue";
+import PageHeader from "@/components/ui/PageHeader.vue";
+import TucoFaqAccordion from "@/components/sections/resources/TucoFaqAccordion.vue";
 import { useSEO } from "@/composables/useSEO";
 
 useSEO({

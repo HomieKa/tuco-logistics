@@ -415,9 +415,9 @@
 </template>
 
 <script setup lang="ts">
-import Button from "@/components/common/Button.vue";
-import CallToAction from "@/components/common/CallToAction.vue";
-import PageHeader from "@/components/common/PageHeader.vue";
+import Button from "@/components/ui/Button.vue";
+import CallToAction from "@/components/ui/CallToAction.vue";
+import PageHeader from "@/components/ui/PageHeader.vue";
 import sugarcrmIcon from "@/assets/images/icons/sugarcrm.svg";
 import prontoIcon from "@/assets/images/icons/pronto.svg";
 import wooIcon from "@/assets/images/icons/woo.svg";
