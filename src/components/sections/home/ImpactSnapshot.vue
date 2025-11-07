@@ -29,11 +29,13 @@
         >
           <span class="absolute left-0 top-8 h-14 w-[3px] bg-sky-400"></span>
           <div class="pl-6">
-            <p class="text-4xl font-semibold tracking-tight text-white">
+            <p
+              class="text-4xl font-semibold tracking-tight text-white min-h-[0.5rem]"
+            >
               {{ metric.value }}
             </p>
             <p
-              class="mt-2 text-sm font-semibold uppercase tracking-[0.2em] text-sky-200"
+              class="mt-2 text-sm font-semibold uppercase tracking-[0.2em] text-sky-200 min-h-[2.5rem]"
             >
               {{ metric.label }}
             </p>

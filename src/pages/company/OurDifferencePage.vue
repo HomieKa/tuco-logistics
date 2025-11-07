@@ -415,7 +415,7 @@ const capabilities = [
 
 const metrics = [
   {
-    value: "15-30%",
+    value: "15%",
     title: "Average savings",
     body: "Through renegotiated carrier rates and automation.",
     card: "border-transparent bg-gradient-to-br from-white to-sky-100/80",

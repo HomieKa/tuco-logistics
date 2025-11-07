@@ -138,38 +138,40 @@ router/
 
 ## Route Map
 
-| Path | Name | Target |
-| --- | --- | --- |
-| / | home | @/pages/home/HomePage.vue |
-| /about-us | about-us | @/pages/company/AboutPage.vue |
-| /services | services | @/pages/services/ServicesPage.vue |
-| /track | track | @/pages/support/TrackPage.vue |
-| /privacy | privacy | @/pages/legal/PrivacyPage.vue |
-| /terms | terms | @/pages/legal/TermsPage.vue |
-| /services/freight-management | - | redirect: path: "/services", hash: "#freight-management" |
-| /services/tracking-reporting | - | redirect: path: "/services", hash: "#tracking-reporting" |
-| /services/integration-automation | - | redirect: path: "/services", hash: "#integration-automation" |
-| /technology | technology | @/pages/technology/TechnologyPage.vue |
-| /our-difference | our-difference | @/pages/company/OurDifferencePage.vue |
-| /resources/insights | resources-insights | @/pages/resources/InsightsPage.vue |
-| /resources/blog/:slug | resources-blog-post | @/pages/resources/BlogPostPage.vue |
-| /faq | faq | @/pages/resources/FAQPage.vue |
-| /contact | contact | @/pages/contact/ContactPage.vue |
-| /:pathMatch(.*)* | - | redirect: name: "home" |
+| Path                             | Name                | Target                                                       |
+| -------------------------------- | ------------------- | ------------------------------------------------------------ |
+| /                                | home                | @/pages/home/HomePage.vue                                    |
+| /about-us                        | about-us            | @/pages/company/AboutPage.vue                                |
+| /services                        | services            | @/pages/services/ServicesPage.vue                            |
+| /track                           | track               | @/pages/support/TrackPage.vue                                |
+| /privacy                         | privacy             | @/pages/legal/PrivacyPage.vue                                |
+| /terms                           | terms               | @/pages/legal/TermsPage.vue                                  |
+| /services/freight-management     | -                   | redirect: path: "/services", hash: "#freight-management"     |
+| /services/tracking-reporting     | -                   | redirect: path: "/services", hash: "#tracking-reporting"     |
+| /services/integration-automation | -                   | redirect: path: "/services", hash: "#integration-automation" |
+| /technology                      | technology          | @/pages/technology/TechnologyPage.vue                        |
+| /our-difference                  | our-difference      | @/pages/company/OurDifferencePage.vue                        |
+| /resources/insights              | resources-insights  | @/pages/resources/InsightsPage.vue                           |
+| /resources/blog/:slug            | resources-blog-post | @/pages/resources/BlogPostPage.vue                           |
+| /faq                             | faq                 | @/pages/resources/FAQPage.vue                                |
+| /contact                         | contact             | @/pages/contact/ContactPage.vue                              |
+| /:pathMatch(._)_                 | -                   | redirect: name: "home"                                       |
 
 ## Assets
+
 - Hero illustration converted to `hero_page_img.webp` (85 quality, 1400px max width).
 - Duplicate carrier, logo, and illustration assets removed; leadership portraits renamed for case-safe imports.
 - `src/assets/styles/main.css` is referenced via `main.ts` and remains the Tailwind entrypoint.
 
 ## Link & Router Notes
+
 - `vite.config.ts` now sets `base: "/tuco-logistics/"` and the router uses `createWebHashHistory(import.meta.env.BASE_URL)` for GitHub Pages.
 - Internal navigation relies on `<RouterLink>` components; no absolute `/slug` anchors remain.
 - Track proxy script logs clean ASCII arrows again.
 
 ## Key Fixes
+
 - Migrated routed views into `src/pages/**` and removed unused legacy files, data mocks, and Pinia stores.
 - Normalised asset naming, trimmed unused SVGs, and optimised the hero artwork for bundle size.
 - Refreshed homepage approach section to reuse SVG illustrations via module imports.
 - Updated tooling scaffolding (`.editorconfig`, ESLint config) and set up docs/CI groundwork.
-

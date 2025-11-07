@@ -3,7 +3,7 @@ module.exports = {
   env: {
     browser: true,
     es2022: true,
-    node: true
+    node: true,
   },
   parser: "vue-eslint-parser",
   parserOptions: {
@@ -12,18 +12,21 @@ module.exports = {
     sourceType: "module",
     extraFileExtensions: [".vue"],
     ecmaFeatures: {
-      jsx: false
-    }
+      jsx: false,
+    },
   },
   extends: [
     "plugin:vue/vue3-recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "prettier",
   ],
   rules: {
     "vue/multi-word-component-names": "off",
-    "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+    ],
     "vue/max-attributes-per-line": "off",
-    "vue/attributes-order": "off"
-  }
+    "vue/attributes-order": "off",
+  },
 };

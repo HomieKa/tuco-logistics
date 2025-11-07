@@ -9,11 +9,11 @@ module.exports = {
       padding: {
         DEFAULT: "1rem",
         md: "1.5rem",
-        lg: "2rem"
+        lg: "2rem",
       },
       screens: {
-        "2xl": "1280px"
-      }
+        "2xl": "1280px",
+      },
     },
     extend: {
       colors: {
@@ -35,7 +35,7 @@ module.exports = {
           700: "#08172b",
           800: "#061221",
           900: "#040c17",
-          950: "#020611"
+          950: "#020611",
         },
         teal: {
           50: "#effaf7",
@@ -48,7 +48,7 @@ module.exports = {
           700: "#3b7163",
           800: "#274c42",
           900: "#142621",
-          950: "#0a1310"
+          950: "#0a1310",
         },
         sky: {
           50: "#e8f6fc",
@@ -61,7 +61,7 @@ module.exports = {
           700: "#22617a",
           800: "#174151",
           900: "#0c2029",
-          950: "#061014"
+          950: "#061014",
         },
         gray: {
           50: "#f8f9f9",
@@ -74,40 +74,50 @@ module.exports = {
           700: "#5e6266",
           800: "#3e4145",
           900: "#1f2123",
-          950: "#0f1011"
-        }
+          950: "#0f1011",
+        },
       },
       fontFamily: {
-        sans: ["ui-sans-serif", "Inter", "system-ui", ...defaultTheme.fontFamily.sans.slice(2)],
-        display: ["Poppins", "ui-sans-serif", "system-ui", ...defaultTheme.fontFamily.sans.slice(2)]
+        sans: [
+          "ui-sans-serif",
+          "Inter",
+          "system-ui",
+          ...defaultTheme.fontFamily.sans.slice(2),
+        ],
+        display: [
+          "Poppins",
+          "ui-sans-serif",
+          "system-ui",
+          ...defaultTheme.fontFamily.sans.slice(2),
+        ],
       },
       borderRadius: {
         "2xl": "1.5rem",
-        "3xl": "2rem"
+        "3xl": "2rem",
       },
       boxShadow: {
         "card-lg": "0 25px 70px -35px rgba(11, 27, 43, 0.35)",
-        "card-soft": "0 18px 50px -28px rgba(15, 23, 42, 0.25)"
+        "card-soft": "0 18px 50px -28px rgba(15, 23, 42, 0.25)",
       },
       animation: {
         "fade-in-up": "fadeInUp 0.8s ease-out",
-        "fade-in": "fadeIn 0.6s ease-out"
+        "fade-in": "fadeIn 0.6s ease-out",
       },
       keyframes: {
         fadeInUp: {
           "0%": { opacity: "0", transform: "translateY(20px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" }
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
         fadeIn: {
           "0%": { opacity: "0" },
-          "100%": { opacity: "1" }
-        }
-      }
-    }
+          "100%": { opacity: "1" },
+        },
+      },
+    },
   },
   plugins: [
     require("@tailwindcss/forms"),
     require("@tailwindcss/typography"),
-    require("@tailwindcss/aspect-ratio")
-  ]
+    require("@tailwindcss/aspect-ratio"),
+  ],
 };

@@ -28,7 +28,7 @@
           class="pointer-events-none absolute -inset-1 rounded-[2.4rem] bg-sky-500/40 blur-3xl"
         ></div>
         <div
-          class="relative overflow-hidden rounded-[2rem] bg-white text-[var(--color-tuco-ink)] shadow-card-soft"
+          class="relative overflow-hidden rounded-[1rem] bg-white text-[var(--color-tuco-ink)] shadow-card-soft"
         >
           <transition name="fade-slide" mode="out-in">
             <div
@@ -56,7 +56,9 @@
                   </p>
                 </div>
               </div>
-              <p class="text-xl leading-relaxed text-[var(--color-tuco-ink)]">
+              <p
+                class="text-xl leading-relaxed text-[var(--color-tuco-ink)] min-h-[6.5rem]"
+              >
                 {{ testimonials[activeTestimonial].quote }}
               </p>
               <div class="text-sm text-[var(--color-tuco-slate)]">

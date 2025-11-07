@@ -28,11 +28,14 @@
           >
             <component :is="highlight.icon" class="h-6 w-6" />
           </span>
+
           <div class="space-y-2">
-            <h3 class="text-lg font-semibold text-navy-500">
+            <h3 class="text-lg font-semibold text-navy-500 min-h-[3.5rem]">
               {{ highlight.title }}
             </h3>
-            <p class="text-sm text-slate-600">{{ highlight.description }}</p>
+            <p class="text-sm text-slate-600">
+              {{ highlight.description }}
+            </p>
           </div>
         </article>
       </div>
