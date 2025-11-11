@@ -105,36 +105,6 @@
               </div>
             </div>
 
-            <div class="mt-12">
-              <h3 class="text-lg font-semibold text-[var(--color-tuco-navy)]">
-                Chain of Responsibility
-              </h3>
-              <p class="mt-2 text-sm text-[var(--color-tuco-slate)]">
-                We embed safety, governance, and accountability across your
-                supply chain so every shipment travels compliantly.
-              </p>
-              <div class="mt-6 grid gap-4 sm:grid-cols-3">
-                <article
-                  v-for="item in corItems"
-                  :key="item.title"
-                  class="flex h-full flex-col overflow-hidden rounded-3xl border border-[var(--color-tuco-line)] bg-white shadow-lg/5 transition hover:-translate-y-1 hover:shadow-card-lg"
-                >
-                  <div class="flex flex-1 flex-col gap-2 p-5">
-                    <item.icon class="h-6 w-6 text-[var(--color-tuco-blue)]" />
-                    <h4
-                      class="text-sm font-semibold text-[var(--color-tuco-navy)]"
-                    >
-                      {{ item.title }}
-                    </h4>
-                    <p
-                      class="text-xs text-[var(--color-tuco-slate)] leading-relaxed"
-                    >
-                      {{ item.description }}
-                    </p>
-                  </div>
-                </article>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -533,12 +503,6 @@
 </template>
 
 <script setup lang="ts">
-import {
-  ArrowPathIcon,
-  BoltIcon,
-  CubeTransparentIcon,
-  ShieldCheckIcon,
-} from "@heroicons/vue/24/outline";
 import { nextTick, onBeforeUnmount, onMounted, ref, watch } from "vue";
 import { RouterLink, useRoute, useRouter } from "vue-router";
 import freightManagementArtwork from "@/assets/images/services/freight-ops.svg";
@@ -794,44 +758,6 @@ const industryCards = [
     imageAlt: "Construction logistics illustration",
     description:
       "Major projects stay on schedule with milestone-controlled staging, cranage, and delivery.",
-  },
-];
-
-const corItems = [
-  {
-    title: "Safety governance",
-    description:
-      "Policies and audits aligned to Chain of Responsibility requirements.",
-    icon: ShieldCheckIcon,
-  },
-  {
-    title: "Driver compliance",
-    description:
-      "Carrier vetting, accreditation, and fatigue management oversight.",
-    icon: BoltIcon,
-  },
-  {
-    title: "Load integrity",
-    description: "Checks on load restraint, packaging, and documentation.",
-    icon: CubeTransparentIcon,
-  },
-  {
-    title: "Incident reporting",
-    description:
-      "Structured escalation and action tracking for on-road events.",
-    icon: ArrowPathIcon,
-  },
-  {
-    title: "Training & onboarding",
-    description:
-      "Support for awareness programs across shipper and carrier teams.",
-    icon: ShieldCheckIcon,
-  },
-  {
-    title: "Data visibility",
-    description:
-      "Compliance dashboards highlighting risks and corrective measures.",
-    icon: BoltIcon,
   },
 ];
 

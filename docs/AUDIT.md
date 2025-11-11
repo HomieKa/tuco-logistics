@@ -113,8 +113,8 @@ env.d.ts
 main.ts
 pages/
   - company/
-    - AboutPage.vue
-    - OurDifferencePage.vue
+    - OurTeamPage.vue
+    - WhyTucoPage.vue
   - contact/
     - ContactPage.vue
   - home/
@@ -124,7 +124,6 @@ pages/
     - TermsPage.vue
   - resources/
     - BlogPostPage.vue
-    - FAQPage.vue
     - InsightsPage.vue
   - services/
     - ServicesPage.vue
@@ -141,7 +140,7 @@ router/
 | Path                             | Name                | Target                                                       |
 | -------------------------------- | ------------------- | ------------------------------------------------------------ |
 | /                                | home                | @/pages/home/HomePage.vue                                    |
-| /about-us                        | about-us            | @/pages/company/AboutPage.vue                                |
+| /our-team                        | our-team            | @/pages/company/OurTeamPage.vue                              |
 | /services                        | services            | @/pages/services/ServicesPage.vue                            |
 | /track                           | track               | @/pages/support/TrackPage.vue                                |
 | /privacy                         | privacy             | @/pages/legal/PrivacyPage.vue                                |
@@ -150,10 +149,9 @@ router/
 | /services/tracking-reporting     | -                   | redirect: path: "/services", hash: "#tracking-reporting"     |
 | /services/integration-automation | -                   | redirect: path: "/services", hash: "#integration-automation" |
 | /technology                      | technology          | @/pages/technology/TechnologyPage.vue                        |
-| /our-difference                  | our-difference      | @/pages/company/OurDifferencePage.vue                        |
+| /why-tuco                        | why-tuco            | @/pages/company/WhyTucoPage.vue                              |
 | /resources/insights              | resources-insights  | @/pages/resources/InsightsPage.vue                           |
 | /resources/blog/:slug            | resources-blog-post | @/pages/resources/BlogPostPage.vue                           |
-| /faq                             | faq                 | @/pages/resources/FAQPage.vue                                |
 | /contact                         | contact             | @/pages/contact/ContactPage.vue                              |
 | /:pathMatch(._)_                 | -                   | redirect: name: "home"                                       |
 

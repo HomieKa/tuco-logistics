@@ -21,7 +21,7 @@
         <article
           v-for="highlight in freightmateHighlights"
           :key="highlight.title"
-          class="tuco-card flex h-full flex-col gap-4 p-6 md:p-7"
+          class="flex flex-col gap-4 rounded-3xl  bg-white p-6 text-left shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-2xl"
         >
           <span
             class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-500"

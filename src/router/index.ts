@@ -8,10 +8,10 @@ const routes: RouteRecordRaw[] = [
     meta: { title: "TUCO Logistics - Hassle-Free Freight Management" },
   },
   {
-    path: "/about-us",
-    name: "about-us",
-    component: () => import("@/pages/company/AboutPage.vue"),
-    meta: { title: "About Us - TUCO Logistics" },
+    path: "/our-team",
+    name: "our-team",
+    component: () => import("@/pages/company/OurTeamPage.vue"),
+    meta: { title: "Our Team - TUCO Logistics" },
   },
   {
     path: "/services",
@@ -56,10 +56,10 @@ const routes: RouteRecordRaw[] = [
     meta: { title: "Freightmate Platform - TUCO Logistics" },
   },
   {
-    path: "/our-difference",
-    name: "our-difference",
-    component: () => import("@/pages/company/OurDifferencePage.vue"),
-    meta: { title: "Why Choose TUCO - TUCO Logistics" },
+    path: "/why-tuco",
+    name: "why-tuco",
+    component: () => import("@/pages/company/WhyTucoPage.vue"),
+    meta: { title: "Why TUCO - TUCO Logistics" },
   },
   {
     path: "/resources/insights",
@@ -72,12 +72,6 @@ const routes: RouteRecordRaw[] = [
     name: "resources-blog-post",
     component: () => import("@/pages/resources/BlogPostPage.vue"),
     meta: { title: "TUCO Logistics Blog" },
-  },
-  {
-    path: "/faq",
-    name: "faq",
-    component: () => import("@/pages/resources/FAQPage.vue"),
-    meta: { title: "FAQ - TUCO Logistics" },
   },
   {
     path: "/contact",

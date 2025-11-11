@@ -58,15 +58,15 @@
           <h3 class="mb-4 text-lg font-semibold text-white">Company</h3>
           <ul class="space-y-2 text-gray-300">
             <li>
-              <RouterLink to="/about-us" class="transition hover:text-teal-400"
-                >About Us</RouterLink
+              <RouterLink to="/our-team" class="transition hover:text-teal-400"
+                >Our Team</RouterLink
               >
             </li>
             <li>
               <RouterLink
-                to="/our-difference"
+                to="/why-tuco"
                 class="transition hover:text-teal-400"
-                >Our Difference</RouterLink
+                >Why TUCO</RouterLink
               >
             </li>
             <li>
@@ -96,11 +96,6 @@
             <li>
               <RouterLink to="/contact" class="transition hover:text-teal-400"
                 >Contact</RouterLink
-              >
-            </li>
-            <li>
-              <RouterLink to="/faq" class="transition hover:text-teal-400"
-                >FAQ</RouterLink
               >
             </li>
             <li>

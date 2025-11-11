@@ -11,11 +11,11 @@
       <div
         class="container mx-auto grid gap-12 px-4 lg:grid-cols-[1.15fr_0.85fr]"
       >
-        <div class="rounded-2xl bg-white p-8 shadow-xl">
+        <div class="rounded-[1rem] bg-white p-8 shadow-xl">
           <ContactForm />
         </div>
         <div
-          class="flex h-full flex-col gap-8 rounded-2xl bg-gradient-to-br from-[#e9f6f2] via-[#eef7fb] to-[#dff1ef] p-8 shadow-xl"
+          class="flex h-full flex-col gap-8 rounded-[1rem] bg-gradient-to-br from-[#e9f6f2] via-[#eef7fb] to-[#dff1ef] p-8 shadow-xl"
         >
           <div class="space-y-4">
             <p
@@ -34,10 +34,10 @@
 
           <div class="space-y-6 text-gray-700">
             <div
-              class="flex items-center gap-4 rounded-2xl bg-white/80 p-4 shadow-card-soft"
+              class="flex items-center gap-4 rounded-[1rem] bg-white/80 p-4 shadow-card-soft"
             >
               <span
-                class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--color-tuco-sky)]/40 text-[var(--color-tuco-blue)]"
+                class="flex h-12 w-12 items-center justify-center rounded-[1rem] bg-[var(--color-tuco-sky)]/40 text-[var(--color-tuco-blue)]"
               >
                 <PhoneIcon class="h-6 w-6" aria-hidden="true" />
               </span>
@@ -51,10 +51,10 @@
               </div>
             </div>
             <div
-              class="flex items-center gap-4 rounded-2xl bg-white/80 p-4 shadow-card-soft"
+              class="flex items-center gap-4 rounded-[1rem] bg-white/80 p-4 shadow-card-soft"
             >
               <span
-                class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--color-tuco-sky)]/40 text-[var(--color-tuco-blue)]"
+                class="flex h-12 w-12 items-center justify-center rounded-[1rem] bg-[var(--color-tuco-sky)]/40 text-[var(--color-tuco-blue)]"
               >
                 <EnvelopeIcon class="h-6 w-6" aria-hidden="true" />
               </span>
@@ -70,7 +70,7 @@
           </div>
 
           <div
-            class="flex flex-col gap-4 rounded-2xl bg-white/80 p-5 shadow-card-soft"
+            class="flex flex-col gap-4 rounded-[1rem] bg-white/80 p-5 shadow-card-soft"
           >
             <div class="flex items-center gap-3 text-navy-500">
               <ClockIcon class="h-5 w-5" aria-hidden="true" />
@@ -169,63 +169,21 @@
         </div>
         <div class="grid gap-6 md:grid-cols-3">
           <article
-            class="flex h-full flex-col overflow-hidden rounded-2xl border border-[var(--color-tuco-line)] bg-white shadow-card-soft"
+            v-for="location in locations"
+            :key="location.city"
+            class="flex h-full flex-col overflow-hidden rounded-[1rem] border border-[var(--color-tuco-line)] bg-white shadow-card-soft"
           >
-            <div class="aspect-video bg-gray-200">
-              <div
-                class="flex h-full items-center justify-center text-gray-500"
-              >
-                Map placeholder - Mulgrave
-              </div>
-            </div>
+            <img
+              :src="location.image"
+              :alt="location.alt"
+              class="h-48 w-full object-cover"
+              loading="lazy"
+            />
             <div class="flex flex-1 flex-col gap-2 p-6">
               <h3 class="text-lg font-semibold text-navy-500">
-                Mulgrave, Victoria
+                {{ location.city }}
               </h3>
-              <p class="text-sm text-gray-600">Head Office</p>
-              <div class="mt-4">
-                <Button variant="outline-sky" size="md">View Map</Button>
-              </div>
-            </div>
-          </article>
-          <article
-            class="flex h-full flex-col overflow-hidden rounded-2xl border border-[var(--color-tuco-line)] bg-white shadow-card-soft"
-          >
-            <div class="aspect-video bg-gray-200">
-              <div
-                class="flex h-full items-center justify-center text-gray-500"
-              >
-                Map placeholder - Brisbane
-              </div>
-            </div>
-            <div class="flex flex-1 flex-col gap-2 p-6">
-              <h3 class="text-lg font-semibold text-navy-500">
-                Brisbane, Queensland
-              </h3>
-              <p class="text-sm text-gray-600">Service Hub</p>
-              <div class="mt-4">
-                <Button variant="outline-sky" size="md">View Map</Button>
-              </div>
-            </div>
-          </article>
-          <article
-            class="flex h-full flex-col overflow-hidden rounded-2xl border border-[var(--color-tuco-line)] bg-white shadow-card-soft"
-          >
-            <div class="aspect-video bg-gray-200">
-              <div
-                class="flex h-full items-center justify-center text-gray-500"
-              >
-                Map placeholder - Sydney
-              </div>
-            </div>
-            <div class="flex flex-1 flex-col gap-2 p-6">
-              <h3 class="text-lg font-semibold text-navy-500">
-                Sydney, New South Wales
-              </h3>
-              <p class="text-sm text-gray-600">Service Hub</p>
-              <div class="mt-4">
-                <Button variant="outline-sky" size="md">View Map</Button>
-              </div>
+              <p class="text-sm text-gray-600">{{ location.role }}</p>
             </div>
           </article>
         </div>
@@ -235,9 +193,11 @@
 </template>
 
 <script setup lang="ts">
-import Button from "@/components/ui/Button.vue";
 import PageHeader from "@/components/ui/PageHeader.vue";
 import ContactForm from "@/components/ui/ContactForm.vue";
+import melbournePhoto from "@/assets/images/contact_us/melbourne.jpg";
+import sydneyPhoto from "@/assets/images/contact_us/sydney.jpg";
+import brisbanePhoto from "@/assets/images/contact_us/brisbane.jpg";
 import { useSEO } from "@/composables/useSEO";
 import {
   ClockIcon,
@@ -251,4 +211,25 @@ useSEO({
   description:
     "Talk with TUCO specialists about freight management, technology, and strategic optimisation.",
 });
+
+const locations = [
+  {
+    city: "Melbourne",
+    role: "Head Office",
+    image: melbournePhoto,
+    alt: "Melbourne CBD skyline at dusk",
+  },
+  {
+    city: "Brisbane",
+    role: "Service Hub",
+    image: brisbanePhoto,
+    alt: "Brisbane Story Bridge over the river",
+  },
+  {
+    city: "Sydney",
+    role: "Service Hub",
+    image: sydneyPhoto,
+    alt: "Sydney Opera House and Harbour Bridge",
+  },
+];
 </script>

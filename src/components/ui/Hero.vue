@@ -15,7 +15,7 @@
           We Work So You Don't Have To.
         </h1>
         <p class="max-w-xl text-lg text-slate-600">
-          We combine expertise and smart technology to handle your logistics
+          4PL Freight Management at TUCO combines expertise and smart technology to handle your logistics
           end-to-end - so you can focus on growth. With real-time visibility,
           dedicated support, and scalable solutions, TUCO helps you reduce
           costs, streamline operations, and achieve measurable results.

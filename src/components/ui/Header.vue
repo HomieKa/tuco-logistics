@@ -13,45 +13,13 @@
 
         <div class="hidden items-center space-x-8 lg:flex">
           <RouterLink
-            v-for="link in primaryNav"
+            v-for="link in mainNav"
             :key="link.to"
             :to="link.to"
             class="text-sm font-medium transition"
             :class="linkClasses(link.to)"
           >
             {{ link.label }}
-          </RouterLink>
-
-          <RouterLink
-            to="/services"
-            class="text-sm font-medium transition"
-            :class="linkClasses('/services')"
-          >
-            Services
-          </RouterLink>
-
-          <RouterLink
-            to="/technology"
-            class="text-sm font-medium transition"
-            :class="linkClasses('/technology')"
-          >
-            Technology
-          </RouterLink>
-
-          <RouterLink
-            to="/faq"
-            class="text-sm font-medium transition"
-            :class="linkClasses('/faq')"
-          >
-            FAQ
-          </RouterLink>
-
-          <RouterLink
-            to="/contact"
-            class="text-sm font-medium transition"
-            :class="linkClasses('/contact')"
-          >
-            Contact
           </RouterLink>
 
           <a
@@ -129,10 +97,7 @@
       >
         <div v-if="mobileMenuOpen" class="space-y-4 pb-4 pt-2 lg:hidden">
           <RouterLink
-            v-for="link in [
-              ...primaryNav,
-              { label: 'Contact', to: '/contact' },
-            ]"
+            v-for="link in mainNav"
             :key="link.to"
             :to="link.to"
             class="block text-sm font-medium transition"
@@ -148,33 +113,11 @@
 
           <div class="border-t border-slate-200 pt-4">
             <RouterLink
-              to="/services"
-              class="mt-3 block text-sm font-medium text-[#0c233f] transition hover:text-teal-500"
-              @click="closeMenu"
-            >
-              Services
-            </RouterLink>
-
-            <RouterLink
-              to="/technology"
-              class="mt-3 block text-sm font-medium text-[#0c233f] transition hover:text-teal-500"
-              @click="closeMenu"
-            >
-              Technology
-            </RouterLink>
-            <RouterLink
               to="/track"
               class="mt-2 block text-sm font-medium text-[#0c233f] transition hover:text-teal-500"
               @click="closeMenu"
             >
               Track freight
-            </RouterLink>
-            <RouterLink
-              to="/faq"
-              class="mt-2 block text-sm font-medium text-[#0c233f] transition hover:text-teal-500"
-              @click="closeMenu"
-            >
-              FAQ
             </RouterLink>
           </div>
         </div>
@@ -193,9 +136,12 @@ const mobileMenuOpen = ref(false);
 const isScrolled = ref(false);
 const route = useRoute();
 
-const primaryNav = [
-  { label: "About Us", to: "/about-us" },
-  { label: "Our Difference", to: "/our-difference" },
+const mainNav = [
+  { label: "Our Team", to: "/our-team" },
+  { label: "Services", to: "/services" },
+  { label: "Technology", to: "/technology" },
+  { label: "Why TUCO", to: "/why-tuco" },
+  { label: "Contact", to: "/contact" },
 ];
 
 const headerClasses = computed(() =>

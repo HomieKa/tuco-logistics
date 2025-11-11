@@ -1,17 +1,17 @@
 ﻿<template>
   <section class="bg-white py-20">
-    <div class="container mx-auto px-4 text-center">
+    <div class="container mx-auto px-6 text-center">
       <p class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-500">
         Our Difference
       </p>
       <h2 class="mt-3 text-3xl font-semibold text-navy-500 md:text-4xl">
         Experience the TUCO difference
       </h2>
-      <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mt-12">
         <article
           v-for="card in differenceCards"
           :key="card.title"
-          class="flex flex-col gap-4 rounded-3xl border border-sky-100 bg-white p-6 text-left shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg/20"
+          class="flex flex-col gap-4 rounded-3xl  bg-white p-6 text-left shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-2xl"
         >
           <div class="aspect-[4/3] w-full overflow-hidden rounded-2xl">
             <img

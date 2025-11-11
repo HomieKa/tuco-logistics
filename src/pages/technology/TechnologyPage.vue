@@ -8,13 +8,9 @@
     </PageHeader>
 
     <section class="bg-[var(--color-tuco-sky)]/40 py-16">
-      <div
-        class="container mx-auto grid gap-10 px-4 lg:grid-cols-[1.15fr_0.85fr] lg:items-center"
-      >
+      <div class="container mx-auto grid px-4 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
         <div class="space-y-6">
-          <h2
-            class="text-3xl font-semibold text-[var(--color-tuco-navy)] md:text-4xl"
-          >
+          <h2  class="text-3xl font-semibold text-[var(--color-tuco-navy)] md:text-4xl">
             Built to keep every shipment visible and controllable
           </h2>
           <p class="text-lg text-[var(--color-tuco-slate)]">
@@ -22,53 +18,20 @@
             inbox chases. Freightmate and our integration toolkit keep every
             move visible, accountable, and ready for action.
           </p>
-          <ul class="space-y-3 text-[var(--color-tuco-slate)]">
-            <li class="flex items-start gap-3">
-              <span
-                class="mt-1 h-2 w-2 rounded-full bg-[var(--color-tuco-blue)]"
-              ></span>
-              <span
-                >Smart allocation respects transit promises, capacity, and
-                compliance rules.</span
-              >
-            </li>
-            <li class="flex items-start gap-3">
-              <span
-                class="mt-1 h-2 w-2 rounded-full bg-[var(--color-tuco-blue)]"
-              ></span>
-              <span
-                >Shared live timeline so operations, commercial, and service
-                teams see the same truth.</span
-              >
-            </li>
-            <li class="flex items-start gap-3">
-              <span
-                class="mt-1 h-2 w-2 rounded-full bg-[var(--color-tuco-blue)]"
-              ></span>
-              <span
-                >Proactive exception alerts trigger fixes before customers pick
-                up the phone.</span
-              >
-            </li>
-          </ul>
         </div>
 
-        <div
-          class="rounded-[2rem] bg-[var(--color-tuco-card)] p-8 shadow-card-soft ring-1 ring-[var(--color-tuco-line)]"
-        >
+        <div class="rounded-[1rem] bg-[var(--color-tuco-card)] p-8">
           <h3 class="text-xl font-semibold text-[var(--color-tuco-navy)]">
             Platform snapshot
           </h3>
           <dl class="mt-6 grid gap-6 sm:grid-cols-2">
             <div>
               <dt
-                class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
-              >
+                class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]">
                 Carriers supported
               </dt>
               <dd
-                class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]"
-              >
+                class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]">
                 200+
               </dd>
               <p class="mt-1 text-sm text-[var(--color-tuco-slate)]">
@@ -77,13 +40,11 @@
             </div>
             <div>
               <dt
-                class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
-              >
+                class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]">
                 Automations
               </dt>
               <dd
-                class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]"
-              >
+                class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]">
                 60+
               </dd>
               <p class="mt-1 text-sm text-[var(--color-tuco-slate)]">
@@ -92,14 +53,11 @@
               </p>
             </div>
             <div>
-              <dt
-                class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
-              >
+              <dt class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]">
                 Onboarding window
               </dt>
               <dd
-                class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]"
-              >
+                class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]">
                 Up to 3 Weeks
               </dd>
               <p class="mt-1 text-sm text-[var(--color-tuco-slate)]">
@@ -108,14 +66,10 @@
               </p>
             </div>
             <div>
-              <dt
-                class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
-              >
+              <dt class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]">
                 Visibility
               </dt>
-              <dd
-                class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]"
-              >
+              <dd class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]">
                 Real-time
               </dd>
               <p class="mt-1 text-sm text-[var(--color-tuco-slate)]">
@@ -141,17 +95,26 @@
           Freightmate keeps every stakeholder on the same story, from the first
           quote through to proactive reviews and optimisation.
         </p>
-
+        <div
+          class="mt-16 overflow-hidden rounded-[2rem] border border-[var(--color-tuco-line)] bg-black/90 p-2 shadow-card-soft"
+        >
+          <video
+            class="aspect-video w-full rounded-[1.75rem] bg-black object-cover"
+            :src="freightmateVideo"
+            controls
+            preload="metadata"
+          >
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
         <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           <article
             v-for="module in modules"
             :key="module.title"
-            class="tuco-card flex h-full flex-col gap-4 p-6 md:p-7 lg:p-8"
+            class="group flex flex-col gap-4 rounded-2xl bg-white p-8 transition duration-200 hover:-translate-y-1 hover:shadow-2xl"
           >
             <div class="flex items-start gap-4">
-              <span
-                class="mt-1 inline-flex h-11 w-11 flex-none items-center justify-center rounded-full bg-[var(--color-tuco-sky)] text-[var(--color-tuco-blue)]"
-              >
+              <span class="mt-1 inline-flex h-11 w-11 flex-none items-center justify-center rounded-full bg-[var(--color-tuco-sky)] text-[var(--color-tuco-blue)]">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -170,127 +133,39 @@
                 </svg>
               </span>
               <div>
-                <h3
-                  class="text-lg font-semibold text-[var(--color-tuco-navy)] md:text-xl"
-                >
+                <h3 class="text-lg font-semibold text-[var(--color-tuco-navy)] md:text-xl">
                   {{ module.title }}
                 </h3>
-                <p
-                  class="mt-2 text-sm text-[var(--color-tuco-slate)] md:text-base"
-                >
+                <p class="mt-2 text-sm text-[var(--color-tuco-slate)] md:text-base">
                   {{ module.body }}
                 </p>
               </div>
             </div>
             <ul
-              class="mt-auto space-y-2 text-sm text-[var(--color-tuco-slate)]"
-            >
-              <li
-                v-for="point in module.points"
-                :key="point"
-                class="flex items-start gap-2"
-              >
-                <span
-                  class="mt-1 h-1.5 w-1.5 rounded-full bg-[var(--color-tuco-blue)]"
-                ></span>
-                <span>{{ point }}</span>
-              </li>
+              class="mt-auto space-y-2 text-sm text-[var(--color-tuco-slate)]">
             </ul>
-          </article>
-        </div>
-
-        <div
-          class="mt-16 overflow-hidden rounded-[2rem] border border-[var(--color-tuco-line)] bg-black/90 p-2 shadow-card-soft"
-        >
-          <video
-            class="aspect-video w-full rounded-[1.75rem] bg-black object-cover"
-            :src="freightmateVideo"
-            controls
-            preload="metadata"
-          >
-            Your browser does not support HTML5 video.
-          </video>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-[--color-tuco-sky]/40 py-16 md:py-20">
-      <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-        <div class="text-center">
-          <p
-            class="text-sm font-semibold uppercase tracking-[0.35em] text-[--color-tuco-blue]"
-          >
-            Platform principles
-          </p>
-          <h2
-            class="mt-3 text-3xl font-semibold text-[--color-tuco-navy] md:text-4xl"
-          >
-            Built for real-time logistics: fast, reliable, secure.
-          </h2>
-        </div>
-
-        <div class="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-          <article
-            v-for="principle in principles"
-            :key="principle.title"
-            class="group rounded-xl border border-[--color-tuco-line] bg-white p-5 transition duration-200 hover:-translate-y-0.5 hover:shadow-md focus-visible:-translate-y-0.5 focus-visible:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-tuco-blue] focus-visible:ring-offset-2 focus-visible:ring-offset-white motion-safe:animate-fadeInUp"
-            tabindex="0"
-          >
-            <div class="flex items-start gap-4">
-              <span
-                class="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-[--color-tuco-sky]"
-              >
-                <svg
-                  class="h-6 w-6 text-[--color-tuco-blue]"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    :d="principle.icon"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.6"
-                  />
-                </svg>
-              </span>
-              <div>
-                <h3 class="text-lg font-semibold text-[--color-tuco-navy]">
-                  {{ principle.title }}
-                </h3>
-                <p class="mt-2 text-sm text-[--color-tuco-slate]">
-                  {{ principle.description }}
-                </p>
-              </div>
-            </div>
           </article>
         </div>
       </div>
     </section>
 
     <section class="bg-[#f7f9fd] py-16">
-      <div
-        class="container mx-auto grid gap-12 px-4 lg:grid-cols-[1fr_0.9fr] lg:items-start"
-      >
+      <div class="container mx-auto grid lg:items-start">
         <div class="space-y-5">
-          <h2
-            class="text-3xl font-semibold text-[var(--color-tuco-navy)] md:text-4xl"
-          >
+          <h2 class="text-3xl font-semibold text-[var(--color-tuco-navy)] md:text-4xl">
             Integrations and data
           </h2>
           <p class="text-lg text-[var(--color-tuco-slate)]">
             Freightmate connects to ERPs, WMS, ecommerce platforms, customer
             tools, and analytics suites. Use TUCO's native connectors or build
-            on the open API—either way data syncs automatically.
+            on the open API.
           </p>
-          <div class="mt-6 grid gap-4 sm:grid-cols-2">
+          <div class="mt-6 grid gap-4 sm:grid-cols-4">
             <a
               v-for="item in integrationItems"
               :key="item.label"
               :href="item.href"
-              class="flex items-center gap-4 rounded-2xl border border-[var(--color-tuco-line)] bg-white p-4 shadow-lg/5 transition hover:-translate-y-[2px] hover:shadow-lg/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-tuco-blue)] focus-visible:ring-offset-2"
+              class="flex py-4 items-center gap-4 rounded-xl border border-[var(--color-tuco-line)] bg-white p-3 shadow-lg/5 transition duration-200 hover:-translate-y-1 hover:shadow-2xl"
             >
               <img
                 :src="item.src"
@@ -306,33 +181,6 @@
                 </p>
               </div>
             </a>
-          </div>
-        </div>
-
-        <div class="lg:flex lg:justify-center">
-          <div
-            class="w-full max-w-xl rounded-[1.5rem] bg-[var(--color-tuco-card)] p-6 shadow-card-soft ring-1 ring-[var(--color-tuco-line)] md:p-7"
-          >
-            <h3 class="text-xl font-semibold text-[var(--color-tuco-navy)]">
-              Analytics ready from day one
-            </h3>
-            <p class="mt-4 text-[var(--color-tuco-slate)]">
-              Freightmate ships with dashboards that highlight service
-              performance, utilisation, and customer experience. Push data to
-              Snowflake, Power BI, or Looker—or work directly inside
-              Freightmate's reporting suite.
-            </p>
-            <ul class="mt-6 space-y-3 text-sm text-[var(--color-tuco-slate)]">
-              <li>
-                Scheduled exports and automated insights keep leadership,
-                operations, and commercial teams aligned.
-              </li>
-              <li>Event webhooks trigger downstream workflows in real time.</li>
-              <li>
-                Audit logs and role-based access deliver the governance you
-                expect from enterprise platforms.
-              </li>
-            </ul>
           </div>
         </div>
       </div>
@@ -388,11 +236,6 @@
               utilisation, and carbon to guide reviews.
             </li>
           </ul>
-          <p class="mt-6 text-sm text-white/70">
-            "Freightmate gave us one place to manage rates, bookings, and
-            tracking. TUCO's team made the rollout painless." - Jess, Operations
-            Lead
-          </p>
         </div>
       </div>
     </section>
@@ -578,6 +421,10 @@ const integrationItems = [
     label: "Cin7",
     desc: "Inventory",
     href: "/partners/integrations",
+  },
+  {
+    src: "https://cdn.jsdelivr.net/gh/lucide-icons/lucide/icons/app-window.svg",
+    label: "Custom integrations",
   },
 ];
 
