@@ -46,6 +46,6 @@
 </template>
 
 <script setup lang="ts">
-import Button from "@/components/sections/ui/Button.vue";
-import homeVideo from "@/assets/videos/home-animation.mp4"
+import Button from "@/components/ui/Button.vue";
+import homeVideo from "@/assets/videos/home-animation.mp4";
 </script>

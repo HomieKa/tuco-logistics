@@ -68,9 +68,9 @@
 </template>
 
 <script setup lang="ts">
-import Button from "@/components/sections/ui/Button.vue";
-import CallToAction from "@/components/sections/ui/CallToAction.vue";
-import PageHeader from "@/components/sections/ui/PageHeader.vue";
+import Button from "@/components/ui/Button.vue";
+import CallToAction from "@/components/ui/CallToAction.vue";
+import PageHeader from "@/components/ui/PageHeader.vue";
 import { RouterLink } from "vue-router";
 import { useSEO } from "@/composables/useSEO";
 
@@ -98,7 +98,7 @@ const articles = [
   {
     title: "Designing a freight program for rapid ecommerce growth",
     excerpt:
-      "Keep delivery promises tight as order volume scales. Here’s how leading brands do it.",
+      "Keep delivery promises tight as order volume scales. Here's how leading brands do it.",
     category: "Ecommerce",
     to: "/resources/blog/freight-program-design",
   },

@@ -4,7 +4,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: "/",
     name: "home",
-    component: () => import("@/components/sections/home/HomePage.vue"),
+    component: () => import("@/components/home/HomePage.vue"),
     meta: { title: "TUCO Logistics - Hassle-Free Freight Management" },
   },
   {

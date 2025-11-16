@@ -257,8 +257,8 @@
 </template>
 
 <script setup lang="ts">
-import Button from "@/components/sections/ui/Button.vue";
-import CallToAction from "@/components/sections/ui/CallToAction.vue";
+import Button from "@/components/ui/Button.vue";
+import CallToAction from "@/components/ui/CallToAction.vue";
 import freightmateVideo from "@/assets/videos/freightmate_video.mp4";
 import { useSEO } from "@/composables/useSEO";
 

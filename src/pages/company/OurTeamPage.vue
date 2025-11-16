@@ -266,8 +266,8 @@
 </template>
 
 <script setup lang="ts">
-import Button from "@/components/sections/ui/Button.vue";
-import CallToAction from "@/components/sections/ui/CallToAction.vue";
+import Button from "@/components/ui/Button.vue";
+import CallToAction from "@/components/ui/CallToAction.vue";
 import { useSEO } from "@/composables/useSEO";
 import teamImage from "@/assets/images/about_us/team_photo.jpg";
 import workingImage from "@/assets/images/about_us/working.jpg";

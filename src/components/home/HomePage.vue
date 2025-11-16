@@ -22,14 +22,13 @@
 </template>
 
 <script setup lang="ts">
-import Hero from "@/components/sections/home/Hero.vue";
-import Button from "@/components/sections/ui/Button.vue";
-import CallToAction from "@/components/sections/ui/CallToAction.vue";
-import OurApproach from "@/components/sections/home/OurApproach.vue";
-import OurDifference from "@/components/sections/home/OurDifference.vue";
-import ImpactSnapshot from "@/components/sections/home/ImpactSnapshot.vue";
-import CustomerStories from "@/components/sections/home/CustomerStories.vue";
-import TechnologySummary from "@/components/sections/home/TechnologySummary.vue";
+import Hero from "@/components/home/Hero.vue";
+import Button from "@/components/ui/Button.vue";
+import CallToAction from "@/components/ui/CallToAction.vue";
+import OurApproach from "@/components/home/OurApproach.vue";
+import OurDifference from "@/components/home/OurDifference.vue";
+import ImpactSnapshot from "@/components/home/ImpactSnapshot.vue";
+import CustomerStories from "@/components/home/CustomerStories.vue";
 import { useSEO } from "@/composables/useSEO";
 
 useSEO({
