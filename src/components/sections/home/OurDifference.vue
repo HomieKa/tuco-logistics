@@ -34,10 +34,13 @@
 </template>
 
 <script setup lang="ts">
-import strategyImage from "@/assets/images/our_difference/strategic_partner.jpg";
-import supportImage from "@/assets/images/our_difference/australian_expert.jpg";
-import automationImage from "@/assets/images/our_difference/automation.jpg";
-import trustImage from "@/assets/images/our_difference/governance.jpg";
+
+import supportImage from "@/assets/images/our_difference/carrier.svg";
+import automationImage from "@/assets/images/our_difference/finance.svg";
+import trustImage from "@/assets/images/our_difference/service.svg";
+import strategyImage from "@/assets/images/our_difference/strategy.svg";
+
+
 
 const differenceCards = [
   {

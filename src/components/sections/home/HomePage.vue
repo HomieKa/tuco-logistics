@@ -2,10 +2,11 @@
   <div>
     <Hero />
     <OurApproach />
-    <OurDifference />
+
     <ImpactSnapshot />
     <CustomerStories />
-    <TechnologySummary />
+    <OurDifference />
+    <!-- <TechnologySummary /> -->
 
     <CallToAction>
       <template #title>Ready to transform your freight network?</template>
@@ -21,9 +22,9 @@
 </template>
 
 <script setup lang="ts">
-import Hero from "@/components/ui/Hero.vue";
-import Button from "@/components/ui/Button.vue";
-import CallToAction from "@/components/ui/CallToAction.vue";
+import Hero from "@/components/sections/home/Hero.vue";
+import Button from "@/components/sections/ui/Button.vue";
+import CallToAction from "@/components/sections/ui/CallToAction.vue";
 import OurApproach from "@/components/sections/home/OurApproach.vue";
 import OurDifference from "@/components/sections/home/OurDifference.vue";
 import ImpactSnapshot from "@/components/sections/home/ImpactSnapshot.vue";

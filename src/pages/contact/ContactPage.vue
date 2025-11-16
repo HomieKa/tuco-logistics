@@ -193,8 +193,8 @@
 </template>
 
 <script setup lang="ts">
-import PageHeader from "@/components/ui/PageHeader.vue";
-import ContactForm from "@/components/ui/ContactForm.vue";
+import PageHeader from "@/components/sections/ui/PageHeader.vue";
+import ContactForm from "@/components/sections/ui/ContactForm.vue";
 import melbournePhoto from "@/assets/images/contact_us/melbourne.jpg";
 import sydneyPhoto from "@/assets/images/contact_us/sydney.jpg";
 import brisbanePhoto from "@/assets/images/contact_us/brisbane.jpg";

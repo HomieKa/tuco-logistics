@@ -25,11 +25,11 @@
           :key="feature.title"
           class="group flex flex-col gap-4 rounded-2xl bg-white p-8 transition duration-200 hover:-translate-y-1 hover:shadow-2xl"
         >
-          <div v-if="feature.image" class="overflow-hidden rounded-xl">
+          <div v-if="feature.image" class="overflow-hidden rounded-xl ">
             <img
               :src="feature.image"
               :alt="feature.title"
-              class="h-40 w-full rounded-xl object-cover"
+              class="w-full aspect-[16/10] "
               loading="lazy"
             />
           </div>
@@ -50,11 +50,13 @@
 <script setup lang="ts">
 // You'll need to replace these with actual images
 // For now, keeping the SVG imports as placeholders
-import carrierImage from "@/assets/images/approach-carrier.svg";
-import financeImage from "@/assets/images/approach-finance.svg";
-import serviceImage from "@/assets/images/approach-service.svg";
-import strategyImage from "@/assets/images/approach-strategy.svg";
-import technologyImage from "@/assets/images/approach-technology.svg";
+
+
+import technologyImage from "@/assets/images/our_approach/technology.png";
+import strategyImage from "@/assets/images/our_approach/strategic_partner.jpg";
+import serviceImage from "@/assets/images/our_approach/australian_expert.jpg";
+import carrierImage from "@/assets/images/our_approach/automation.jpg";
+import financeImage from "@/assets/images/our_approach/governance.jpg";
 
 const features = [
   {

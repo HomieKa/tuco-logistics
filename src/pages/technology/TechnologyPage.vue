@@ -1,37 +1,46 @@
 <template>
-  <div>
-    <PageHeader
-      title="TUCO Technology: real-time logistics made simple"
-      description="Our platform stack unifies booking, tracking, analytics, and governance so freight teams stay ahead without juggling portals."
-    >
-      <template #eyebrow>Technology</template>
-    </PageHeader>
-
-    <section class="bg-[var(--color-tuco-sky)]/40 py-16">
-      <div class="container mx-auto grid px-4 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
-        <div class="space-y-6">
-          <h2  class="text-3xl font-semibold text-[var(--color-tuco-navy)] md:text-4xl">
-            Built to keep every shipment visible and controllable
-          </h2>
+  <div class="bg-[#f7f9fd]">
+    <section class="py-16 md:py-24">
+      <div
+        class="mx-auto flex max-w-6xl flex-col gap-12 px-4 lg:grid lg:grid-cols-[1.15fr_0.95fr] lg:items-center lg:gap-16 lg:px-10"
+        aria-labelledby="technology-hero"
+      >
+        <div class="space-y-6 text-center lg:max-w-none lg:text-left">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
+          >
+            Technology
+          </p>
+          <h1
+            id="technology-hero"
+            class="text-4xl font-semibold text-[var(--color-tuco-navy)] md:text-5xl"
+          >
+            TUCO Technology: real-time logistics made simple
+          </h1>
           <p class="text-lg text-[var(--color-tuco-slate)]">
-            TUCO technology replaces disconnected portals, spreadsheets, and
-            inbox chases. Freightmate and our integration toolkit keep every
-            move visible, accountable, and ready for action.
+            Freightmate brings quoting, dispatch, tracking, analytics, and
+            governance into one workspace so freight teams stay focused on the
+            shipment—not juggling portals.
           </p>
         </div>
 
-        <div class="rounded-[1rem] bg-[var(--color-tuco-card)] p-8">
-          <h3 class="text-xl font-semibold text-[var(--color-tuco-navy)]">
-            Platform snapshot
-          </h3>
+        <div class="w-full lg:max-w-none lg:self-stretch">
+          <div
+            class="h-full rounded-[1.5rem] border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] p-10 text-left shadow-card-soft"
+          >
+            <h3 class="text-xl font-semibold text-[var(--color-tuco-navy)] text-center">
+              Platform snapshot
+            </h3>
           <dl class="mt-6 grid gap-6 sm:grid-cols-2">
             <div>
               <dt
-                class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]">
+                class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
+              >
                 Carriers supported
               </dt>
               <dd
-                class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]">
+                class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]"
+              >
                 200+
               </dd>
               <p class="mt-1 text-sm text-[var(--color-tuco-slate)]">
@@ -40,11 +49,13 @@
             </div>
             <div>
               <dt
-                class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]">
+                class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
+              >
                 Automations
               </dt>
               <dd
-                class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]">
+                class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]"
+              >
                 60+
               </dd>
               <p class="mt-1 text-sm text-[var(--color-tuco-slate)]">
@@ -53,11 +64,14 @@
               </p>
             </div>
             <div>
-              <dt class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]">
+              <dt
+                class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
+              >
                 Onboarding window
               </dt>
               <dd
-                class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]">
+                class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]"
+              >
                 Up to 3 Weeks
               </dd>
               <p class="mt-1 text-sm text-[var(--color-tuco-slate)]">
@@ -66,7 +80,9 @@
               </p>
             </div>
             <div>
-              <dt class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]">
+              <dt
+                class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
+              >
                 Visibility
               </dt>
               <dd class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]">
@@ -80,6 +96,7 @@
           </dl>
         </div>
       </div>
+    </div>
     </section>
 
     <section class="bg-[#f3f5fb] py-16">
@@ -87,8 +104,17 @@
         <h2
           class="text-center text-3xl font-semibold text-[var(--color-tuco-navy)] md:text-4xl"
         >
-          Freightmate modules
+          Freightmate platform
         </h2>
+        <p
+          class="mx-auto mt-4 max-w-3xl text-center text-[var(--color-tuco-slate)]"
+        >
+          TUCO owns Freightmate - the SaaS platform that cares for your freight
+          program. We take every piece of customer feedback, real-time data
+          insight, and operator idea, iterating quickly so we keep improving
+          orchestration and clarity.
+        </p>
+
         <p
           class="mx-auto mt-4 max-w-3xl text-center text-[var(--color-tuco-slate)]"
         >
@@ -107,7 +133,7 @@
             Your browser does not support HTML5 video.
           </video>
         </div>
-        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div class="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           <article
             v-for="module in modules"
             :key="module.title"
@@ -142,46 +168,19 @@
               </div>
             </div>
             <ul
-              class="mt-auto space-y-2 text-sm text-[var(--color-tuco-slate)]">
+              class="mt-auto space-y-3 text-sm text-[var(--color-tuco-slate)]">
+              <li
+                v-for="point in module.points"
+                :key="point"
+                class="flex gap-3 text-left"
+              >
+                <span
+                  class="mt-1 inline-block h-1.5 w-1.5 flex-none rounded-full bg-[var(--color-tuco-blue)]"
+                />
+                <span>{{ point }}</span>
+              </li>
             </ul>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-[#f7f9fd] py-16">
-      <div class="container mx-auto grid lg:items-start">
-        <div class="space-y-5">
-          <h2 class="text-3xl font-semibold text-[var(--color-tuco-navy)] md:text-4xl">
-            Integrations and data
-          </h2>
-          <p class="text-lg text-[var(--color-tuco-slate)]">
-            Freightmate connects to ERPs, WMS, ecommerce platforms, customer
-            tools, and analytics suites. Use TUCO's native connectors or build
-            on the open API.
-          </p>
-          <div class="mt-6 grid gap-4 sm:grid-cols-4">
-            <a
-              v-for="item in integrationItems"
-              :key="item.label"
-              :href="item.href"
-              class="flex py-4 items-center gap-4 rounded-xl border border-[var(--color-tuco-line)] bg-white p-3 shadow-lg/5 transition duration-200 hover:-translate-y-1 hover:shadow-2xl"
-            >
-              <img
-                :src="item.src"
-                :alt="`${item.label} logo`"
-                class="h-10 w-10 flex-none object-contain"
-              />
-              <div>
-                <p class="text-sm font-semibold text-[var(--color-tuco-navy)]">
-                  {{ item.label }}
-                </p>
-                <p class="text-xs text-[var(--color-tuco-slate)]">
-                  {{ item.desc }}
-                </p>
-              </div>
-            </a>
-          </div>
         </div>
       </div>
     </section>
@@ -258,20 +257,8 @@
 </template>
 
 <script setup lang="ts">
-import Button from "@/components/ui/Button.vue";
-import CallToAction from "@/components/ui/CallToAction.vue";
-import PageHeader from "@/components/ui/PageHeader.vue";
-import sugarcrmIcon from "@/assets/images/icons/sugarcrm.svg";
-import prontoIcon from "@/assets/images/icons/pronto.svg";
-import wooIcon from "@/assets/images/icons/woo.svg";
-import odooIcon from "@/assets/images/icons/odoo.svg";
-import shopifyIcon from "@/assets/images/icons/shopify.svg";
-import xeroIcon from "@/assets/images/icons/xero.svg";
-import netsuiteIcon from "@/assets/images/icons/netsuite.svg";
-import sapIcon from "@/assets/images/icons/sap.svg";
-import dynamicsIcon from "@/assets/images/icons/dynamics365.svg";
-import myobIcon from "@/assets/images/icons/myob.svg";
-import cin7Icon from "@/assets/images/icons/cin7.svg";
+import Button from "@/components/sections/ui/Button.vue";
+import CallToAction from "@/components/sections/ui/CallToAction.vue";
 import freightmateVideo from "@/assets/videos/freightmate_video.mp4";
 import { useSEO } from "@/composables/useSEO";
 
@@ -332,101 +319,7 @@ const modules = [
   },
 ];
 
-const principles = [
-  {
-    title: "Real-time by default",
-    description: "Status, POD, and analytics refresh instantly.",
-    icon: "M12 6v12m6-6H6m12 6a6 6 0 100-12 6 6 0 000 12z",
-  },
-  {
-    title: "API-first",
-    description: "Integrates cleanly with ERP, WMS, and CRM.",
-    icon: "M15 10l4.553-1.138a1 1 0 01.894 1.79L16 13m-7-2L4.447 9.862a1 1 0 00-.894 1.79L8 13m4-9v16",
-  },
-  {
-    title: "Secure & compliant",
-    description: "RBAC, audit, and SOC-ready controls.",
-    icon: "M12 12a3 3 0 013 3v4H9v-4a3 3 0 013-3zm0-6a2 2 0 012 2v2H10V8a2 2 0 012-2z",
-  },
-  {
-    title: "Configurable, not custom",
-    description: "Adapt with rules—no rebuilds.",
-    icon: "M4 6h16M4 12h10m-6 6h12",
-  },
-  {
-    title: "Actionable analytics",
-    description: "Insights that trigger alerts and workflows.",
-    icon: "M4 19h16M4 5h16M8 5v14m4-6 4-4 4 4",
-  },
-  {
-    title: "Enterprise-grade uptime",
-    description: "Resilient architecture and monitoring.",
-    icon: "M5 12l5 5L20 7M4 17h16",
-  },
-];
 
-const integrationItems = [
-  {
-    src: sugarcrmIcon,
-    label: "SugarCRM",
-    desc: "CRM",
-    href: "/partners/integrations",
-  },
-  {
-    src: prontoIcon,
-    label: "Pronto",
-    desc: "ERP",
-    href: "/partners/integrations",
-  },
-  {
-    src: wooIcon,
-    label: "WooCommerce",
-    desc: "E-commerce",
-    href: "/partners/integrations",
-  },
-  { src: odooIcon, label: "Odoo", desc: "ERP", href: "/partners/integrations" },
-  {
-    src: shopifyIcon,
-    label: "Shopify",
-    desc: "E-commerce",
-    href: "/partners/integrations",
-  },
-  {
-    src: xeroIcon,
-    label: "Xero",
-    desc: "Accounting",
-    href: "/partners/integrations",
-  },
-  {
-    src: netsuiteIcon,
-    label: "NetSuite",
-    desc: "ERP",
-    href: "/partners/integrations",
-  },
-  { src: sapIcon, label: "SAP", desc: "ERP", href: "/partners/integrations" },
-  {
-    src: dynamicsIcon,
-    label: "Dynamics 365",
-    desc: "ERP/CRM",
-    href: "/partners/integrations",
-  },
-  {
-    src: myobIcon,
-    label: "MYOB",
-    desc: "Accounting",
-    href: "/partners/integrations",
-  },
-  {
-    src: cin7Icon,
-    label: "Cin7",
-    desc: "Inventory",
-    href: "/partners/integrations",
-  },
-  {
-    src: "https://cdn.jsdelivr.net/gh/lucide-icons/lucide/icons/app-window.svg",
-    label: "Custom integrations",
-  },
-];
 
 const onboarding = [
   {

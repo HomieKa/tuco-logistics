@@ -6,7 +6,7 @@
           <img
             :src="logo_invert"
             alt="TUCO Logistics"
-            class="h-10 w-auto transition duration-200"
+            class="h-14 w-auto transition duration-200"
             :class="isScrolled ? '' : 'invert'"
           />
         </RouterLink>
@@ -130,7 +130,7 @@
 import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
 
-import logo_invert from "@/assets/images/tuco_logo_2_invert.svg";
+import logo_invert from "@/assets/images/tuco_logo.svg";
 
 const mobileMenuOpen = ref(false);
 const isScrolled = ref(false);

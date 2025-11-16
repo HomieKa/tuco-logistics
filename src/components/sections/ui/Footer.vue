@@ -4,9 +4,9 @@
       <div class="mb-8 grid grid-cols-1 gap-8 md:grid-cols-4">
         <div>
           <img
-            src="@/assets/images/tuco_logo_2_invert.svg"
+            :src="logo_invert"
             alt="TUCO Logistics"
-            class="mb-4 h-10 w-auto"
+            class="mb-4 h-20 w-auto"
           />
           <p class="mb-4 text-gray-300">
             Strategic freight management made effortless for Australian
@@ -156,4 +156,5 @@
 
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
+import logo_invert from "@/assets/images/tuco_logo.svg";
 </script>

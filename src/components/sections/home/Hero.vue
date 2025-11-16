@@ -1,7 +1,7 @@
 <template>
-  <section class="relative overflow-hidden bg-[#f3f5fb]">
+  <section class="relative overflow-hidden bg-[#f8f9f9]">
     <div
-      class="container mx-auto grid gap-10 px-4 py-20 lg:grid-cols-2 lg:items-center"
+      class="container mx-auto grid gap-10 px-4 py-20 lg:grid-cols-[50fr_60fr] lg:items-center"
     >
       <div class="space-y-8">
         <p
@@ -30,18 +30,22 @@
         </div>
       </div>
 
-      <div class="relative flex items-center justify-center">
-        <img
-          :src="heroIllustration"
-          alt="Illustration of freight tracking"
-          class="w-full max-w-xl object-contain drop-shadow-2xl"
-        />
+      <div class="relative flex items-center justify-center lg:-mr-60">
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          class="w-full max-w-6xl object-fill rounded-lg"
+        >
+          <source :src="homeVideo" type="video/mp4" />
+        </video>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import Button from "@/components/ui/Button.vue";
-import heroIllustration from "@/assets/images/hero_page_img.webp";
+import Button from "@/components/sections/ui/Button.vue";
+import homeVideo from "@/assets/videos/home-animation.mp4"
 </script>
