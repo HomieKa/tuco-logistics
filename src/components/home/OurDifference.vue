@@ -11,7 +11,7 @@
         <article
           v-for="card in differenceCards"
           :key="card.title"
-          class="flex flex-col gap-4 rounded-3xl  bg-white p-6 text-left shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-2xl"
+          class="flex flex-col gap-4 rounded-3xl bg-white p-6 text-left shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-2xl"
         >
           <div class="aspect-[4/3] w-full overflow-hidden rounded-2xl">
             <img
@@ -34,13 +34,10 @@
 </template>
 
 <script setup lang="ts">
-
 import supportImage from "@/assets/images/our_difference/carrier.svg";
 import automationImage from "@/assets/images/our_difference/finance.svg";
 import trustImage from "@/assets/images/our_difference/service.svg";
 import strategyImage from "@/assets/images/our_difference/strategy.svg";
-
-
 
 const differenceCards = [
   {

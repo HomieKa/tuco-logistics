@@ -28,75 +28,79 @@
           <div
             class="h-full rounded-[1.5rem] border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] p-10 text-left shadow-card-soft"
           >
-            <h3 class="text-xl font-semibold text-[var(--color-tuco-navy)] text-center">
+            <h3
+              class="text-xl font-semibold text-[var(--color-tuco-navy)] text-center"
+            >
               Platform snapshot
             </h3>
-          <dl class="mt-6 grid gap-6 sm:grid-cols-2">
-            <div>
-              <dt
-                class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
-              >
-                Carriers supported
-              </dt>
-              <dd
-                class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]"
-              >
-                200+
-              </dd>
-              <p class="mt-1 text-sm text-[var(--color-tuco-slate)]">
-                Parcel, pallet, airfreight, linehaul, courier, and specialist.
-              </p>
-            </div>
-            <div>
-              <dt
-                class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
-              >
-                Automations
-              </dt>
-              <dd
-                class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]"
-              >
-                60+
-              </dd>
-              <p class="mt-1 text-sm text-[var(--color-tuco-slate)]">
-                Dispatch workflows, exception handling, and compliance checks
-                baked in.
-              </p>
-            </div>
-            <div>
-              <dt
-                class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
-              >
-                Onboarding window
-              </dt>
-              <dd
-                class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]"
-              >
-                Up to 3 Weeks
-              </dd>
-              <p class="mt-1 text-sm text-[var(--color-tuco-slate)]">
-                TUCO project squads guide data, integrations, and change
-                management.
-              </p>
-            </div>
-            <div>
-              <dt
-                class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
-              >
-                Visibility
-              </dt>
-              <dd class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]">
-                Real-time
-              </dd>
-              <p class="mt-1 text-sm text-[var(--color-tuco-slate)]">
-                Tracking, POD, and analytics refresh as events happen across the
-                network.
-              </p>
-            </div>
-          </dl>
+            <dl class="mt-6 grid gap-6 sm:grid-cols-2">
+              <div>
+                <dt
+                  class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
+                >
+                  Carriers supported
+                </dt>
+                <dd
+                  class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]"
+                >
+                  200+
+                </dd>
+                <p class="mt-1 text-sm text-[var(--color-tuco-slate)]">
+                  Parcel, pallet, airfreight, linehaul, courier, and specialist.
+                </p>
+              </div>
+              <div>
+                <dt
+                  class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
+                >
+                  Automations
+                </dt>
+                <dd
+                  class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]"
+                >
+                  60+
+                </dd>
+                <p class="mt-1 text-sm text-[var(--color-tuco-slate)]">
+                  Dispatch workflows, exception handling, and compliance checks
+                  baked in.
+                </p>
+              </div>
+              <div>
+                <dt
+                  class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
+                >
+                  Onboarding window
+                </dt>
+                <dd
+                  class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]"
+                >
+                  Up to 3 Weeks
+                </dd>
+                <p class="mt-1 text-sm text-[var(--color-tuco-slate)]">
+                  TUCO project squads guide data, integrations, and change
+                  management.
+                </p>
+              </div>
+              <div>
+                <dt
+                  class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
+                >
+                  Visibility
+                </dt>
+                <dd
+                  class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)]"
+                >
+                  Real-time
+                </dd>
+                <p class="mt-1 text-sm text-[var(--color-tuco-slate)]">
+                  Tracking, POD, and analytics refresh as events happen across
+                  the network.
+                </p>
+              </div>
+            </dl>
+          </div>
         </div>
       </div>
-    </div>
     </section>
 
     <section class="bg-[#f3f5fb] py-16">
@@ -140,7 +144,9 @@
             class="group flex flex-col gap-4 rounded-2xl bg-white p-8 transition duration-200 hover:-translate-y-1 hover:shadow-2xl"
           >
             <div class="flex items-start gap-4">
-              <span class="mt-1 inline-flex h-11 w-11 flex-none items-center justify-center rounded-full bg-[var(--color-tuco-sky)] text-[var(--color-tuco-blue)]">
+              <span
+                class="mt-1 inline-flex h-11 w-11 flex-none items-center justify-center rounded-full bg-[var(--color-tuco-sky)] text-[var(--color-tuco-blue)]"
+              >
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -159,16 +165,21 @@
                 </svg>
               </span>
               <div>
-                <h3 class="text-lg font-semibold text-[var(--color-tuco-navy)] md:text-xl">
+                <h3
+                  class="text-lg font-semibold text-[var(--color-tuco-navy)] md:text-xl"
+                >
                   {{ module.title }}
                 </h3>
-                <p class="mt-2 text-sm text-[var(--color-tuco-slate)] md:text-base">
+                <p
+                  class="mt-2 text-sm text-[var(--color-tuco-slate)] md:text-base"
+                >
                   {{ module.body }}
                 </p>
               </div>
             </div>
             <ul
-              class="mt-auto space-y-3 text-sm text-[var(--color-tuco-slate)]">
+              class="mt-auto space-y-3 text-sm text-[var(--color-tuco-slate)]"
+            >
               <li
                 v-for="point in module.points"
                 :key="point"
@@ -318,8 +329,6 @@ const modules = [
     ],
   },
 ];
-
-
 
 const onboarding = [
   {

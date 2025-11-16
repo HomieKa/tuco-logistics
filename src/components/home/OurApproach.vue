@@ -3,12 +3,18 @@
     <div class="container mx-auto px-6">
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         <!-- Title Card -->
-        <article class="md:col-span-2 lg:col-span-1 flex flex-col justify-center gap-6">
+        <article
+          class="md:col-span-2 lg:col-span-1 flex flex-col justify-center gap-6"
+        >
           <div class="mb-12 space-y-4">
-            <p class="text-xs font-semibold uppercase tracking-[0.35em] text-sky-500">
+            <p
+              class="text-xs font-semibold uppercase tracking-[0.35em] text-sky-500"
+            >
               Our Approach
             </p>
-            <h2 class="text-2xl font-semibold leading-tight text-[#0a1d35] lg:text-3xl">
+            <h2
+              class="text-2xl font-semibold leading-tight text-[#0a1d35] lg:text-3xl"
+            >
               End-to-end logistics partnerships, built around you
             </h2>
             <p class="text-sm leading-relaxed text-slate-600">
@@ -25,11 +31,11 @@
           :key="feature.title"
           class="group flex flex-col gap-4 rounded-2xl bg-white p-8 transition duration-200 hover:-translate-y-1 hover:shadow-2xl"
         >
-          <div v-if="feature.image" class="overflow-hidden rounded-xl ">
+          <div v-if="feature.image" class="overflow-hidden rounded-xl">
             <img
               :src="feature.image"
               :alt="feature.title"
-              class="w-full aspect-[16/10] "
+              class="w-full aspect-[16/10]"
               loading="lazy"
             />
           </div>
@@ -50,7 +56,6 @@
 <script setup lang="ts">
 // You'll need to replace these with actual images
 // For now, keeping the SVG imports as placeholders
-
 
 import technologyImage from "@/assets/images/our_approach/technology.png";
 import strategyImage from "@/assets/images/our_approach/strategic_partner.jpg";

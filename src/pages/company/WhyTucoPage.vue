@@ -20,11 +20,14 @@
     <section class="py-0" aria-labelledby="built-for">
       <div class="relative left-1/2 w-screen -translate-x-1/2 bg-[#f3f5fb]">
         <div class="mx-auto max-w-7xl px-4 py-14 md:px-6 md:py-20 lg:px-8">
-          <div class="flex flex-col items-start gap-10 rounded-[2rem] bg-[var(--color-tuco-sky)]/50 p-8 md:flex-row md:p-12">
+          <div
+            class="flex flex-col items-start gap-10 rounded-[2rem] bg-[var(--color-tuco-sky)]/50 p-8 md:flex-row md:p-12"
+          >
             <div class="space-y-6">
               <h2
                 id="built-for"
-                class="text-3xl font-semibold text-[var(--color-tuco-navy)] md:text-4xl">
+                class="text-3xl font-semibold text-[var(--color-tuco-navy)] md:text-4xl"
+              >
                 Built for Australian logistics leaders
               </h2>
               <p class="text-[var(--color-tuco-slate)]">
@@ -34,7 +37,9 @@
               </p>
             </div>
 
-            <div class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
+            <div
+              class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3"
+            >
               <article
                 v-for="feature in leaderFeatures"
                 :key="feature.title"
@@ -96,7 +101,9 @@
             </p>
           </div>
 
-          <div class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
+          <div
+            class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3"
+          >
             <article
               v-for="(reason, index) in reasons"
               :key="reason.title"

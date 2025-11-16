@@ -63,9 +63,7 @@
               >
             </li>
             <li>
-              <RouterLink
-                to="/why-tuco"
-                class="transition hover:text-teal-400"
+              <RouterLink to="/why-tuco" class="transition hover:text-teal-400"
                 >Why TUCO</RouterLink
               >
             </li>

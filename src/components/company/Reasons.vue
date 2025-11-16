@@ -12,8 +12,8 @@
         The reasons why companies partner with TUCO
       </h2>
       <p class="mt-3 text-center text-[var(--color-tuco-slate)]">
-        Logistics is more than a service—it’s a collaborative journey driving real
-        growth.
+        Logistics is more than a service—it’s a collaborative journey driving
+        real growth.
       </p>
 
       <ul class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" role="list">

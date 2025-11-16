@@ -57,7 +57,7 @@
             <article
               v-for="metric in metrics"
               :key="metric.label"
-              class="rounded-xl  bg-[var(--color-tuco-card)] p-6 text-center transition hover:-translate-y-[2px] hover:shadow-card-lg"
+              class="rounded-xl bg-[var(--color-tuco-card)] p-6 text-center transition hover:-translate-y-[2px] hover:shadow-card-lg"
             >
               <p
                 class="text-3xl font-bold text-[var(--color-tuco-navy)] md:text-4xl"
