@@ -24,7 +24,7 @@
             </p>
             <h1
               class="text-4xl font-semibold text-[var(--color-tuco-navy)] md:text-5xl"
-              >
+            >
               Our services, delivered your way
             </h1>
             <p
@@ -35,7 +35,11 @@
           </div>
           <div
             class="flex w-full flex-nowrap items-center gap-3 overflow-x-auto whitespace-nowrap pb-1 lg:justify-end"
-            :class="isCondensed ? '' : 'flex-wrap sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:whitespace-normal sm:overflow-visible sm:pb-0'"
+            :class="
+              isCondensed
+                ? ''
+                : 'flex-wrap sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:whitespace-normal sm:overflow-visible sm:pb-0'
+            "
           >
             <button
               v-for="section in sections"
@@ -43,15 +47,13 @@
               type="button"
               :aria-pressed="activeSection === section.id"
               @click="scrollToSection(section.id)"
-              class="rounded-xl border border-[var(--color-tuco-line)] bg-white px-4 py-3 text-left text-sm font-semibold text-[var(--color-tuco-navy)] shadow-sm transition hover:-translate-y-1 hover:shadow-lg/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-tuco-blue)] "
-              :class="
-                [
-                  activeSection === section.id
-                    ? 'border-[var(--color-tuco-blue)] bg-[var(--color-tuco-blue)]/10'
-                    : '',
-                  isCondensed ? 'px-3 py-2 text-xs' : '',
-                ]
-              "
+              class="rounded-xl border border-[var(--color-tuco-line)] bg-white px-4 py-3 text-left text-sm font-semibold text-[var(--color-tuco-navy)] shadow-sm transition hover:-translate-y-1 hover:shadow-lg/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-tuco-blue)]"
+              :class="[
+                activeSection === section.id
+                  ? 'border-[var(--color-tuco-blue)] bg-[var(--color-tuco-blue)]/10'
+                  : '',
+                isCondensed ? 'px-3 py-2 text-xs' : '',
+              ]"
             >
               {{ section.label }}
             </button>

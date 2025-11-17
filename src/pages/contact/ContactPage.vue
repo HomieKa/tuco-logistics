@@ -69,9 +69,7 @@
             </div>
           </div>
 
-          <div
-            class="flex flex-col gap-3 rounded-[1rem] bg-white/80 p-5"
-          >
+          <div class="flex flex-col gap-3 rounded-[1rem] bg-white/80 p-5">
             <div class="flex items-center gap-3 text-navy-500">
               <ClockIcon class="h-5 w-5 shrink-0" aria-hidden="true" />
               <div>
@@ -86,7 +84,10 @@
               </div>
             </div>
             <div class="flex items-center gap-3 text-navy-500">
-              <PaperAirplaneIcon class="h-5 w-5 rotate-6 shrink-0" aria-hidden="true" />
+              <PaperAirplaneIcon
+                class="h-5 w-5 rotate-6 shrink-0"
+                aria-hidden="true"
+              />
               <div>
                 <p
                   class="text-sm font-semibold uppercase tracking-wide text-[var(--color-tuco-blue)]"

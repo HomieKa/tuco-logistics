@@ -10,7 +10,6 @@
           />
         </RouterLink>
 
-
         <div class="hidden items-center space-x-8 lg:flex">
           <RouterLink
             v-for="link in mainNav"
@@ -132,7 +131,6 @@ import { useRoute } from "vue-router";
 
 import logo_invert from "@/assets/images/tuco_logo_invert.svg";
 import logo from "@/assets/images/tuco_logo.svg";
-
 
 const mobileMenuOpen = ref(false);
 const isScrolled = ref(false);

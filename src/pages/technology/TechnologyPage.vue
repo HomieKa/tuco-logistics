@@ -148,7 +148,9 @@
                 >
                   {{ module.title }}
                 </h3>
-                <p class="mt-2 text-sm text-[var(--color-tuco-slate)] md:text-base">
+                <p
+                  class="mt-2 text-sm text-[var(--color-tuco-slate)] md:text-base"
+                >
                   {{ module.body }}
                 </p>
               </div>

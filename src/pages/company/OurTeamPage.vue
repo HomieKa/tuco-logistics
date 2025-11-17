@@ -1,7 +1,9 @@
 <template>
   <div class="bg-[var(--color-tuco-sky)]/20">
     <section class="py-16 md:py-24" aria-labelledby="our-team-hero">
-      <div class="mx-auto grid max-w-7xl gap-12 px-4 md:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:items-center">
+      <div
+        class="mx-auto grid max-w-7xl gap-12 px-4 md:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:items-center"
+      >
         <div class="space-y-6">
           <p
             class="text-sm font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
