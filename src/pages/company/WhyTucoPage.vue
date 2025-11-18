@@ -1,10 +1,9 @@
 <template>
-  <div>
-    <section
-      class="bg-[var(--color-tuco-sky)]/20 py-16 md:py-24"
-      aria-labelledby="why-intro"
-    >
-      <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+  <div class="bg-[#f8f9f9] text-[#0c233f]">
+    <section class="py-14 md:py-20" aria-labelledby="why-hero">
+      <div
+        class="container mx-auto max-w-7xl grid gap-10 px-4 md:px-6 lg:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center"
+      >
         <div class="space-y-6">
           <p
             class="text-sm font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
@@ -12,75 +11,70 @@
             Why TUCO
           </p>
           <h1
-            id="why-intro"
-            class="text-4xl font-semibold text-[var(--color-tuco-navy)] md:text-5xl"
+            id="why-hero"
+            class="text-4xl font-semibold leading-tight text-[#0c233f] md:text-5xl"
           >
             Why companies choose TUCO
           </h1>
-          <p class="text-lg text-[var(--color-tuco-slate)] max-w-3xl">
+          <p class="max-w-2xl text-lg leading-relaxed text-[#0c233f]">
             Strategic partnerships, measurable ROI, and a freight program
             tailored to your business.
           </p>
         </div>
+
+        <div
+          class="overflow-hidden rounded-2xl border border-[#e9f5f7] bg-white shadow-[0_12px_30px_rgba(12,35,63,0.08)]"
+          aria-hidden="true"
+        >
+          <div class="aspect-[16/9] w-full max-h-[50vh]">
+            <img
+              :src="heroImage"
+              alt="Fleet of logistics trucks being loaded at an Australian depot"
+              class="h-full w-full object-cover object-center"
+            />
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="py-0" aria-labelledby="built-for">
-      <div class="relative left-1/2 w-screen -translate-x-1/2 bg-[#f3f5fb]">
-        <div class="mx-auto max-w-7xl px-4 py-14 md:px-6 md:py-20 lg:px-8">
-          <div
-            class="flex flex-col items-start gap-10 rounded-[2rem] bg-[var(--color-tuco-sky)]/50 p-8 md:flex-row md:p-12"
-          >
-            <div class="space-y-6">
+    <section class="bg-[#0c233f] py-16 md:py-20" aria-labelledby="built-for">
+      <div class="container mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+        <div class="space-y-14">
+          <div class="space-y-8">
+            <div class="space-y-3">
               <h2
                 id="built-for"
-                class="text-3xl font-semibold text-[var(--color-tuco-navy)] md:text-4xl"
+                class="text-3xl font-semibold text-white md:text-4xl"
               >
                 Built for Australian logistics leaders
               </h2>
-              <p class="text-[var(--color-tuco-slate)]">
+              <p class="max-w-4xl text-lg leading-relaxed text-white/90">
                 TUCO partners with operations, finance, and customer teams to
                 run freight with precision - combining in-market experience,
                 data-backed insights, and technology that fits how you work.
               </p>
             </div>
-
-            <div
-              class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3"
-            >
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               <article
                 v-for="feature in leaderFeatures"
                 :key="feature.title"
-                :class="[
-                  'group relative overflow-hidden rounded-3xl border p-6 shadow-card-soft transition duration-300 hover:-translate-y-1 hover:shadow-card-lg',
-                  feature.wrapper,
-                ]"
+                class="flex h-full flex-col gap-3 rounded-xl bg-transparent p-3 text-white"
               >
-                <div
-                  :class="[
-                    'pointer-events-none absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100',
-                    feature.glow,
-                  ]"
-                />
-                <div class="relative flex flex-col gap-4">
+                <div class="flex items-start gap-3">
                   <span
-                    :class="[
-                      'inline-flex h-12 w-12 items-center justify-center rounded-2xl',
-                      feature.iconBg,
-                    ]"
+                    class="mt-1 inline-flex h-11 w-11 flex-none items-center justify-center rounded-xl bg-white/10"
                   >
                     <component
                       :is="feature.icon"
-                      :class="['h-6 w-6', feature.iconColor]"
+                      class="h-6 w-6"
+                      :class="feature.iconColor"
                     />
                   </span>
-                  <div class="space-y-2">
-                    <h3
-                      class="text-lg font-semibold text-[var(--color-tuco-navy)]"
-                    >
+                  <div class="space-y-1">
+                    <h3 class="text-lg font-semibold text-white">
                       {{ feature.title }}
                     </h3>
-                    <p class="text-sm text-[var(--color-tuco-slate)]">
+                    <p class="text-sm leading-relaxed text-white/80">
                       {{ feature.body }}
                     </p>
                   </div>
@@ -88,116 +82,38 @@
               </article>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="py-0" aria-labelledby="why-reasons">
-      <div class="relative left-1/2 w-screen -translate-x-1/2 bg-[#f7f9fd]">
-        <div class="mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-20 lg:px-8">
-          <div class="text-center">
-            <h2
-              id="why-reasons"
-              class="text-3xl font-semibold text-[var(--color-tuco-navy)] md:text-4xl"
+          <div class="space-y-4 text-center text-white">
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.35em] text-[#38a2ca]"
             >
-              The reasons why companies partner with TUCO
-            </h2>
-            <p class="mx-auto mt-3 max-w-3xl text-[var(--color-tuco-slate)]">
-              Each partnership shows that logistics is more than a service -
-              it's a collaborative journey driving real growth and lasting
-              impact.
+              Impact snapshot
             </p>
-          </div>
-
-          <div
-            class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3"
-          >
-            <article
-              v-for="(reason, index) in reasons"
-              :key="reason.title"
-              :class="[
-                'group relative overflow-hidden rounded-3xl border p-6 transition duration-300 hover:-translate-y-1 hover:shadow-card-lg',
-                reasonVariants[index % reasonVariants.length].card,
-              ]"
+            <h2
+              id="proof-metrics"
+              class="text-3xl font-semibold text-white md:text-4xl"
             >
-              <span
-                :class="[
-                  'inline-flex h-2 w-14 rounded-full',
-                  reasonVariants[index % reasonVariants.length].accent,
-                ]"
-              />
-              <h3
-                class="mt-4 text-lg font-semibold text-[var(--color-tuco-navy)]"
-              >
-                {{ reason.title }}
-              </h3>
-              <p class="mt-2 text-sm text-[var(--color-tuco-slate)]">
-                {{ reason.body }}
-              </p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-0" aria-labelledby="freightmate-band">
-      <div class="relative left-1/2 w-screen -translate-x-1/2 bg-[#f3f5fb]">
-        <div class="mx-auto max-w-7xl px-4 py-14 md:px-6 md:py-20 lg:px-8">
-          <div
-            class="rounded-[2rem] bg-[var(--color-tuco-sky)]/50 p-10 md:p-16"
-          >
-            <div class="text-center">
-              <h2
-                id="freightmate-band"
-                class="text-3xl font-semibold text-[var(--color-tuco-navy)] md:text-4xl"
-              >
-                Where strategy meets smart logistics
-              </h2>
-              <p class="mx-auto mt-3 max-w-3xl text-[var(--color-tuco-slate)]">
-                TUCO's intelligence layer continually optimises every move,
-                every consignment, and every dollar.
-              </p>
-            </div>
-
-            <div
-              class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4 md:gap-6"
-            >
+              What our clients experience
+            </h2>
+            <div class="mt-8 grid gap-6 md:grid-cols-3">
               <article
-                v-for="capability in capabilities"
-                :key="capability.title"
-                :class="[
-                  'group relative overflow-hidden rounded-3xl border p-6 text-left shadow-card-soft transition duration-300 hover:-translate-y-1 hover:shadow-card-lg',
-                  capability.card,
-                ]"
+                v-for="metric in metrics"
+                :key="metric.title"
+                class="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 text-left transition duration-200 hover:-translate-y-1 hover:bg-white/10"
               >
-                <div
-                  :class="[
-                    'pointer-events-none absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100',
-                    capability.glow,
-                  ]"
-                />
-                <div class="relative flex flex-col gap-4">
-                  <span
-                    :class="[
-                      'inline-flex h-11 w-11 items-center justify-center rounded-2xl',
-                      capability.iconBg,
-                    ]"
+                <span class="absolute left-0 top-6 h-14 w-[3px] bg-[#38a2ca]" />
+                <div class="pl-4">
+                  <p class="text-3xl font-bold text-white">
+                    {{ metric.value }}
+                  </p>
+                  <p
+                    class="mt-1 text-sm font-semibold uppercase tracking-[0.2em] text-[#62bda5]"
                   >
-                    <component
-                      :is="capability.icon"
-                      :class="['h-6 w-6', capability.iconColor]"
-                    />
-                  </span>
-                  <div class="space-y-2">
-                    <h3
-                      class="text-sm font-semibold text-[var(--color-tuco-navy)]"
-                    >
-                      {{ capability.title }}
-                    </h3>
-                    <p class="text-sm text-[var(--color-tuco-slate)]">
-                      {{ capability.body }}
-                    </p>
-                  </div>
+                    {{ metric.title }}
+                  </p>
+                  <p class="mt-2 text-sm leading-relaxed text-white/80">
+                    {{ metric.body }}
+                  </p>
                 </div>
               </article>
             </div>
@@ -206,49 +122,130 @@
       </div>
     </section>
 
-    <section class="py-0" aria-labelledby="proof-metrics">
-      <div class="relative left-1/2 w-screen -translate-x-1/2 bg-[#f3f5fb]">
-        <div class="mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-20 lg:px-8">
-          <div class="text-center">
-            <h2
-              id="proof-metrics"
-              class="text-3xl font-semibold text-[var(--color-tuco-navy)] md:text-4xl"
-            >
-              What our clients experience
-            </h2>
-          </div>
-          <div class="mt-12 grid gap-6 md:grid-cols-3">
+    <section class="bg-[#f9f9f9] py-16 md:py-20" aria-labelledby="why-reasons">
+      <div class="container mx-auto max-w-7xl px-4 md:px-6 lg:px-8 space-y-12">
+        <div class="text-center">
+          <h2
+            id="why-reasons"
+            class="mt-3 text-3xl font-semibold text-[#0c233f] md:text-4xl"
+          >
+            Why companies partner with TUCO
+          </h2>
+          <p
+            class="mx-auto mt-3 max-w-3xl text-base leading-relaxed text-[#0c233f]"
+          >
+            Each partnership shows that logistics is more than a service - it's
+            a collaborative journey driving real growth and lasting impact.
+          </p>
+        </div>
+
+        <div class="space-y-10">
+          <div class="grid gap-6 md:grid-cols-3">
             <article
-              v-for="metric in metrics"
-              :key="metric.title"
-              :class="[
-                'group relative overflow-hidden rounded-3xl border p-8 text-center shadow-card-soft transition duration-300 hover:-translate-y-1 hover:shadow-card-lg',
-                metric.card,
-              ]"
+              v-for="reasonGroup in reasonGroups"
+              :key="reasonGroup.title"
+              class="flex h-full flex-col gap-4 rounded-xl border border-[#e9f5f7] bg-[#e9f5f7] p-6 shadow-[0_12px_28px_rgba(12,35,63,0.06)]"
             >
-              <div
-                :class="[
-                  'pointer-events-none absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100',
-                  metric.glow,
-                ]"
-              />
-              <div class="relative flex flex-col items-center gap-3">
+              <div class="flex items-center gap-3">
                 <span
-                  :class="['inline-flex h-2 w-16 rounded-full', metric.accent]"
-                />
-                <p
-                  :class="['text-3xl font-bold md:text-4xl', metric.valueClass]"
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#62bda5]"
                 >
-                  {{ metric.value }}
-                </p>
-                <h3 class="text-lg font-semibold text-[var(--color-tuco-navy)]">
-                  {{ metric.title }}
+                  <component :is="reasonGroup.icon" class="h-5 w-5" />
+                </span>
+                <h3 class="text-lg font-semibold text-[#0c233f]">
+                  {{ reasonGroup.title }}
                 </h3>
-                <p class="text-sm text-[var(--color-tuco-slate)]">
-                  {{ metric.body }}
-                </p>
               </div>
+              <ul class="space-y-3">
+                <li
+                  v-for="item in reasonGroup.items"
+                  :key="item"
+                  class="flex items-start gap-3 text-sm leading-relaxed text-[#0c233f]"
+                >
+                  <CheckCircleIcon
+                    class="mt-[2px] h-5 w-5 flex-none text-[#62bda5]"
+                  />
+                  <span>{{ item }}</span>
+                </li>
+              </ul>
             </article>
+          </div>
+
+          <div class="space-y-4">
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.28em] text-[#38a2ca] text-center"
+            >
+              Smart logistics capabilities
+            </p>
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
+              <article
+                v-for="capability in capabilities"
+                :key="capability.title"
+                class="flex h-full flex-col gap-3 rounded-xl border border-[#e9f5f7] bg-[#e9f5f7] p-6 shadow-[0_12px_28px_rgba(12,35,63,0.06)]"
+              >
+                <span
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white"
+                  :class="capability.iconBg || 'text-[#62bda5]'"
+                >
+                  <component
+                    :is="capability.icon"
+                    class="h-5 w-5"
+                    :class="capability.iconColor || 'text-[#62bda5]'"
+                  />
+                </span>
+                <div class="space-y-1">
+                  <h3 class="text-base font-semibold text-[#0c233f]">
+                    {{ capability.title }}
+                  </h3>
+                  <p class="text-sm leading-relaxed text-[#0c233f]">
+                    {{ capability.body }}
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#f7f9fd] py-16 md:py-20" aria-labelledby="faq">
+      <div class="container mx-auto max-w-5xl px-4 md:px-6 lg:px-8">
+        <div class="text-center">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
+          >
+            FAQ
+          </p>
+          <h2
+            id="faq"
+            class="text-3xl font-semibold text-[#0c233f] md:text-4xl"
+          >
+            Frequently Asked Questions
+          </h2>
+        </div>
+        <div
+          class="mt-10 divide-y divide-[#e5ecf0] rounded-2xl border border-[#e5ecf0] bg-white"
+        >
+          <div v-for="(item, idx) in faqs" :key="item.question">
+            <button
+              class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38a2ca] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+              @click="toggleFaq(idx)"
+              :aria-expanded="openFaq === idx"
+            >
+              <span class="text-lg font-semibold text-[#0c233f]">
+                {{ item.question }}
+              </span>
+              <ChevronDownIcon
+                class="h-5 w-5 text-[#0c233f] transition"
+                :class="{ 'rotate-180': openFaq === idx }"
+              />
+            </button>
+            <div
+              v-show="openFaq === idx"
+              class="px-6 pb-6 py-6 text-base leading-relaxed text-[#0c233f]/80 bg-[#f9f9f9]"
+            >
+              {{ item.answer }}
+            </div>
           </div>
         </div>
       </div>
@@ -263,11 +260,15 @@ import {
   BellAlertIcon,
   ChartBarIcon,
   CheckCircleIcon,
+  ChevronDownIcon,
   EyeIcon,
   SparklesIcon,
+  UserGroupIcon,
 } from "@heroicons/vue/24/outline";
+import { ref } from "vue";
 
 import { useSEO } from "@/composables/useSEO";
+import heroImage from "@/assets/images/why_tuco/why_tuco_hero.jpg";
 
 useSEO({
   title: "Why Choose TUCO - TUCO Logistics",
@@ -280,86 +281,52 @@ const leaderFeatures = [
     title: "Faster onboarding",
     body: "Launch new programs in weeks, not months.",
     icon: SparklesIcon,
-    wrapper:
-      "border-transparent bg-gradient-to-br from-white via-white to-sky-100/70",
-    glow: "bg-gradient-to-br from-sky-500/15 via-transparent to-transparent",
-    iconBg: "bg-sky-500/15 text-sky-600 shadow-card-soft",
-    iconColor: "text-sky-600",
+    iconBg: "bg-[#e9f5f7]",
+    iconColor: "text-[#62bda5]",
   },
   {
     title: "Visibility across the network",
     body: "Dashboards, alerts, and reporting for each stakeholder.",
     icon: EyeIcon,
-    wrapper:
-      "border-transparent bg-gradient-to-br from-white via-white to-[var(--color-tuco-sky)]/80",
-    glow: "bg-gradient-to-br from-[var(--color-tuco-blue)]/18 via-transparent to-transparent",
-    iconBg:
-      "bg-[var(--color-tuco-blue)]/15 text-[var(--color-tuco-blue)] shadow-card-soft",
-    iconColor: "text-[var(--color-tuco-blue)]",
+    iconBg: "bg-[#e9f5f7]",
+    iconColor: "text-[#38a2ca]",
   },
   {
     title: "Continuous optimisation",
     body: "Regular reviews keep carrier performance and costs aligned.",
     icon: ArrowTrendingUpIcon,
-    wrapper:
-      "border-transparent bg-gradient-to-br from-white via-white to-teal-100/70",
-    glow: "bg-gradient-to-br from-teal-500/15 via-transparent to-transparent",
-    iconBg: "bg-teal-500/15 text-teal-600 shadow-card-soft",
-    iconColor: "text-teal-600",
+    iconBg: "bg-[#e9f5f7]",
+    iconColor: "text-[#62bda5]",
   },
 ];
 
-const reasons = [
+const reasonGroups = [
   {
-    title: "Increase on-time deliveries & improve DIFOT",
-    body: "Real-time visibility with right-fit carriers lifts reliability and satisfaction.",
+    title: "Operational excellence",
+    icon: UserGroupIcon,
+    items: [
+      "Increase on-time deliveries & improve DIFOT",
+      "Enhance operational efficiencies",
+      "Streamline your booking process",
+    ],
   },
   {
-    title: "Focus on what you do best",
-    body: "Clients reclaim valuable time to focus on strategic growth.",
+    title: "Cost & control",
+    icon: UserGroupIcon,
+    items: [
+      "Achieve annual cost savings",
+      "Make data-driven decisions",
+      "Fix billing leakage",
+    ],
   },
   {
-    title: "Increase in customer satisfaction",
-    body: "Proactive monitoring and fast resolution keep you ahead of expectations.",
-  },
-  {
-    title: "Enhance operational efficiencies",
-    body: "50+ clients have integrated TUCO with ERP/WMS for streamlined operations.",
-  },
-  {
-    title: "Achieve annual cost savings",
-    body: "Smarter analysis and carrier selection deliver meaningful savings.",
-  },
-  {
-    title: "Make data-driven decisions",
-    body: "Freightmate provides real-time analytics to optimise operations and reduce freight costs.",
-  },
-  {
-    title: "Fix billing leakage",
-    body: "We analyse, match and interrogate carrier invoices for accuracy and transparency.",
-  },
-  {
-    title: "Automated customer notifications reduce calls",
-    body: "Proactive updates lower support volume and keep customers informed.",
-  },
-  {
-    title: "Streamline your booking process",
-    body: "The right carrier is selected 100% of the time.",
-  },
-];
-
-const reasonVariants = [
-  {
-    card: "border-transparent bg-gradient-to-br from-white via-white to-sky-100/70 shadow-card-soft",
-    accent: "bg-sky-500/30",
-  },
-  {
-    card: "border-transparent bg-gradient-to-br from-white via-white to-teal-100/70 shadow-card-soft",
-    accent: "bg-teal-500/30",
-  },
-  {
-    card: "border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] shadow-card-soft",
-    accent: "bg-[var(--color-tuco-blue)]/25",
+    title: "Customer experience",
+    icon: UserGroupIcon,
+    items: [
+      "Increase in customer satisfaction",
+      "Automated customer notifications reduce calls",
+      "Focus on what you do best",
+    ],
   },
 ];
 
@@ -368,38 +335,29 @@ const capabilities = [
     icon: BellAlertIcon,
     title: "Live customer notifications",
     body: "Right carrier, right message, right time.",
-    card: "border-transparent bg-gradient-to-br from-white to-sky-100/80",
-    glow: "bg-gradient-to-br from-sky-500/18 via-transparent to-transparent",
-    iconBg: "bg-sky-500/15 text-sky-600 shadow-card-soft",
-    iconColor: "text-sky-600",
+    iconBg: "text-[#62bda5]",
+    iconColor: "text-[#62bda5]",
   },
   {
     icon: CheckCircleIcon,
     title: "Real-time tracking & visibility",
     body: "Full shipment insight as standard.",
-    card: "border-transparent bg-gradient-to-br from-white to-[var(--color-tuco-sky)]/70",
-    glow: "bg-gradient-to-br from-[var(--color-tuco-blue)]/16 via-transparent to-transparent",
-    iconBg:
-      "bg-[var(--color-tuco-blue)]/15 text-[var(--color-tuco-blue)] shadow-card-soft",
-    iconColor: "text-[var(--color-tuco-blue)]",
+    iconBg: "text-[#38a2ca]",
+    iconColor: "text-[#38a2ca]",
   },
   {
     icon: ArrowPathRoundedSquareIcon,
     title: "Automated billing audits",
     body: "Catch errors before they hit your ledger.",
-    card: "border-transparent bg-gradient-to-br from-white to-teal-100/70",
-    glow: "bg-gradient-to-br from-teal-500/16 via-transparent to-transparent",
-    iconBg: "bg-teal-500/15 text-teal-600 shadow-card-soft",
-    iconColor: "text-teal-600",
+    iconBg: "text-[#62bda5]",
+    iconColor: "text-[#62bda5]",
   },
   {
     icon: ChartBarIcon,
     title: "Performance analytics",
     body: "Monitor carriers and improve what matters.",
-    card: "border-transparent bg-gradient-to-br from-white to-indigo-100/70",
-    glow: "bg-gradient-to-br from-indigo-500/16 via-transparent to-transparent",
-    iconBg: "bg-indigo-500/15 text-indigo-600 shadow-card-soft",
-    iconColor: "text-indigo-600",
+    iconBg: "text-[#38a2ca]",
+    iconColor: "text-[#38a2ca]",
   },
 ];
 
@@ -407,29 +365,51 @@ const metrics = [
   {
     value: "15%",
     title: "Average savings",
-    body: "Through renegotiated carrier rates and automation.",
-    card: "border-transparent bg-gradient-to-br from-white to-sky-100/80",
-    glow: "bg-gradient-to-br from-sky-500/14 via-transparent to-transparent",
-    accent: "bg-sky-500/30",
-    valueClass: "text-[var(--color-tuco-blue)]",
+    body: "Through negotiated carrier rates and automation.",
   },
   {
     value: "20+ hours",
     title: "Saved per week",
     body: "Removing manual tasks across operations, finance, and customer teams.",
-    card: "border-transparent bg-gradient-to-br from-white to-teal-100/80",
-    glow: "bg-gradient-to-br from-teal-500/14 via-transparent to-transparent",
-    accent: "bg-teal-500/30",
-    valueClass: "text-teal-600",
   },
   {
     value: "Up to 40%",
     title: "Fewer support calls",
     body: "Proactive branded notifications keep customers informed.",
-    card: "border-transparent bg-gradient-to-br from-white to-indigo-100/80",
-    glow: "bg-gradient-to-br from-indigo-500/14 via-transparent to-transparent",
-    accent: "bg-indigo-500/30",
-    valueClass: "text-indigo-600",
   },
 ];
+
+const faqs = [
+  {
+    question: "What is freightmate and how does it work?",
+    answer:
+      "Freightmate is TUCO’s cloud-based freight management system that brings all your shipping needs into one easy platform—letting businesses instantly book, track, and manage their freight with multiple carriers across Australia. It works by integrating with carrier networks to automate quoting, booking, tracking, proof of delivery, and reporting, giving you end-to-end visibility and control over every shipment in real time.",
+  },
+  {
+    question: "How is tuco different from freight brokers or platorms?",
+    answer:
+      "TUCO stands out by offering a true end-to-end service—combining advanced technology, personalised account management, and hands-on carrier oversight to deliver tailored, transparent logistics solutions for Australian businesses. Unlike standard freight brokers or generic platforms, TUCO manages everything from quoting and compliance to invoice vetting and strategic optimisation, so customers enjoy real support and better results at every step.",
+  },
+  {
+    question: "Can freightmate integrate with our existing systems?",
+    answer:
+      "Yes, Freightmate can integrate seamlessly with your existing business systems, including CRMs and ERPs, to centralise shipment data, automate status updates, and streamline your freight processes—all tailored to fit your operational needs. This means less manual work, greater visibility, and more efficient logistics management from end to end.",
+  },
+  {
+    question: "What kind of cost savings can we expect?",
+    answer:
+      "While exact figures depend on your freight profile and business needs, TUCO consistently finds savings for clients—not just in carrier rates, but through streamlined processes, reduced admin time, and increased efficiency across your logistics network. Our approach looks beyond simple freight costs to deliver total value, so you benefit from both financial and operational improvements tailored to your goals.",
+  },
+  {
+    question: "Who will support us day to day?",
+    answer:
+      "Day-to-day support is provided by a dedicated local Account Manager who gets to know your business and acts as your single point of contact—backed by TUCO’s specialist operations and customer service teams to resolve issues quickly and keep everything running smoothly.",
+  },
+];
+
+const openFaq = ref<number | null>(null);
+
+const toggleFaq = (idx: number) => {
+  openFaq.value = openFaq.value === idx ? null : idx;
+};
 </script>

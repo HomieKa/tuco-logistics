@@ -2,21 +2,23 @@
   <div class="bg-[var(--color-tuco-sky)]/20">
     <div
       class="sticky z-20 border-b border-[var(--color-tuco-line)] bg-[#f8f9f9] transition-all duration-200"
-      :class="isCondensed ? 'top-[80px] py-3 shadow-sm' : 'top-[72px] py-4'"
+      :class="isCondensed ? 'top-[72px] py-3 shadow-sm' : 'top-[72px] py-4'"
     >
       <div
         class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8"
         :class="isCondensed ? 'flex items-center' : ''"
       >
         <div
-          class="grid gap-6"
-          :class="
-            isCondensed
-              ? 'lg:grid-cols-1'
-              : 'lg:grid-cols-[1.1fr_auto] lg:items-center lg:justify-between'
-          "
+          class="grid gap-6 lg:grid-cols-[1.1fr_auto] lg:items-center lg:justify-between"
         >
-          <div v-if="!isCondensed" class="space-y-3">
+          <div
+            class="space-y-3 overflow-hidden transition-[max-height,opacity,transform] duration-250 ease-out"
+            :class="
+              isCondensed
+                ? 'max-h-0 opacity-0 -translate-y-2 pointer-events-none'
+                : 'max-h-[260px] opacity-100 translate-y-0'
+            "
+          >
             <p
               class="text-sm font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
             >
@@ -47,10 +49,10 @@
               type="button"
               :aria-pressed="activeSection === section.id"
               @click="scrollToSection(section.id)"
-              class="rounded-xl border border-[var(--color-tuco-line)] bg-white px-4 py-3 text-left text-sm font-semibold text-[var(--color-tuco-navy)] shadow-sm transition hover:-translate-y-1 hover:shadow-lg/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-tuco-blue)]"
+              class="shrink-0 min-w-[140px] rounded-xl border border-[var(--color-tuco-line)] bg-white px-4 py-3 text-left text-sm font-semibold text-[var(--color-tuco-navy)] shadow-sm transition hover:-translate-y-1 hover:shadow-lg/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38a2ca] sm:min-w-[160px]"
               :class="[
                 activeSection === section.id
-                  ? 'border-[var(--color-tuco-blue)] bg-[var(--color-tuco-blue)]/10'
+                  ? 'border-[#38a2ca] bg-[#e9f5f7] text-[#38a2ca] shadow-md/20'
                   : '',
                 isCondensed ? 'px-3 py-2 text-xs' : '',
               ]"
@@ -100,9 +102,7 @@
                     :key="item.title"
                     class="flex items-start gap-4"
                   >
-                    <span
-                      class="mt-1 inline-flex h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[var(--color-tuco-blue)]"
-                    />
+                    <span class="brand-bullet mt-1" />
                     <div class="space-y-1">
                       <h3
                         class="text-base font-semibold text-[var(--color-tuco-navy)]"
@@ -170,9 +170,7 @@
                     :key="item.title"
                     class="flex items-start gap-4"
                   >
-                    <span
-                      class="mt-1 inline-flex h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[var(--color-tuco-blue)]"
-                    />
+                    <span class="brand-bullet mt-1" />
                     <div class="space-y-1">
                       <h3
                         class="text-base font-semibold text-[var(--color-tuco-navy)]"
@@ -238,9 +236,7 @@
                     :key="item.title"
                     class="flex items-start gap-4"
                   >
-                    <span
-                      class="mt-1 inline-flex h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[var(--color-tuco-blue)]"
-                    />
+                    <span class="brand-bullet mt-1" />
                     <div class="space-y-1">
                       <h3
                         class="text-base font-semibold text-[var(--color-tuco-navy)]"
@@ -280,59 +276,60 @@
           <div
             class="mx-auto max-w-7xl px-4 py-14 md:px-6 md:py-24 lg:px-8 lg:py-20"
           >
-            <p
-              class="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-tuco-blue)]"
-            >
-              Warehousing
-            </p>
-            <h2
-              id="warehousing-title"
-              class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)] md:text-4xl"
-            >
-              Warehousing
-            </h2>
-            <p
-              class="mt-4 text-[var(--color-tuco-slate)] leading-relaxed md:text-lg"
-            >
-              TUCO connects you with national 3PL partners so inventory stays
-              visible, orders move fast, and overflow capacity is always ready.
-            </p>
+            <div>
+              <p
+                class="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-tuco-blue)]"
+              >
+                Warehousing
+              </p>
+              <h2
+                id="warehousing-title"
+                class="mt-2 text-3xl font-semibold text-[var(--color-tuco-navy)] md:text-4xl"
+              >
+                Warehousing
+              </h2>
+              <p
+                class="mt-4 text-[var(--color-tuco-slate)] leading-relaxed md:text-lg"
+              >
+                TUCO connects you with national 3PL partners so inventory stays
+                visible, orders move fast, and overflow capacity is always
+                ready.
+              </p>
 
-            <div
-              class="mt-10 flex flex-col gap-10 lg:flex-row-reverse lg:items-center"
-            >
-              <div class="flex-1">
-                <div class="mx-auto max-w-xl">
-                  <img
-                    :src="warehouseHeroImage"
-                    alt="Modern TUCO warehouse operations"
-                    class="h-full w-full object-contain"
-                  />
-                </div>
-              </div>
-              <div class="flex-1">
-                <div class="grid gap-6 sm:grid-cols-2">
-                  <article
-                    v-for="service in warehousingServices"
-                    :key="service.title"
-                    class="flex items-start gap-4"
-                  >
-                    <span
-                      class="mt-1 inline-flex h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[var(--color-tuco-blue)]"
+              <div
+                class="mt-10 flex flex-col gap-10 lg:flex-row-reverse lg:items-center"
+              >
+                <div class="flex-1">
+                  <div class="mx-auto max-w-xl">
+                    <img
+                      :src="warehouseHeroImage"
+                      alt="Modern TUCO warehouse operations"
+                      class="h-full w-full object-contain"
                     />
-                    <div class="space-y-1">
-                      <p
-                        class="text-base font-semibold text-[var(--color-tuco-navy)]"
-                      >
-                        {{ service.title }}
-                      </p>
-                      <p
-                        class="text-sm text-[var(--color-tuco-slate)] leading-relaxed"
-                      >
-                        {{ service.description }}
-                      </p>
-                    </div>
-                  </article>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="grid gap-6 sm:grid-cols-2">
+                    <article
+                      v-for="service in warehousingServices"
+                      :key="service.title"
+                      class="flex items-start gap-4"
+                    >
+                      <span class="brand-bullet mt-1" />
+                      <div class="space-y-1">
+                        <p
+                          class="text-base font-semibold text-[var(--color-tuco-navy)]"
+                        >
+                          {{ service.title }}
+                        </p>
+                        <p
+                          class="text-sm text-[var(--color-tuco-slate)] leading-relaxed"
+                        >
+                          {{ service.description }}
+                        </p>
+                      </div>
+                    </article>
+                  </div>
                 </div>
               </div>
             </div>
@@ -587,6 +584,8 @@ const carouselOffset = ref(0);
 const isCarouselPaused = ref(false);
 const brokenCarrierLogos = ref<Set<string>>(new Set());
 let animationFrameId: number | null = null;
+let lastScrollY = 0;
+let isTicking = false;
 
 const freightManagementItems = [
   {
@@ -837,6 +836,11 @@ function stepCarousel() {
   animationFrameId = requestAnimationFrame(stepCarousel);
 }
 
+const handleResize = () => {
+  updateCarouselMeasurements();
+  handleHeroCondense();
+};
+
 onMounted(() => {
   nextTick(() => {
     setupObserver();
@@ -847,9 +851,13 @@ onMounted(() => {
       activeSection.value = sections[0].id;
     }
     stepCarousel();
-    window.addEventListener("resize", updateCarouselMeasurements);
-    window.addEventListener("scroll", handleHeroCondense, { passive: true });
-    setTimeout(updateCarouselMeasurements, 500);
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScrollThrottled, { passive: true });
+    handleHeroCondense();
+    setTimeout(() => {
+      updateCarouselMeasurements();
+      handleHeroCondense();
+    }, 500);
   });
 });
 
@@ -858,8 +866,8 @@ onBeforeUnmount(() => {
     cancelAnimationFrame(animationFrameId);
   }
   observer.value?.disconnect();
-  window.removeEventListener("resize", updateCarouselMeasurements);
-  window.removeEventListener("scroll", handleHeroCondense);
+  window.removeEventListener("resize", handleResize);
+  window.removeEventListener("scroll", handleScrollThrottled);
 });
 
 function setupObserver() {
@@ -931,12 +939,37 @@ function isLogoBroken(logo: string) {
   return brokenCarrierLogos.value.has(logo);
 }
 
-function handleHeroCondense() {
-  isCondensed.value = window.scrollY > 10;
+function handleScrollThrottled() {
+  lastScrollY = window.scrollY;
+  if (!isTicking) {
+    isTicking = true;
+    requestAnimationFrame(() => {
+      handleHeroCondense(lastScrollY);
+      isTicking = false;
+    });
+  }
+}
+
+function handleHeroCondense(y = window.scrollY) {
+  const collapseAt = 4;
+  const expandAt = 0;
+  const nextCondensed = y > collapseAt;
+  if (nextCondensed !== isCondensed.value) {
+    isCondensed.value = nextCondensed;
+  }
 }
 </script>
 
 <style scoped>
+.brand-bullet {
+  background-color: #38a2ca;
+  border-radius: 9999px;
+  display: inline-flex;
+  height: 10px;
+  width: 10px;
+  flex-shrink: 0;
+}
+
 @keyframes fadeUp {
   from {
     opacity: 0;

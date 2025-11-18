@@ -40,32 +40,43 @@
 
     <section class="bg-[#0c233f] py-14 md:py-20" aria-labelledby="our-story">
       <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-        <div class="rounded-[2rem] bg-[var(--color-tuco-sky)]/50 p-8 md:p-12">
-          <h2
-            id="our-story"
-            class="text-3xl font-semibold text-white md:text-4xl"
+        <div class="rounded-[2rem] p-10 text-center md:p-14">
+          <div class="mx-auto max-w-4xl space-y-4">
+            <h2
+              id="our-story"
+              class="text-3xl font-semibold text-white md:text-4xl"
+            >
+              Our story
+            </h2>
+            <p class="text-lg leading-relaxed text-white/90">
+              Founded in 2016, TUCO set out to make complex freight simple,
+              transparent, and accessible for Australian businesses. With
+              decades of experience and ongoing investment in our people and
+              technology, TUCO has grown into a trusted freight management
+              partner nationwide.
+            </p>
+          </div>
+          <div
+            class="mt-10 grid gap-4 sm:grid-cols-2 md:grid-cols-4 justify-items-center"
           >
-            Our story
-          </h2>
-          <p class="mt-4 max-w-3xl text-white leading-relaxed">
-            Founded in 2016, TUCO set out to make complex freight simple,
-            transparent, and accessible for Australian businesses. With decades
-            of experience and ongoing investment in our people and technology,
-            TUCO has grown into a trusted freight management partner nationwide.
-          </p>
-          <div class="mt-10 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
             <article
               v-for="metric in metrics"
               :key="metric.label"
-              class="rounded-xl bg-[var(--color-tuco-card)] p-6 text-center transition hover:-translate-y-[2px] hover:shadow-card-lg"
+              class="relative w-full max-w-[260px] overflow-hidden rounded-3xl border border-white/15 bg-[#102647] p-6 text-left shadow-[0_12px_32px_rgba(0,0,0,0.22)] transition hover:-translate-y-[4px] hover:shadow-[0_18px_44px_rgba(0,0,0,0.25)]"
             >
-              <p
-                class="text-3xl font-bold text-[var(--color-tuco-navy)] md:text-4xl"
-              >
+              <span
+                class="absolute left-0 top-6 h-14 w-[6px] rounded-r-full bg-[#38a2ca]"
+              />
+              <p class="text-3xl font-bold text-white md:text-4xl pl-4">
                 {{ metric.value }}
               </p>
-              <p class="mt-2 text-sm text-[var(--color-tuco-slate)]">
+              <p
+                class="mt-1 pl-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#62bda5]"
+              >
                 {{ metric.label }}
+              </p>
+              <p class="mt-3 pl-4 text-sm leading-relaxed text-white/80">
+                {{ metric.description || metric.label }}
               </p>
             </article>
           </div>
@@ -77,90 +88,113 @@
       class="bg-[#38a2ca] py-14 md:py-20"
       aria-labelledby="mission-values"
     >
-      <div class="mx-auto max-w-7xl space-y-10 px-4 md:px-6 lg:px-8">
-        <div class="max-w-3xl">
-          <h2
-            id="mission-values"
-            class="text-3xl font-semibold text-[#0c233f] md:text-4xl"
-          >
-            Mission
-          </h2>
-          <p class="mt-4 text-lg leading-relaxed text-white">
-            To be Australia's partner of choice in freight management through
-            outstanding people, partnerships, and performance.
-          </p>
-        </div>
-        <div
-          class="rounded-xl border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] p-8 shadow-lg/5"
-        >
-          <h3 class="text-lg font-semibold text-[var(--color-tuco-navy)]">
-            Our Values
-          </h3>
-          <ul
-            class="mt-6 grid gap-3 text-[var(--color-tuco-slate)] sm:grid-cols-2 lg:grid-cols-3"
-          >
-            <li
-              v-for="value in values"
-              :key="value.highlight"
-              class="rounded-xl bg-white/70 p-4 transition hover:-translate-y-[2px] hover:bg-white hover:shadow-card-soft"
+      <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+        <div class="rounded-[2rem] p-10 text-center md:p-14">
+          <div class="mx-auto max-w-4xl space-y-4">
+            <h2
+              id="mission-values"
+              class="text-3xl font-semibold text-[#0c233f] md:text-4xl"
             >
-              <span class="font-semibold text-[var(--color-tuco-navy)]">
-                {{ value.prefix }}&nbsp;
-                <span class="text-[#62bda5]">{{ value.highlight }}</span
-                ><template v-if="value.suffix"> {{ value.suffix }}</template>
-              </span>
-              <span class="block text-sm leading-relaxed">{{
-                value.description
-              }}</span>
-            </li>
-          </ul>
+              Mission
+            </h2>
+            <p class="text-lg leading-relaxed text-white/90">
+              To be Australia's partner of choice in freight management through
+              outstanding people, partnerships, and performance.
+            </p>
+          </div>
+
+          <div class="mt-10 space-y-4">
+            <h3 class="text-3xl font-semibold text-[#0c233f] md:text-4xl">
+              Our Values
+            </h3>
+            <ul
+              class="mx-auto grid max-w-5xl gap-4 text-[var(--color-tuco-slate)] sm:grid-cols-2 lg:grid-cols-3"
+            >
+              <li
+                v-for="value in values"
+                :key="value.highlight"
+                class="rounded-xl bg-white/80 p-5 text-left transition hover:-translate-y-[1px] hover:shadow-card-soft"
+              >
+                <span class="font-semibold text-[var(--color-tuco-navy)]">
+                  {{ value.prefix }}&nbsp;
+                  <span class="text-[#62bda5]">{{ value.highlight }}</span
+                  ><template v-if="value.suffix"> {{ value.suffix }}</template>
+                </span>
+                <span class="block text-sm leading-relaxed">{{
+                  value.description
+                }}</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="bg-[#f7f9fd] py-14 md:py-20" aria-labelledby="how-we-work">
-      <div
-        class="mx-auto grid max-w-7xl gap-10 px-4 md:px-6 md:grid-cols-2 lg:px-8 lg:items-center"
-      >
-        <div
-          class="overflow-hidden rounded-[2rem] border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] shadow-card-soft"
-          aria-hidden="true"
-        >
-          <div class="aspect-[16/9] w-full">
-            <img
-              :src="workingImage"
-              alt="TUCO specialists working together"
-              class="h-full w-full object-cover"
-            />
-          </div>
-        </div>
-        <div class="space-y-5">
-          <h2
-            id="how-we-work"
-            class="text-3xl font-semibold text-[var(--color-tuco-navy)] md:text-4xl"
+      <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-[1.05fr_1.15fr] lg:items-center">
+          <div
+            class="overflow-hidden rounded-2xl border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] shadow-card-soft"
+            aria-hidden="true"
           >
-            How we work
-          </h2>
-          <ul class="space-y-3 text-[var(--color-tuco-slate)]">
-            <li class="flex items-start gap-3">
-              <span
-                class="mt-1 inline-flex h-2 w-2 rounded-full bg-[var(--color-tuco-blue)]"
+            <div class="aspect-video w-full">
+              <img
+                :src="workingImage"
+                alt="TUCO specialists collaborating during implementation"
+                class="h-full w-full object-cover"
               />
-              <span>Strategic reviews that uncover hidden savings</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span
-                class="mt-1 inline-flex h-2 w-2 rounded-full bg-[var(--color-tuco-blue)]"
-              />
-              <span>Hands-on Australian customer service</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span
-                class="mt-1 inline-flex h-2 w-2 rounded-full bg-[var(--color-tuco-blue)]"
-              />
-              <span>Automation that removes manual work across teams</span>
-            </li>
-          </ul>
+            </div>
+          </div>
+
+          <div>
+            <div class="space-y-3 text-left lg:text-left">
+              <h2
+                id="how-we-work"
+                class="text-3xl font-semibold text-[var(--color-tuco-navy)] md:text-4xl"
+              >
+                How we work with you
+              </h2>
+              <p class="text-lg text-[var(--color-tuco-slate)] max-w-3xl">
+                A smooth, measurable onboarding journey for every TUCO
+                client—from the first audit through optimisation.
+              </p>
+            </div>
+
+            <div class="mt-8 grid gap-6 sm:grid-cols-2">
+              <article
+                v-for="step in workSteps"
+                :key="step.title"
+                class="flex items-start gap-4 text-left"
+              >
+                <div
+                  class="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-[#e9f5f7] text-[#38a2ca]"
+                >
+                  <component
+                    :is="step.icon"
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="space-y-1.5">
+                  <p
+                    class="text-sm font-semibold uppercase tracking-[0.12em] text-[var(--color-tuco-slate)]"
+                  >
+                    {{ step.label }}
+                  </p>
+                  <h3
+                    class="text-lg font-semibold text-[var(--color-tuco-navy)]"
+                  >
+                    {{ step.title }}
+                  </h3>
+                  <p
+                    class="text-sm text-[var(--color-tuco-slate)] leading-relaxed"
+                  >
+                    {{ step.description }}
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -272,7 +306,6 @@ import { useSEO } from "@/composables/useSEO";
 import teamImage from "@/assets/images/about_us/team_photo.jpg";
 import workingImage from "@/assets/images/about_us/working.jpg";
 import khaiPhoto from "@/assets/images/leadership/khai.jpg";
-import chrisPhoto from "@/assets/images/leadership/chris.jpg";
 import davePhoto from "@/assets/images/leadership/dave.jpg";
 import farzanaPhoto from "@/assets/images/leadership/farzana.jpg";
 import fionaPhoto from "@/assets/images/leadership/fiona.jpg";
@@ -281,6 +314,12 @@ import katerinaPhoto from "@/assets/images/leadership/katerina.jpg";
 import michellePhoto from "@/assets/images/leadership/michelle.jpg";
 import mladenPhoto from "@/assets/images/leadership/mladen.jpg";
 import samPhoto from "@/assets/images/leadership/sam.jpg";
+import {
+  ChartBarIcon,
+  CursorArrowRaysIcon,
+  RocketLaunchIcon,
+  WrenchScrewdriverIcon,
+} from "@heroicons/vue/24/outline";
 
 useSEO({
   title: "Our Team - TUCO Logistics",
@@ -328,10 +367,58 @@ const values = [
 ];
 
 const metrics = [
-  { value: "2016", label: "Founded" },
-  { value: "200+", label: "Customers" },
-  { value: "150+", label: "Carrier partnerships" },
-  { value: "50+", label: "Specialists" },
+  {
+    value: "2016",
+    label: "Founded",
+    description: "Built to simplify complex freight for Australian businesses.",
+  },
+  {
+    value: "200+",
+    label: "Customers",
+    description: "Shippers partnering with TUCO for dependable logistics.",
+  },
+  {
+    value: "150+",
+    label: "Carrier partnerships",
+    description: "Network breadth to match freight profiles and SLAs.",
+  },
+  {
+    value: "50+",
+    label: "Specialists",
+    description: "People on deck to support ops, finance, and customers.",
+  },
+];
+
+const workSteps = [
+  {
+    label: "Audit",
+    title: "Discover & analyse",
+    description: "Surface risks, gaps, and cost leaks in your current setup.",
+    cta: "Assess",
+    icon: CursorArrowRaysIcon,
+  },
+  {
+    label: "Design",
+    title: "Customise & plan",
+    description:
+      "Shape carriers, automations, and Freightmate around your goals.",
+    cta: "Design",
+    icon: WrenchScrewdriverIcon,
+  },
+  {
+    label: "Implement",
+    title: "Launch & train",
+    description: "Deploy with guided onboarding, change support, and training.",
+    cta: "Launch",
+    icon: RocketLaunchIcon,
+  },
+  {
+    label: "Optimise",
+    title: "Monitor & improve",
+    description: "Track results, spot issues early, and iterate with data.",
+    cta: "Improve",
+    icon: ChartBarIcon,
+  },
 ];
 
 const leadershipTeam = [
@@ -357,18 +444,18 @@ const leadershipTeam = [
     linkedin: "https://www.linkedin.com/in/farzana-schoumaund-897458b3/",
   },
   {
-    name: "Chris Jewitt",
-    role: "Sales Director",
-    bio: "Leads commercial growth, matching the right TUCO specialists and solutions to every client scenario.",
-    photo: chrisPhoto,
-    linkedin: "https://www.linkedin.com/in/chris-jewitt-65298a3b/",
-  },
-  {
     name: "Dave Smyth",
     role: "Head of Account Management",
     bio: "Keeps national accounts ahead of targets with clear reporting, proactive reviews, and fast escalation paths.",
     photo: davePhoto,
     linkedin: "https://www.linkedin.com/in/dave-smyth-0a132171/",
+  },
+  {
+    name: "Sam Walker",
+    role: "Customer Service Manager",
+    bio: "Leads the customer care team, resolving exceptions quickly and keeping communication transparent.",
+    photo: samPhoto,
+    linkedin: "https://www.linkedin.com/in/samuel-walker-6a819a228/",
   },
   {
     name: "Khai Wee",
@@ -383,13 +470,6 @@ const leadershipTeam = [
     bio: "Ensures billing, reconciliation, and financial governance run smoothly across carriers and clients.",
     photo: katerinaPhoto,
     linkedin: "https://www.linkedin.com/in/katerina-vladicic-38a941207/",
-  },
-  {
-    name: "Sam Walker",
-    role: "Customer Service Manager",
-    bio: "Leads the customer care team, resolving exceptions quickly and keeping communication transparent.",
-    photo: samPhoto,
-    linkedin: "https://www.linkedin.com/in/samuel-walker-6a819a228/",
   },
   {
     name: "Jamie-Lee McLeary",
