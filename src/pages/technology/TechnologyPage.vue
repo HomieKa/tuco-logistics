@@ -27,25 +27,35 @@
             </p>
           </div>
 
-          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <article
-              v-for="snapshot in snapshots"
-              :key="snapshot.title"
-              class="flex flex-col gap-2 rounded-2xl border border-[#dfeaed] bg-[#e9f5f7]/70 p-6"
+          <div
+            class="rounded-[var(--corner-radius)] bg-white shadow-[0_20px_60px_rgba(15,23,42,0.12)]"
+          >
+            <div
+              class="grid grid-cols-1 divide-y divide-[#dfeaed] text-center text-[#0c233f] md:grid-cols-4 md:divide-y-0 md:divide-x"
             >
-              <p
-                :class="[
-                  'text-3xl font-bold md:text-4xl text-[#62bda5]',
-                  snapshot.valueClass,
-                ]"
+              <article
+                v-for="snapshot in snapshots"
+                :key="snapshot.title"
+                class="px-6 py-6"
               >
-                {{ snapshot.value }}
-              </p>
-              <h3 class="text-base font-semibold text-[var(--color-tuco-blue)]">
-                {{ snapshot.title }}
-              </h3>
-              <p class="text-sm text-[#0c233f]/70">{{ snapshot.caption }}</p>
-            </article>
+                <p
+                  :class="[
+                    'text-3xl font-bold md:text-4xl',
+                    snapshot.valueClass,
+                  ]"
+                >
+                  {{ snapshot.value }}
+                </p>
+                <h3
+                  class="mt-2 text-base font-semibold text-[var(--color-tuco-blue)]"
+                >
+                  {{ snapshot.title }}
+                </h3>
+                <p class="mt-2 text-sm text-[#0c233f]/70">
+                  {{ snapshot.caption }}
+                </p>
+              </article>
+            </div>
           </div>
         </div>
       </div>
@@ -82,17 +92,55 @@
           </div>
 
           <div>
-            <div
-              class="overflow-hidden rounded-2xl bg-[#0c233f] shadow-[0_18px_40px_rgba(12,35,63,0.2)]"
-            >
-              <video
-                class="aspect-video w-full bg-black object-cover"
-                :src="freightmateVideo"
-                :poster="demoPoster"
-                controls
+            <div class="relative">
+              <img
+                :src="demoPoster"
+                alt="Freightmate platform dashboard overview"
+                class="h-[320px] w-full rounded-[var(--corner-radius)] object-cover"
+              />
+              <div
+                class="absolute inset-0 rounded-[var(--corner-radius)] bg-gradient-to-b from-black/40 to-black/70"
+              ></div>
+              <button
+                v-if="!showInlineVideo"
+                type="button"
+                class="absolute inset-0 flex flex-col items-center justify-center gap-2 text-white"
+                @click="playInlineVideo"
+                aria-label="Play Freightmate platform overview inline"
               >
-                Your browser does not support HTML5 video.
-              </video>
+                <span
+                  class="flex h-16 w-16 items-center justify-center rounded-full border border-white/50 bg-white/10 text-white shadow-[0_10px_25px_rgba(0,0,0,0.6)]"
+                >
+                  <PlayIcon class="h-8 w-8" aria-hidden="true" />
+                </span>
+                <span
+                  class="text-xs font-semibold uppercase tracking-[0.4em] text-white/90"
+                >
+                  {{ videoDuration }}
+                </span>
+              </button>
+              <div
+                v-if="showInlineVideo"
+                class="absolute inset-0 rounded-[var(--corner-radius)] bg-black/90"
+              >
+                <video
+                  ref="videoRef"
+                  class="h-full w-full rounded-[var(--corner-radius)] object-cover"
+                  :src="freightmateVideo"
+                  :poster="demoPoster"
+                  controls
+                >
+                  Your browser does not support HTML5 video.
+                </video>
+                <button
+                  type="button"
+                  class="absolute right-4 top-4 inline-flex items-center justify-center rounded-full bg-white/20 p-2 text-white transition hover:bg-white/40"
+                  @click="stopInlineVideo"
+                  aria-label="Close video"
+                >
+                  <XMarkIcon class="h-4 w-4" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -121,7 +169,7 @@
           <article
             v-for="module in modules"
             :key="module.title"
-            class="flex flex-col gap-4 rounded-2xl bg-white/70 p-6 ring-1 ring-[#e6edf0]"
+            class="flex flex-col gap-4 rounded-2xl p-6"
           >
             <span
               :class="[
@@ -220,9 +268,9 @@
         <Button
           size="lg"
           to="/contact"
-          class="!bg-[#62bda5] !text-white !shadow-[0_12px_28px_rgba(98,189,165,0.35)] hover:!bg-[#55ad92] focus:!ring-[#62bda5]"
+          class="!bg-[#62bda5] !text-white hover:!bg-[#55ad92]"
         >
-          Talk to a consultant
+          Talk to a logistics specialist
         </Button>
       </template>
     </CallToAction>
@@ -230,6 +278,7 @@
 </template>
 
 <script setup lang="ts">
+import { nextTick, onBeforeUnmount, ref } from "vue";
 import Button from "@/components/ui/Button.vue";
 import CallToAction from "@/components/ui/CallToAction.vue";
 import freightmateVideo from "@/assets/videos/freightmate_video.mp4";
@@ -239,7 +288,9 @@ import {
   EyeIcon,
   MapIcon,
   PresentationChartLineIcon,
+  XMarkIcon,
 } from "@heroicons/vue/24/outline";
+import { PlayIcon } from "@heroicons/vue/24/solid";
 import { useSEO } from "@/composables/useSEO";
 
 const snapshots = [
@@ -269,6 +320,26 @@ const snapshots = [
     valueClass: "text-[#62bda5]",
   },
 ];
+
+const videoRef = ref<HTMLVideoElement | null>(null);
+const videoDuration = "00:46";
+const showInlineVideo = ref(false);
+
+async function playInlineVideo() {
+  showInlineVideo.value = true;
+  await nextTick();
+  videoRef.value?.play().catch(() => {});
+}
+
+function stopInlineVideo() {
+  videoRef.value?.pause();
+  showInlineVideo.value = false;
+}
+
+onBeforeUnmount(() => {
+  videoRef.value?.pause();
+  showInlineVideo.value = false;
+});
 
 const modules = [
   {
@@ -329,3 +400,46 @@ useSEO({
     "Explore how Freightmate centralises quoting, booking, tracking, and analytics for Australian freight networks.",
 });
 </script>
+
+<style scoped>
+.video-dialog {
+  border: none;
+  padding: 0;
+  border-radius: var(--corner-radius);
+  margin: 0;
+  width: min(94vw, 960px);
+  max-width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+.video-dialog::backdrop {
+  background: rgba(12, 35, 63, 0.85);
+}
+
+.video-dialog-content {
+  position: relative;
+  width: 100%;
+}
+
+.video-dialog-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 9999px;
+  border: none;
+  background: rgba(12, 35, 63, 0.7);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.video-dialog-close:hover {
+  background: rgba(12, 35, 63, 0.85);
+}
+</style>

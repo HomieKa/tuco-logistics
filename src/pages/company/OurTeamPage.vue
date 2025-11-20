@@ -85,46 +85,64 @@
     </section>
 
     <section
-      class="bg-[#38a2ca] py-14 md:py-20"
+      class="bg-[#e9f5f7] border-t border-[#62bda5]/20 border-b border-[#62bda5]/20 py-14 md:py-16"
       aria-labelledby="mission-values"
     >
       <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-        <div class="rounded-[2rem] p-10 text-center md:p-14">
-          <div class="mx-auto max-w-4xl space-y-4">
-            <h2
-              id="mission-values"
-              class="text-3xl font-semibold text-[#0c233f] md:text-4xl"
+        <div class="space-y-6 md:space-y-8">
+          <div
+            class="rounded-[var(--corner-radius)] p-7 text-[var(--color-tuco-navy)] md:p-10"
+          >
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.35em] text-[var(--color-tuco-blue)]"
             >
               Mission
+            </p>
+            <h2
+              id="mission-values"
+              class="mt-3 text-3xl font-semibold text-[var(--color-tuco-navy)] md:text-4xl"
+            >
+              To be Australia's partner of choice in freight management
             </h2>
-            <p class="text-lg leading-relaxed text-white/90">
-              To be Australia's partner of choice in freight management through
-              outstanding people, partnerships, and performance.
+            <p
+              class="mt-4 text-lg leading-relaxed text-[var(--color-tuco-navy)]/80"
+            >
+              Through outstanding people, partnerships, and performance, TUCO
+              brings clarity and care to every freight program.
             </p>
           </div>
 
-          <div class="mt-10 space-y-4">
-            <h3 class="text-3xl font-semibold text-[#0c233f] md:text-4xl">
-              Our Values
-            </h3>
-            <ul
-              class="mx-auto grid max-w-5xl gap-4 text-[var(--color-tuco-slate)] sm:grid-cols-2 lg:grid-cols-3"
-            >
-              <li
+          <div
+            class="rounded-[var(--corner-radius)] bg-[#e9f5f7] p-6 shadow-none md:p-8"
+          >
+            <div class="flex flex-wrap items-center justify-between gap-4">
+              <h3
+                class="text-3xl font-semibold text-[var(--color-tuco-navy)] md:text-4xl"
+              >
+                Our Values
+              </h3>
+            </div>
+            <div class="mt-7 grid grid-cols-1 gap-4 md:grid-cols-3">
+              <article
                 v-for="value in values"
                 :key="value.highlight"
-                class="rounded-xl bg-white/80 p-5 text-left transition hover:-translate-y-[1px] hover:shadow-card-soft"
+                :class="[
+                  'rounded-[var(--corner-radius)] border border-white bg-white/90 p-5 text-left text-[var(--color-tuco-navy)] shadow-[0_4px_6px_rgba(0,0,0,0.05)] transition-all duration-200 hover:-translate-y-[2px]',
+                  value.cardTone,
+                ]"
               >
-                <span class="font-semibold text-[var(--color-tuco-navy)]">
+                <p class="font-semibold">
                   {{ value.prefix }}&nbsp;
                   <span class="text-[#62bda5]">{{ value.highlight }}</span
                   ><template v-if="value.suffix"> {{ value.suffix }}</template>
-                </span>
-                <span class="block text-sm leading-relaxed">{{
-                  value.description
-                }}</span>
-              </li>
-            </ul>
+                </p>
+                <p
+                  class="mt-3 text-sm leading-relaxed text-[var(--color-tuco-navy)]/75"
+                >
+                  {{ value.description }}
+                </p>
+              </article>
+            </div>
           </div>
         </div>
       </div>
@@ -333,36 +351,42 @@ const values = [
     highlight: "Transparent",
     suffix: "",
     description: "Open communication, clear data, no surprises.",
+    cardTone: "bg-white/90",
   },
   {
     prefix: "We",
     highlight: "Believe",
     suffix: " in our people",
     description: "We hire, develop, and empower teams to deliver.",
+    cardTone: "bg-white/95",
   },
   {
     prefix: "We act with",
     highlight: "Purpose",
     suffix: "",
     description: "Every project maps to meaningful outcomes.",
+    cardTone: "bg-[#f9f9f9]",
   },
   {
     prefix: "We do it",
     highlight: "Together",
     suffix: "",
     description: "One team with customers, carriers, and partners.",
+    cardTone: "bg-white/90",
   },
   {
     prefix: "We",
     highlight: "Evolve",
     suffix: "",
     description: "We learn fast and improve faster.",
+    cardTone: "bg-[#f0faf7]/70",
   },
   {
     prefix: "We have",
     highlight: "Fun",
     suffix: "",
     description: "A positive culture where wins are shared.",
+    cardTone: "bg-[#e9f5f7]/70",
   },
 ];
 
@@ -375,7 +399,7 @@ const metrics = [
   {
     value: "200+",
     label: "Customers",
-    description: "Shippers partnering with TUCO for dependable logistics.",
+    description: "Customers partnering with TUCO for dependable logistics.",
   },
   {
     value: "150+",

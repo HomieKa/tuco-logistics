@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --corner-radius: 6px;
   --color-tuco-navy: #0b1b2b;
   --color-tuco-blue: #1e3a8a;
   --color-tuco-sky: #e8eef7;
@@ -31,14 +32,49 @@ p {
   @apply leading-relaxed text-[var(--color-tuco-slate)];
 }
 
+a {
+  @apply font-medium text-[var(--color-tuco-navy)];
+  transition:
+    color 0.2s ease,
+    text-decoration 0.2s ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-tuco-blue);
+  text-decoration: underline;
+}
+
 .btn-primary {
-  @apply inline-flex items-center gap-2 rounded-full bg-[var(--color-tuco-navy)] px-5 py-3 text-sm font-semibold text-white transition duration-200 hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-tuco-blue)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-tuco-card)];
+  @apply inline-flex items-center gap-2 bg-[var(--color-tuco-navy)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-tuco-blue)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-tuco-card)];
+  border-radius: var(--corner-radius);
+  box-shadow: 0 10px 24px rgba(12, 35, 63, 0.24);
+  transform: translateZ(0);
+}
+
+.btn-primary:hover {
+  background-color: #081634;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 24px rgba(12, 35, 63, 0.32);
 }
 
 .btn-ghost {
-  @apply inline-flex items-center gap-2 rounded-full border border-[var(--color-tuco-line)] bg-transparent px-5 py-3 text-sm font-semibold text-[var(--color-tuco-navy)] transition duration-200 hover:bg-white/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-tuco-blue)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-tuco-card)];
+  @apply inline-flex items-center gap-2 border border-[var(--color-tuco-line)] bg-transparent px-5 py-3 text-sm font-semibold text-[var(--color-tuco-navy)] transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-tuco-blue)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-tuco-card)];
+  border-radius: var(--corner-radius);
+}
+
+.btn-ghost:hover {
+  background-color: #f9f9f9;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.18);
+  border-color: var(--color-tuco-blue);
 }
 
 .tuco-card {
-  @apply rounded-2xl border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] shadow-card-soft transition duration-200 hover:shadow-card-lg;
+  @apply border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] shadow-card-soft transition duration-200;
+  border-radius: var(--corner-radius);
+}
+
+.tuco-card:hover {
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.24);
 }

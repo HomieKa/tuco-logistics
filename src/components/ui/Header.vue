@@ -25,11 +25,11 @@
             href="https://app.freightmate.com"
             target="_blank"
             rel="noopener"
-            class="rounded-full px-5 py-2 text-sm font-semibold shadow transition"
+            class="rounded-[var(--corner-radius)] px-5 py-2 text-sm font-semibold shadow transition"
             :class="
               isScrolled
-                ? 'bg-teal-500 text-white hover:bg-teal-600'
-                : 'border border-[#0c233f] text-[#0c233f] hover:bg-[#0c233f]/5'
+                ? 'bg-teal-500 text-white hover:bg-teal-600 hover:text-white'
+                : 'border border-[#0c233f] text-[#0c233f] hover:bg-[#0c233f]/5 hover:text-[#0c233f]'
             "
           >
             Login to Freightmate
@@ -37,11 +37,11 @@
 
           <RouterLink
             to="/track"
-            class="rounded-full px-5 py-2 text-sm font-semibold shadow transition"
+            class="rounded-[var(--corner-radius)] px-5 py-2 text-sm font-semibold shadow transition"
             :class="
               isScrolled
-                ? 'bg-[#38a2ca] text-white hover:bg-[#2d82a2]'
-                : 'border border-[#38a2ca] text-[#38a2ca] hover:bg-[#38a2ca]/10'
+                ? 'bg-[#38a2ca] text-white hover:bg-[#2d82a2] hover:text-white'
+                : 'border border-[#38a2ca] text-[#38a2ca] hover:bg-[#38a2ca]/10 hover:text-[#38a2ca]'
             "
           >
             Tracking

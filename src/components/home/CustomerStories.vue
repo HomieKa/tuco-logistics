@@ -13,7 +13,7 @@
           Freightmate outcomes from teams like yours
         </h2>
         <p class="text-lg text-white/80">
-          TUCO keeps operations, finance, commercial, and customer teams
+          TUCO keeps operations, finance, commercial, and customer service teams
           aligned. Real people see real results, from smoother bookings to
           on-time deliveries and happier customers.
         </p>
@@ -50,9 +50,6 @@
                     class="text-sm font-bold uppercase tracking-[0.3em] text-[#62bda5]-800"
                   >
                     {{ testimonials[activeTestimonial].sector }}
-                  </p>
-                  <p class="text-sm text-[var(--color-tuco-slate)]">
-                    {{ testimonials[activeTestimonial].company }}
                   </p>
                 </div>
               </div>
@@ -137,31 +134,30 @@ import { onBeforeUnmount, onMounted, ref } from "vue";
 const testimonials = [
   {
     quote:
-      "Freightmate cut our inbound booking time by 52%. TUCO's rollout kept our dock moving while we switched everything over.",
+      "TUCO & Freightmate cut our inbound booking time by 52%. TUCO's rollout kept our dock moving while we switched everything over.",
     name: "Jess Collins",
-    role: "Operations Lead, National Forwarder",
+    role: "Operations Lead",
     company: "FreightOne Logistics",
     sector: "Logistics",
   },
   {
     quote:
-      "We finally have one landed cost view across customers. Finance closes the month two days faster with zero CSV exports.",
+      "We finally have one cost view across all carriers. Finance closes the month two days faster.",
     name: "Khai Tran",
-    role: "Commercial Manager, FMCG",
+    role: "Commercial Manager",
     company: "Entwine Foods",
     sector: "Finance & Commercial",
   },
   {
     quote:
-      "Exception alerts mean customers hear from us before an issue escalates. Support calls dropped 43% in the first quarter.",
+      "Exception management mean customers hear from us before an issue escalates. Support calls dropped 43% in the first quarter.",
     name: "Aisha Rahman",
     role: "Head of Customer Service",
     company: "Swift Parcel Co.",
     sector: "Customer Experience",
   },
   {
-    quote:
-      "Live SLA dashboards show where to focus each morning. Compliance checks that used to take hours now happen in minutes.",
+    quote: "Invoice checks that used to take hours now happen in minutes.",
     name: "Michael Lee",
     role: "Finance Director",
     company: "Apex Industrial",
@@ -169,9 +165,9 @@ const testimonials = [
   },
   {
     quote:
-      "Weekly network pulse reports now auto-send to leadership. We walk into reviews with the answers ready.",
+      "Daily pulse reports now auto-send to us, providing the right information when we speak to our customers",
     name: "Lauren Fisher",
-    role: "Chief Operating Officer",
+    role: "Operation Manager",
     company: "Harbour & Co.",
     sector: "Executive Leadership",
   },

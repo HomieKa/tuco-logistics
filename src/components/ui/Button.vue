@@ -85,29 +85,29 @@ const tag = computed(() => {
 
 const buttonClasses = computed(() => {
   const base =
-    "inline-flex items-center justify-center font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2";
+    "inline-flex items-center justify-center font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[var(--color-tuco-card)] shadow-sm hover:-translate-y-0.5 rounded-[var(--corner-radius)]";
 
   const sizes: Record<ButtonSize, string> = {
-    sm: "px-4 py-2 text-sm rounded-lg",
-    md: "px-6 py-3 text-base rounded-lg",
-    lg: "px-8 py-4 text-lg rounded-lg",
-    xl: "px-10 py-5 text-xl rounded-xl",
+    sm: "px-4 py-2 text-sm",
+    md: "px-6 py-3 text-base",
+    lg: "px-8 py-4 text-lg",
+    xl: "px-10 py-5 text-xl",
   };
 
   const variants: Record<ButtonVariant, string> = {
     primary:
-      "bg-navy-500 text-white hover:bg-navy-600 focus:ring-navy-500 shadow-navy hover:shadow-navy-lg",
+      "bg-navy-500 text-white hover:bg-navy-600 focus:ring-navy-500 shadow-[0_10px_22px_rgba(12,35,63,0.28)] hover:text-white",
     secondary:
-      "bg-teal-500 text-white hover:bg-teal-600 focus:ring-teal-500 shadow-teal hover:shadow-teal-lg",
+      "bg-teal-500 text-white hover:bg-teal-600 focus:ring-teal-500 shadow-[0_10px_22px_rgba(98,189,165,0.33)]  hover:text-white",
     accent:
-      "bg-sky-500 text-white hover:bg-sky-600 focus:ring-sky-500 shadow-sky hover:shadow-sky-lg",
+      "bg-sky-500 text-white hover:bg-sky-600 focus:ring-sky-500 shadow-[0_10px_22px_rgba(56,162,202,0.33)]  hover:text-white",
     outline:
-      "border-2 border-navy-500 text-navy-500 hover:bg-navy-50 focus:ring-navy-500",
+      "border-2 border-navy-500 text-navy-500 hover:bg-navy-50 focus:ring-navy-500 shadow-sm ",
     "outline-teal":
-      "border-2 border-teal-500 text-teal-500 hover:bg-teal-50 focus:ring-teal-500",
+      "border-2 border-teal-500 text-teal-500 hover:bg-teal-50 focus:ring-teal-500 shadow-sm ",
     "outline-sky":
-      "border-2 border-sky-500 text-sky-500 hover:bg-sky-50 focus:ring-sky-500",
-    ghost: "text-navy-500 hover:bg-gray-100 focus:ring-navy-500",
+      "border-2 border-sky-500 text-sky-500 hover:bg-sky-50 focus:ring-sky-500 shadow-sm",
+    ghost: "text-navy-500 hover:bg-gray-100 focus:ring-navy-500 shadow-sm",
   };
 
   const disabledClass =

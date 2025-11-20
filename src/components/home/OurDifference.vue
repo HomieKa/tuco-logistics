@@ -1,31 +1,38 @@
 ﻿<template>
-  <section class="bg-white py-20">
+  <section class="bg-[#f7f9fd] py-20">
     <div class="container mx-auto px-6 text-center">
-      <p class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-500">
+      <p
+        class="text-sm font-semibold uppercase tracking-[0.3em] text-[#38a2ca]"
+      >
         Our Difference
       </p>
-      <h2 class="mt-3 text-3xl font-semibold text-navy-500 md:text-4xl">
+      <h2 class="mt-4 text-3xl font-semibold text-[#0c233f] md:text-4xl">
         Experience the TUCO difference
       </h2>
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mt-12">
+      <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:gap-10">
         <article
-          v-for="card in differenceCards"
+          v-for="(card, index) in differenceCards"
           :key="card.title"
-          class="flex flex-col gap-4 rounded-3xl bg-white p-6 text-left shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-2xl"
+          class="flex items-start gap-4 pillar-animate"
+          :style="{ animationDelay: `${index * 100}ms` }"
         >
-          <div class="aspect-[4/3] w-full overflow-hidden rounded-2xl">
+          <div
+            class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#e9f5f7]"
+          >
             <img
               :src="card.image"
               :alt="card.title"
-              class="h-full w-full object-cover"
+              class="h-8 w-8 object-contain"
               loading="lazy"
             />
           </div>
-          <div>
-            <h3 class="text-lg font-semibold text-navy-500">
+          <div class="text-left">
+            <h3 class="text-base font-semibold text-[#0c233f]">
               {{ card.title }}
             </h3>
-            <p class="mt-3 text-sm text-slate-600">{{ card.description }}</p>
+            <p class="mt-1 text-sm leading-relaxed text-[#64748b]">
+              {{ card.description }}
+            </p>
           </div>
         </article>
       </div>
@@ -43,19 +50,19 @@ const differenceCards = [
   {
     title: "Strategic partnerships",
     description:
-      "Strategic reviews, DIFOT focus, and commercial guidance keep your logistics program aligned with growth at every stage.",
+      "Structured reviews, DIFOT focus, and commercial guidance keep your logistics program aligned with growth at every stage.",
     image: strategyImage,
   },
   {
     title: "Australian experts on call",
     description:
-      "Hands-on TUCO specialists support operations, finance, and customer teams with proactive communication and rapid resolution.",
+      "Local TUCO specialists support operations, finance, and customer teams with fast, proactive communication and rapid resolution.",
     image: supportImage,
   },
   {
     title: "Automation that sticks",
     description:
-      "Freightmate automation, live analytics, and invoice reconciliation remove manual work so your teams can focus on higher-impact tasks.",
+      "Freightmate automation, analytics, and invoice reconciliation remove manual work so your teams can focus on higher-impact tasks.",
     image: automationImage,
   },
   {
@@ -66,3 +73,20 @@ const differenceCards = [
   },
 ];
 </script>
+
+<style scoped>
+@keyframes pillarFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pillar-animate {
+  animation: pillarFadeIn 0.5s ease-out both;
+}
+</style>

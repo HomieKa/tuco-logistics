@@ -29,7 +29,7 @@
         <article
           v-for="feature in features"
           :key="feature.title"
-          class="group flex flex-col gap-4 rounded-2xl p-8 transition duration-200 hover:-translate-y-1 hover:shadow-2xl"
+          class="group flex flex-col gap-4 rounded-2xl p-8"
         >
           <div v-if="feature.image" class="overflow-hidden rounded-xl">
             <img
@@ -67,7 +67,7 @@ const features = [
   {
     title: "Freightmate technology",
     description:
-      "Real-time tracking, automated routing, and integration connectors keep every freight decision informed.",
+      "Real-time tracking, automated carrier routing, and integration connectors keep every freight decision informed.",
     image: technologyImage,
   },
   {

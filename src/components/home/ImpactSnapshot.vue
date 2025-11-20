@@ -14,9 +14,9 @@
             Trusted logistics execution for Australian commercial teams
           </h2>
           <p class="text-base text-slate-100/90">
-            TUCO blends deep carrier relationships with the Freightmate control
-            tower, delivering measurable outcomes across every shipment, site,
-            and stakeholder you manage.
+            TUCO blends deep carrier relationships with our proprietary
+            Freightmate technology, delivering measurable outcomes across every
+            shipment, site, and stakeholder you manage.
           </p>
         </div>
       </div>
@@ -54,12 +54,12 @@ const metrics = [
   {
     value: "10m+",
     label: "Shipments orchestrated",
-    helper: "Road, air, sea and final mile across AU/NZ",
+    helper: "Road, air, sea and final mile across Australia & New Zealand",
   },
   {
     value: "200+",
     label: "Customers supported",
-    helper: "Commercial teams relying on TUCO for freight clarity",
+    helper: "Customers relying on TUCO's network and expertise",
   },
   {
     value: "150+",

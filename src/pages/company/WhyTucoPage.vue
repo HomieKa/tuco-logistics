@@ -20,6 +20,7 @@
             Strategic partnerships, measurable ROI, and a freight program
             tailored to your business.
           </p>
+          <Button variant="primary" to="/contact"> Talk to our team </Button>
         </div>
 
         <div
@@ -266,7 +267,7 @@ import {
   UserGroupIcon,
 } from "@heroicons/vue/24/outline";
 import { ref } from "vue";
-
+import Button from "@/components/ui/Button.vue";
 import { useSEO } from "@/composables/useSEO";
 import heroImage from "@/assets/images/why_tuco/why_tuco_hero.jpg";
 
