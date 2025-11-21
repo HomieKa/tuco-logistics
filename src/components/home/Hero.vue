@@ -12,7 +12,7 @@
         <h1
           class="text-5xl font-semibold leading-tight text-navy-500 lg:text-[3.5rem]"
         >
-          We Work So You Don't Have To.
+          End-to-end logistics partnerships, built around you
         </h1>
         <p class="max-w-xl text-lg text-slate-600">
           4PL Freight Management at TUCO combines expertise and smart technology

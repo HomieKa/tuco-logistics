@@ -331,6 +331,8 @@ import jamiePhoto from "@/assets/images/leadership/jamie.jpg";
 import katerinaPhoto from "@/assets/images/leadership/katerina.jpg";
 import michellePhoto from "@/assets/images/leadership/michelle.jpg";
 import mladenPhoto from "@/assets/images/leadership/mladen.jpg";
+import justinePhoto from "@/assets/images/leadership/justine.jpg";
+
 import samPhoto from "@/assets/images/leadership/sam.jpg";
 import {
   ChartBarIcon,
@@ -506,7 +508,7 @@ const leadershipTeam = [
     name: "Justine Smethurst",
     role: "QLD State Manager",
     bio: "Oversees Queenslad programs, ensuring service level commitments are met across the state.",
-    photo: null,
+    photo: justinePhoto,
     linkedin: "https://www.linkedin.com/in/justine-smethurst-oly-3064b171/",
   },
   {

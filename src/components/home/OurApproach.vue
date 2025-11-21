@@ -15,7 +15,7 @@
             <h2
               class="text-2xl font-semibold leading-tight text-[#0a1d35] lg:text-3xl"
             >
-              End-to-end logistics partnerships, built around you
+              We Work So You Don't Have To.
             </h2>
             <p class="text-sm leading-relaxed text-slate-600">
               TUCO blends smart systems with human problem-solvers so every team
