@@ -13,9 +13,10 @@
           Real outcomes delivered by TUCO
         </h2>
         <p class="text-lg text-white/80">
-          TUCO partners with operations, finance, commercial, and customer service teams 
-          to reduce workload, lift performance, and keep freight programs running smoothly. 
-          Clients see clearer communication, fewer exceptions, and more reliable delivery outcomes.
+          TUCO partners with operations, finance, commercial, and customer
+          service teams to reduce workload, lift performance, and keep freight
+          programs running smoothly. Clients see clearer communication, fewer
+          exceptions, and more reliable delivery outcomes.
         </p>
       </div>
 
@@ -215,8 +216,6 @@ const testimonials = [
     sector: "Technology",
   },
 ];
-
-
 
 const activeTestimonial = ref(0);
 let testimonialTimer: number | null = null;
