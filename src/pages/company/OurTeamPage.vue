@@ -451,70 +451,80 @@ const leadershipTeam = [
   {
     name: "Michelle Hall",
     role: "Co-founder & Director",
-    bio: "20+ years in freight sales and logistics, partnering with shippers to streamline complex freight with dependable tech and service.",
+    bio: `Michelle brings strong freight sales and logistics experience, leading TUCO’s sales, commercial, finance and onboarding teams. 
+          They drives TUCO’s growth direction and provides strategic input that shapes Freightmate’s customer-focused evolution.`,
     photo: michellePhoto,
     linkedin: "https://www.linkedin.com/in/michelle-hall-52b0718b/",
   },
   {
     name: "Mladen Kustura",
     role: "Co-founder & Director",
-    bio: "Leads TUCO's operational strategy, focused on removing admin friction and keeping teams on-plan when volumes spike.",
+    bio: `Mladen’s operational background across transport and account management guides TUCO’s customer service and account management teams. 
+          They strengthens TUCO’s service model and brings insight that enhances Freightmate's functionality.`,
     photo: mladenPhoto,
     linkedin: "https://www.linkedin.com/in/mladenkustura/",
   },
   {
     name: "Farzana Adams",
     role: "Human Resource",
-    bio: "Supports TUCO people from onboarding to development so teams feel empowered and cared for at every step.",
+    bio: `Farzana combines operational experience with HR capability to elevate TUCO’s people and culture. She leads talent and engagement initiatives 
+          that build a positive, inclusive, high-performing workplace.`,
     photo: farzanaPhoto,
     linkedin: "https://www.linkedin.com/in/farzana-schoumaund-897458b3/",
   },
   {
     name: "Dave Smyth",
     role: "Head of Account Management",
-    bio: "Keeps national accounts ahead of targets with clear reporting, proactive reviews, and fast escalation paths.",
+    bio: `Dave leads TUCO’s national account management team, strengthening customer relationships and ensuring consistent service delivery. He brings strong 
+          operational and customer experience that helps drive better outcomes for clients.`,
     photo: davePhoto,
     linkedin: "https://www.linkedin.com/in/dave-smyth-0a132171/",
   },
   {
     name: "Sam Walker",
     role: "Customer Service Manager",
-    bio: "Leads the customer care team, resolving exceptions quickly and keeping communication transparent.",
+    bio: `Sam leads TUCO’s customer service team, driving responsive support and strong day-to-day service delivery for clients. He brings experience leading 
+          high-performing teams fostering engagement, consistency, and a customer-first culture.`,
     photo: samPhoto,
     linkedin: "https://www.linkedin.com/in/samuel-walker-6a819a228/",
   },
   {
     name: "Khai Wee",
     role: "Commercial Manager",
-    bio: "Analyses freight performance and commercial levers to unlock margin improvements for TUCO clients.",
+    bio: `Khai leads TUCO’s commercial strategy, shaping pricing, and market insight to support growth. He combines freight industry experience 
+          with data-driven thinking to guide commercial enablement and strengthen TUCO’s digital offering.`,
     photo: khaiPhoto,
     linkedin: "https://www.linkedin.com/in/khairulamirulwee/",
   },
   {
     name: "Katerina Vladicic",
     role: "Finance Manager",
-    bio: "Ensures billing, reconciliation, and financial governance run smoothly across carriers and clients.",
+    bio: `Katerina leads TUCO’s finance operations, ensuring accurate reconciliation and the timely invoicing of customers. 
+          She also oversees end-to-end  processes including billing accuracy and supplier claim resolution to keep operations running smoothly.`,
     photo: katerinaPhoto,
     linkedin: "https://www.linkedin.com/in/katerina-vladicic-38a941207/",
   },
   {
     name: "Jamie-Lee McLeary",
     role: "Onboarding Manager",
-    bio: "Manages implementation so every new TUCO client goes live with confidence and minimal disruption.",
+    bio: `Jamie leads TUCO’s onboarding function, guiding new customers smoothly into our services. She combines deep customer 
+          care experience with strong process management to ensure every onboarding is clear, efficient, and set up for long-term success.`,
     photo: jamiePhoto,
     linkedin: "https://www.linkedin.com/in/jamie-lee-mcleary-a627821a9/",
   },
   {
     name: "Justine Smethurst",
     role: "QLD State Manager",
-    bio: "Oversees Queenslad programs, ensuring service level commitments are met across the state.",
+    bio: `Justine leads TUCO’s Queensland, guiding regional sales and account management to deliver reliable service. She brings strong logistics and leadership experience, 
+          driving practical solutions and a culture of performance and teamwork.`,
     photo: justinePhoto,
     linkedin: "https://www.linkedin.com/in/justine-smethurst-oly-3064b171/",
   },
   {
     name: "Fiona Henderson",
     role: "NSW State Manager",
-    bio: "Oversees New South Wales programs, ensuring service level commitments are met across the state.",
+    bio: `Fiona leads TUCO’s NSW operations, guiding regional sales and account management to deliver strong and consistent service performance. She brings deep experience across 
+          logistics, driving reliable solutions-focused outcomes for customers.`,
     photo: fionaPhoto,
     linkedin: "https://www.linkedin.com/in/fiona-henderson-6b500353/",
   },

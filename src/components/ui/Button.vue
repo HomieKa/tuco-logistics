@@ -85,7 +85,7 @@ const tag = computed(() => {
 
 const buttonClasses = computed(() => {
   const base =
-    "inline-flex items-center justify-center font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[var(--color-tuco-card)] shadow-sm hover:-translate-y-0.5 rounded-[var(--corner-radius)]";
+    "inline-flex items-center justify-center font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[var(--color-tuco-card)] shadow-sm hover:-translate-y-0.5 rounded-[var(--corner-radius)] cursor-pointer select-none";
 
   const sizes: Record<ButtonSize, string> = {
     sm: "px-4 py-2 text-sm",

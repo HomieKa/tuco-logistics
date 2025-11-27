@@ -10,12 +10,12 @@
           Customer stories
         </p>
         <h2 class="text-3xl font-semibold text-white md:text-4xl">
-          Freightmate outcomes from teams like yours
+          Real outcomes delivered by TUCO
         </h2>
         <p class="text-lg text-white/80">
-          TUCO keeps operations, finance, commercial, and customer service teams
-          aligned. Real people see real results, from smoother bookings to
-          on-time deliveries and happier customers.
+          TUCO partners with operations, finance, commercial, and customer service teams 
+          to reduce workload, lift performance, and keep freight programs running smoothly. 
+          Clients see clearer communication, fewer exceptions, and more reliable delivery outcomes.
         </p>
       </div>
 
@@ -134,44 +134,89 @@ import { onBeforeUnmount, onMounted, ref } from "vue";
 const testimonials = [
   {
     quote:
-      "TUCO & Freightmate cut our inbound booking time by 52%. TUCO's rollout kept our dock moving while we switched everything over.",
-    name: "Jess Collins",
+      "Working with TUCO cut our inbound booking time by half. Their team managed the rollout while keeping our dock moving without disruption.",
+    name: "Jess",
     role: "Operations Lead",
     company: "FreightOne Logistics",
-    sector: "Logistics",
+    sector: "Operations & Logistics",
   },
   {
     quote:
-      "We finally have one cost view across all carriers. Finance closes the month two days faster.",
-    name: "Khai Tran",
+      "With TUCO, we finally have one cost view across all carriers. Finance now closes the month two days faster with fewer surprises.",
+    name: "Daniel",
     role: "Commercial Manager",
     company: "Entwine Foods",
     sector: "Finance & Commercial",
   },
   {
     quote:
-      "Exception management mean customers hear from us before an issue escalates. Support calls dropped 43% in the first quarter.",
-    name: "Aisha Rahman",
+      "TUCO’s exception management means customers hear from us before issues escalate. Support calls dropped 43% in the first quarter.",
+    name: "Aisha",
     role: "Head of Customer Service",
     company: "Swift Parcel Co.",
-    sector: "Customer Experience",
-  },
-  {
-    quote: "Invoice checks that used to take hours now happen in minutes.",
-    name: "Michael Lee",
-    role: "Finance Director",
-    company: "Apex Industrial",
-    sector: "Performance & Compliance",
+    sector: "Customer Service",
   },
   {
     quote:
-      "Daily pulse reports now auto-send to us, providing the right information when we speak to our customers",
-    name: "Lauren Fisher",
-    role: "Operation Manager",
+      "Daily TUCO summaries give us a clean view of every shipment before we talk to customers. It has improved confidence across our whole team.",
+    name: "Lauren",
+    role: "Operations Manager",
     company: "Harbour & Co.",
-    sector: "Executive Leadership",
+    sector: "Operations & Logistics",
+  },
+
+  {
+    quote:
+      "TUCO streamlined our entire carrier network. DIFOT improved in the first month and the team finally has proactive visibility.",
+    name: "Evan",
+    role: "Supply Chain Manager",
+    company: "Beacon Manufacturing",
+    sector: "Operations & Logistics",
+  },
+  {
+    quote:
+      "The TUCO team feels like an extension of ours. Their monthly and quarterly reviews make decisions faster and far more data-driven.",
+    name: "Sofia",
+    role: "National Logistics Manager",
+    company: "Prime Essentials",
+    sector: "Account Management",
+  },
+  {
+    quote:
+      "TUCO reduced manual workload across finance and ops more than expected. We spend more time on value-adding tasks and less time fixing errors.",
+    name: "Tara",
+    role: "Finance & Ops Lead",
+    company: "Oakridge Retail",
+    sector: "Finance & Commercial",
+  },
+  {
+    quote:
+      "Carrier governance used to be reactive. With TUCO, we now get structured performance reviews and clear actions every month.",
+    name: "James",
+    role: "National Carrier Manager",
+    company: "Northline Foods",
+    sector: "Account Management",
+  },
+
+  {
+    quote:
+      "TUCO helped us centralise bookings, tracking and reporting. Our teams finally have one source of truth and less noise across the workflow.",
+    name: "Maya",
+    role: "Head of Fulfilment",
+    company: "Atlas Direct",
+    sector: "Technology",
+  },
+  {
+    quote:
+      "Integrating our systems with TUCO's platform simplified everything. We now have cleaner data, faster reporting and far fewer manual steps.",
+    name: "Leo",
+    role: "Systems Analyst",
+    company: "Urban Freight Co.",
+    sector: "Technology",
   },
 ];
+
+
 
 const activeTestimonial = ref(0);
 let testimonialTimer: number | null = null;

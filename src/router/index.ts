@@ -81,7 +81,9 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: "/:pathMatch(.*)*",
-    redirect: { name: "home" },
+    name: "not-found",
+    component: () => import("@/pages/NotFoundPage.vue"),
+    meta: { title: "Page Not Found | TUCO Logistics" },
   },
 ];
 
