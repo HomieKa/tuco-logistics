@@ -30,6 +30,6 @@ withDefaults(
   {
     valueClass: "text-[var(--color-tuco-blue)]",
     glow: "bg-gradient-to-br from-[#e9f5f7] via-transparent to-transparent",
-  },
+  }
 );
 </script>

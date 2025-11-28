@@ -885,7 +885,7 @@ function getFocusableElements() {
   const container = modalRef.value;
   if (!container) return [];
   return Array.from(
-    container.querySelectorAll<HTMLElement>(focusableSelectors),
+    container.querySelectorAll<HTMLElement>(focusableSelectors)
   ).filter((el) => !el.hasAttribute("disabled") && el.tabIndex !== -1);
 }
 
@@ -1007,7 +1007,7 @@ function setupObserver() {
     {
       rootMargin: "-45% 0px -45% 0px",
       threshold: [0.25, 0.5, 0.75],
-    },
+    }
   );
   sections.forEach((section) => {
     const el = document.getElementById(section.id);
@@ -1043,7 +1043,7 @@ watch(
     if (hash && hash !== oldHash) {
       syncHashScroll();
     }
-  },
+  }
 );
 
 watch(isNetworkModalOpen, (open) => {

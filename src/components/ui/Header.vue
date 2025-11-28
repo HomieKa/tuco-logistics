@@ -155,7 +155,7 @@ const headerClasses = computed(() =>
     isScrolled.value
       ? "bg-[#0c233f]/95 shadow-lg text-white"
       : "bg-transparent text-[#0c233f]",
-  ].join(" "),
+  ].join(" ")
 );
 
 function handleScroll() {

@@ -272,7 +272,7 @@
                   @click="
                     openModal(
                       event.POD,
-                      `POD - ${event.Status} - ${toLocal(event.DateTime)}`,
+                      `POD - ${event.Status} - ${toLocal(event.DateTime)}`
                     )
                   "
                 >
@@ -416,12 +416,12 @@ const activeModal = ref<{ src: string; alt: string } | null>(null);
 const timelineEvents = computed<TrackingEvent[]>(() => {
   const events = trackingData.value?.consignmentTracking ?? [];
   return [...events].sort(
-    (a, b) => new Date(b.DateTime).getTime() - new Date(a.DateTime).getTime(),
+    (a, b) => new Date(b.DateTime).getTime() - new Date(a.DateTime).getTime()
   );
 });
 
 const latestEvent = computed<TrackingEvent | null>(() =>
-  timelineEvents.value.length ? timelineEvents.value[0] : null,
+  timelineEvents.value.length ? timelineEvents.value[0] : null
 );
 
 const statusBadge = computed(() => statusClass(trackingData.value?.status));
@@ -494,13 +494,13 @@ async function triggerFetch(connote: string) {
         headers: {
           Accept: "application/json",
         },
-      },
+      }
     );
     if (!response.ok) {
       throw new Error(
         response.status === 404
           ? "Connote not found."
-          : `Unable to fetch tracking data (HTTP ${response.status}).`,
+          : `Unable to fetch tracking data (HTTP ${response.status}).`
       );
     }
     const payload: TrackingRecord[] = await response.json();
@@ -643,7 +643,7 @@ function capitalize(value: string) {
 function formatLocation(location?: TrackingRecord["senderAddressSuburb"]) {
   if (!location) return "-";
   const parts = [location.name, location.state, location.postcode].filter(
-    Boolean,
+    Boolean
   );
   return parts.join(", ") || "-";
 }

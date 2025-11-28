@@ -53,6 +53,6 @@ withDefaults(
     accent: "bg-[#e9f5f7] text-[#62bda5]",
     accentBullet: "bg-[#62bda5]",
     icon: SparklesIcon,
-  },
+  }
 );
 </script>

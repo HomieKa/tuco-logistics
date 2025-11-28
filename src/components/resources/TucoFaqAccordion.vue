@@ -105,38 +105,38 @@ const faqs = [
 
 const activeIndex = ref<number | null>(null);
 const buttonRefs = ref<(HTMLButtonElement | null)[]>(
-  Array(faqs.length).fill(null),
+  Array(faqs.length).fill(null)
 );
 const contentRefs = ref<(HTMLDivElement | null)[]>(
-  Array(faqs.length).fill(null),
+  Array(faqs.length).fill(null)
 );
 
 const sectionClasses = computed(() =>
-  props.compact ? "pt-10 md:pt-12 pb-0" : "pt-12 md:pt-16 pb-0",
+  props.compact ? "pt-10 md:pt-12 pb-0" : "pt-12 md:pt-16 pb-0"
 );
 const listClasses = computed(() =>
-  props.compact ? "mt-8 space-y-3" : "mt-10 space-y-4 md:space-y-6",
+  props.compact ? "mt-8 space-y-3" : "mt-10 space-y-4 md:space-y-6"
 );
 const buttonPadding = computed(() =>
-  props.compact ? "p-4 md:p-5" : "p-5 md:p-6",
+  props.compact ? "p-4 md:p-5" : "p-5 md:p-6"
 );
 const openPadding = computed(() =>
-  props.compact ? "px-4 py-4 md:px-5 md:py-5" : "px-5 py-5 md:px-6 md:py-6",
+  props.compact ? "px-4 py-4 md:px-5 md:py-5" : "px-5 py-5 md:px-6 md:py-6"
 );
 const closedPadding = computed(() =>
-  props.compact ? "px-4 py-0 md:px-5 md:py-0" : "px-5 py-0 md:px-6 md:py-0",
+  props.compact ? "px-4 py-0 md:px-5 md:py-0" : "px-5 py-0 md:px-6 md:py-0"
 );
 
 function setButtonRef(
   el: Element | ComponentPublicInstance | null,
-  index: number,
+  index: number
 ) {
   buttonRefs.value[index] = el instanceof HTMLButtonElement ? el : null;
 }
 
 function setContentRef(
   el: Element | ComponentPublicInstance | null,
-  index: number,
+  index: number
 ) {
   contentRefs.value[index] = el instanceof HTMLDivElement ? el : null;
 }

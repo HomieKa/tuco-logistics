@@ -47,6 +47,6 @@ const props = defineProps({
 const sectionClasses = computed(() =>
   props.variant === "alt"
     ? "bg-navy-500 py-16 text-white"
-    : "bg-gray-50 py-12 text-left",
+    : "bg-gray-50 py-12 text-left"
 );
 </script>
