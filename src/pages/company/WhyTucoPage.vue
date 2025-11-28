@@ -269,7 +269,7 @@ import {
 import { ref } from "vue";
 import Button from "@/components/ui/Button.vue";
 import { useSEO } from "@/composables/useSEO";
-import heroImage from "@/assets/images/why_tuco/why_tuco_hero.jpg";
+import heroImage from "@/assets/images/why_tuco/why_tuco_hero.webp";
 
 useSEO({
   title: "Why Choose TUCO - TUCO Logistics",

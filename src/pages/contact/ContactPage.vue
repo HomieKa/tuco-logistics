@@ -258,9 +258,9 @@
 
 <script setup lang="ts">
 import ContactForm from "@/components/ui/ContactForm.vue";
-import melbournePhoto from "@/assets/images/contact_us/melbourne.jpg";
-import sydneyPhoto from "@/assets/images/contact_us/sydney.jpg";
-import brisbanePhoto from "@/assets/images/contact_us/brisbane.jpg";
+import melbournePhoto from "@/assets/images/contact_us/melbourne.webp";
+import sydneyPhoto from "@/assets/images/contact_us/sydney.webp";
+import brisbanePhoto from "@/assets/images/contact_us/brisbane.webp";
 import { useSEO } from "@/composables/useSEO";
 import {
   ClockIcon,

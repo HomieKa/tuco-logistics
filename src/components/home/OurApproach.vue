@@ -58,10 +58,10 @@
 // For now, keeping the SVG imports as placeholders
 
 import technologyImage from "@/assets/images/our_approach/technology.png";
-import strategyImage from "@/assets/images/our_approach/strategic_partner.jpg";
-import serviceImage from "@/assets/images/our_approach/australian_expert.jpg";
-import carrierImage from "@/assets/images/our_approach/automation.jpg";
-import financeImage from "@/assets/images/our_approach/governance.jpg";
+import strategyImage from "@/assets/images/our_approach/strategic_partner.webp";
+import serviceImage from "@/assets/images/our_approach/australian_expert.webp";
+import carrierImage from "@/assets/images/our_approach/automation.webp";
+import financeImage from "@/assets/images/our_approach/governance.webp";
 
 const features = [
   {

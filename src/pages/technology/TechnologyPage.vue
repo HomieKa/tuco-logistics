@@ -282,7 +282,7 @@ import { nextTick, onBeforeUnmount, ref } from "vue";
 import Button from "@/components/ui/Button.vue";
 import CallToAction from "@/components/ui/CallToAction.vue";
 import freightmateVideo from "@/assets/videos/freightmate_video.mp4";
-import demoPoster from "@/assets/images/freightmate_thumbnail.jpg";
+import demoPoster from "@/assets/images/freightmate_thumbnail.webp";
 import {
   CheckCircleIcon,
   EyeIcon,

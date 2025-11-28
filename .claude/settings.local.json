@@ -1,7 +1,20 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run lint:*)"
+      "Bash(npm run lint:*)",
+      "Bash(npm audit:*)",
+      "Bash(npm install:*)",
+      "Bash(node scripts/optimize-images.js:*)",
+      "Bash(npm run test:run:*)",
+      "Bash(node scripts/optimize-all-images.js:*)",
+      "Bash(for:*)",
+      "Bash(do node ../../../../scripts/optimize-images.js \"$file\")",
+      "Bash(echo:*)",
+      "Bash(done)",
+      "Bash(node scripts/optimize-services-images.js:*)",
+      "Bash(node -e:*)",
+      "Bash(npm run build:*)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []

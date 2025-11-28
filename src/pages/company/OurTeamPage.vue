@@ -321,19 +321,19 @@
 import Button from "@/components/ui/Button.vue";
 import CallToAction from "@/components/ui/CallToAction.vue";
 import { useSEO } from "@/composables/useSEO";
-import teamImage from "@/assets/images/about_us/team_photo.jpg";
-import workingImage from "@/assets/images/about_us/working.jpg";
-import khaiPhoto from "@/assets/images/leadership/khai.jpg";
-import davePhoto from "@/assets/images/leadership/dave.jpg";
-import farzanaPhoto from "@/assets/images/leadership/farzana.jpg";
-import fionaPhoto from "@/assets/images/leadership/fiona.jpg";
-import jamiePhoto from "@/assets/images/leadership/jamie.jpg";
-import katerinaPhoto from "@/assets/images/leadership/katerina.jpg";
-import michellePhoto from "@/assets/images/leadership/michelle.jpg";
-import mladenPhoto from "@/assets/images/leadership/mladen.jpg";
-import justinePhoto from "@/assets/images/leadership/justine.jpg";
-
-import samPhoto from "@/assets/images/leadership/sam.jpg";
+import teamImage from "@/assets/images/about_us/team_photo.webp";
+import workingImage from "@/assets/images/about_us/working.webp";
+import khaiPhoto from "@/assets/images/leadership/khai.webp";
+import davePhoto from "@/assets/images/leadership/dave.webp";
+import farzanaPhoto from "@/assets/images/leadership/farzana.webp";
+import fionaPhoto from "@/assets/images/leadership/fiona.webp";
+import jamiePhoto from "@/assets/images/leadership/jamie.webp";
+import katerinaPhoto from "@/assets/images/leadership/katerina.webp";
+import michellePhoto from "@/assets/images/leadership/michelle.webp";
+import mladenPhoto from "@/assets/images/leadership/mladen.webp";
+import justinePhoto from "@/assets/images/leadership/justine.webp";
+import chrisPhoto from "@/assets/images/leadership/chris.webp";
+import samPhoto from "@/assets/images/leadership/sam.webp";
 import {
   ChartBarIcon,
   CursorArrowRaysIcon,

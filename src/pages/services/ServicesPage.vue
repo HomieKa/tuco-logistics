@@ -570,9 +570,9 @@ import {
   watch,
 } from "vue";
 import { RouterLink, useRoute, useRouter } from "vue-router";
-import freightManagementArtwork from "@/assets/images/services/freight_management.jpg";
-import managedCollaborationArtwork from "@/assets/images/services/managed_services.jpg";
-import fleetManagement from "@/assets/images/services/fleet_management.jpg";
+import freightManagementArtwork from "@/assets/images/services/freight_management.webp";
+import managedCollaborationArtwork from "@/assets/images/services/managed_services.webp";
+import fleetManagement from "@/assets/images/services/fleet_management.webp";
 import roadImage from "@/assets/images/services/road.svg";
 import railImage from "@/assets/images/services/rail.svg";
 import airImage from "@/assets/images/services/air.svg";
@@ -585,7 +585,7 @@ import healthcareImage from "@/assets/images/industries/healthcare.svg";
 import buildingImage from "@/assets/images/industries/building.svg";
 import technologyImage from "@/assets/images/industries/technology.svg";
 import constructionImage from "@/assets/images/industries/construction.svg";
-import warehouseHeroArtwork from "@/assets/images/services/warehouse-hero.jpg";
+import warehouseHeroArtwork from "@/assets/images/services/warehouse-hero.webp";
 import carrierAirroad from "@/assets/images/carriers/air_road_specialised.png?url";
 import carrierAllied from "@/assets/images/carriers/allied_express.png?url";
 import carrierCouriersPlease from "@/assets/images/carriers/couriers_please.png?url";
