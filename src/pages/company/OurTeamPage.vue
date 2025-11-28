@@ -332,7 +332,6 @@ import katerinaPhoto from "@/assets/images/leadership/katerina.webp";
 import michellePhoto from "@/assets/images/leadership/michelle.webp";
 import mladenPhoto from "@/assets/images/leadership/mladen.webp";
 import justinePhoto from "@/assets/images/leadership/justine.webp";
-import chrisPhoto from "@/assets/images/leadership/chris.webp";
 import samPhoto from "@/assets/images/leadership/sam.webp";
 import {
   ChartBarIcon,
