@@ -113,7 +113,12 @@
           <div class="border-t border-slate-200 pt-4">
             <RouterLink
               to="/track"
-              class="mt-2 block text-sm font-medium text-[#0c233f] transition hover:text-teal-500"
+              class="mt-2 block text-sm font-medium transition"
+              :class="
+                isScrolled
+                  ? 'text-white hover:text-teal-200'
+                  : 'text-[#0c233f] hover:text-teal-500'
+              "
               @click="closeMenu"
             >
               Track freight
