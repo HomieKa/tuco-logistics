@@ -451,7 +451,7 @@ const leadershipTeam = [
     name: "Michelle Hall",
     role: "Co-founder & Director",
     bio: `Michelle brings strong freight sales and logistics experience, leading TUCO’s sales, commercial, finance and onboarding teams. 
-          They drives TUCO’s growth direction and provides strategic input that shapes Freightmate’s customer-focused evolution.`,
+          She drives TUCO’s growth direction and provides strategic input that shapes Freightmate’s customer-focused evolution.`,
     photo: michellePhoto,
     linkedin: "https://www.linkedin.com/in/michelle-hall-52b0718b/",
   },
@@ -459,7 +459,7 @@ const leadershipTeam = [
     name: "Mladen Kustura",
     role: "Co-founder & Director",
     bio: `Mladen’s operational background across transport and account management guides TUCO’s customer service and account management teams. 
-          They strengthens TUCO’s service model and brings insight that enhances Freightmate's functionality.`,
+          She strengthens TUCO’s service model and brings insight that enhances Freightmate's functionality.`,
     photo: mladenPhoto,
     linkedin: "https://www.linkedin.com/in/mladenkustura/",
   },
