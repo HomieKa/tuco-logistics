@@ -401,9 +401,7 @@ const router = useRouter();
 const TRACK_API_BASE = (() => {
   const raw =
     import.meta.env.VITE_TRACK_API_BASE ||
-    (import.meta.env.PROD
-      ? "https://api.freightmate.com/external/t/"
-      : "/api/track/");
+    "https://api.freightmate.com/external/t/";
   return raw.endsWith("/") ? raw : `${raw}/`;
 })();
 
