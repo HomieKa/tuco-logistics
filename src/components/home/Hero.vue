@@ -50,15 +50,14 @@
 <script setup lang="ts">
 import Button from "@/components/ui/Button.vue";
 import homeVideo from "@/assets/videos/home-animation.mp4";
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const videoEl = ref(null)
-const STOP_AT = 18 // seconds
+const videoEl = ref<HTMLVideoElement | null>(null);
+const STOP_AT = 18; // seconds
 
 const checkTime = () => {
   if (videoEl.value && videoEl.value.currentTime >= STOP_AT) {
-    videoEl.value.pause()
+    videoEl.value.pause();
   }
-}
-
+};
 </script>
