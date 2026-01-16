@@ -33,12 +33,12 @@
         >
           <div
             v-if="feature.image"
-            class="overflow-hidden rounded-[var(--corner-radius-md)]"
+            class="overflow-hidden rounded-[var(--corner-radius-md)] aspect-[16/10]"
           >
             <img
               :src="feature.image"
               :alt="feature.title"
-              class="w-full aspect-[16/10]"
+              class="h-full w-full object-cover"
               loading="lazy"
             />
           </div>
