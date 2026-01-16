@@ -23,12 +23,13 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@heroicons/vue": "^2.2.0",
     "@azure/msal-node": "^2.9.2",
-    "dotenv": "^16.4.5",
+    "@heroicons/vue": "^2.2.0",
     "@vueuse/core": "^10.7.2",
     "@vueuse/head": "^1.2.1",
     "axios": "^1.6.8",
+    "baseline-browser-mapping": "^2.9.14",
+    "dotenv": "^16.4.5",
     "vee-validate": "^4.15.1",
     "vue": "^3.4.21",
     "vue-router": "^4.3.2",
