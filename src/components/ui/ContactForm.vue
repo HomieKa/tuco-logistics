@@ -99,9 +99,7 @@ import Button from "@/components/ui/Button.vue";
 
 const CONTACT_API_URL =
   import.meta.env.VITE_CONTACT_API_URL ||
-  (import.meta.env.DEV
-    ? "http://localhost:5051/api/contact"
-    : "/api/contact");
+  (import.meta.env.DEV ? "http://localhost:5051/api/contact" : "/api/contact");
 
 const emit = defineEmits<{
   (e: "submitted"): void;

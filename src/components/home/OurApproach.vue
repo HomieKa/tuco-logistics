@@ -31,7 +31,10 @@
           :key="feature.title"
           class="group flex flex-col gap-4 rounded-[var(--corner-radius-lg)] py-8"
         >
-          <div v-if="feature.image" class="overflow-hidden rounded-[var(--corner-radius-md)]">
+          <div
+            v-if="feature.image"
+            class="overflow-hidden rounded-[var(--corner-radius-md)]"
+          >
             <img
               :src="feature.image"
               :alt="feature.title"

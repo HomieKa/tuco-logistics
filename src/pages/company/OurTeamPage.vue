@@ -263,7 +263,9 @@
               <article
                 class="absolute inset-0 flex flex-col rounded-[var(--corner-radius-lg)] p-8 [backface-visibility:hidden]"
               >
-                <div class="flex flex-1 flex-col items-center justify-center gap-6">
+                <div
+                  class="flex flex-1 flex-col items-center justify-center gap-6"
+                >
                   <div
                     class="relative h-28 w-28 overflow-hidden rounded-full border border-[var(--color-tuco-line)] bg-[var(--color-tuco-sky)] shadow-inner"
                   >

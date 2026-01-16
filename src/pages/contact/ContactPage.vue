@@ -30,7 +30,9 @@
           <div
             class="flex w-full max-w-3xl flex-col overflow-hidden rounded-[var(--corner-radius-lg)] border shadow-[0_18px_40px_rgba(12,35,63,0.08)]"
             :class="[
-              submitted ? 'bg-[#0c233f] border-transparent h-full' : 'bg-white border-[#e9f5f7]',
+              submitted
+                ? 'bg-[#0c233f] border-transparent h-full'
+                : 'bg-white border-[#e9f5f7]',
             ]"
           >
             <div v-if="!submitted" class="flex flex-col p-5 sm:p-6 md:p-8">
@@ -44,7 +46,10 @@
                 </p>
               </div>
               <div class="mt-5 sm:mt-6">
-                <ContactForm @submitted="handleSubmitted" @error="handleError" />
+                <ContactForm
+                  @submitted="handleSubmitted"
+                  @error="handleError"
+                />
                 <p
                   v-if="submitState === 'error'"
                   class="mt-3 text-sm font-semibold text-red-600"
