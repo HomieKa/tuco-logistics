@@ -1,10 +1,10 @@
 <template>
   <article
-    class="flex h-full flex-col gap-4 rounded-3xl border border-[#e9f5f7] bg-white p-6 shadow-card-soft"
+    class="flex h-full flex-col gap-4 rounded-[var(--corner-radius-lg)] border border-[#e9f5f7] bg-white p-6 shadow-card-soft"
   >
     <div class="flex items-center gap-2">
       <span
-        class="inline-flex h-9 w-9 items-center justify-center rounded-2xl"
+        class="inline-flex h-9 w-9 items-center justify-center rounded-[var(--corner-radius-lg)]"
         :class="accent"
       >
         <component :is="icon" class="h-5 w-5" />

@@ -19,7 +19,7 @@
       </header>
 
       <article
-        class="mt-12 rounded-2xl border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] p-8 shadow-lg/5"
+        class="mt-12 rounded-[var(--corner-radius-lg)] border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] p-8 shadow-lg/5"
       >
         <div class="space-y-4 text-[var(--color-tuco-slate)] leading-relaxed">
           <p>
@@ -116,7 +116,7 @@
               experience for all your logistics needs.
             </p>
             <p
-              class="rounded-xl border border-[var(--color-tuco-line)] bg-[var(--color-tuco-sky)]/40 px-4 py-3 text-sm"
+              class="rounded-[var(--corner-radius-md)] border border-[var(--color-tuco-line)] bg-[var(--color-tuco-sky)]/40 px-4 py-3 text-sm"
             >
               Looking for our full terms and conditions?
               <RouterLink

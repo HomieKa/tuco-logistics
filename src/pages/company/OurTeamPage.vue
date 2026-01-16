@@ -24,7 +24,7 @@
           <Button variant="primary" to="/contact"> Talk to our team </Button>
         </div>
         <div
-          class="overflow-hidden rounded-[1rem] border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] shadow-card-soft"
+          class="overflow-hidden rounded-[var(--corner-radius-md)] border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] shadow-card-soft"
           aria-hidden="true"
         >
           <div class="aspect-[16/9] w-full">
@@ -40,7 +40,7 @@
 
     <section class="bg-[#0c233f] py-14 md:py-20" aria-labelledby="our-story">
       <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-        <div class="rounded-[2rem] p-10 text-center md:p-14">
+        <div class="rounded-[var(--corner-radius-lg)] p-10 text-center md:p-14">
           <div class="mx-auto max-w-4xl space-y-4">
             <h2
               id="our-story"
@@ -62,7 +62,7 @@
             <article
               v-for="metric in metrics"
               :key="metric.label"
-              class="relative w-full max-w-[260px] overflow-hidden rounded-3xl border border-white/15 bg-[#102647] p-6 text-left shadow-[0_12px_32px_rgba(0,0,0,0.22)] transition hover:-translate-y-[4px] hover:shadow-[0_18px_44px_rgba(0,0,0,0.25)]"
+              class="relative w-full max-w-[260px] overflow-hidden rounded-[var(--corner-radius-lg)] border border-white/15 bg-[#102647] p-6 text-left shadow-[0_12px_32px_rgba(0,0,0,0.22)] transition hover:-translate-y-[4px] hover:shadow-[0_18px_44px_rgba(0,0,0,0.25)]"
             >
               <span
                 class="absolute left-0 top-6 h-14 w-[6px] rounded-r-full bg-[#38a2ca]"
@@ -152,7 +152,7 @@
       <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <div class="grid gap-10 lg:grid-cols-[1.05fr_1.15fr] lg:items-center">
           <div
-            class="overflow-hidden rounded-2xl border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] shadow-card-soft"
+            class="overflow-hidden rounded-[var(--corner-radius-lg)] border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] shadow-card-soft"
             aria-hidden="true"
           >
             <div class="aspect-video w-full">
@@ -239,39 +239,73 @@
           <div
             v-for="leader in leadershipTeam"
             :key="leader.name"
-            class="group relative h-[22rem] w-full [perspective:1500px]"
+            class="relative h-[22rem] w-full cursor-pointer [perspective:1500px]"
             tabindex="0"
+            role="button"
+            :aria-pressed="activeLeader === leader.name"
+            :aria-label="
+              activeLeader === leader.name
+                ? `Hide bio for ${leader.name}`
+                : `View bio for ${leader.name}`
+            "
+            @click="toggleLeader(leader.name)"
+            @keydown.enter.prevent="toggleLeader(leader.name)"
+            @keydown.space.prevent="toggleLeader(leader.name)"
           >
             <div
-              class="relative h-full w-full rounded-3xl border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] text-center shadow-lg/5 transition-all duration-500 [transform-style:preserve-3d] hover:shadow-card-lg group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)]"
+              class="relative h-full w-full rounded-[var(--corner-radius-lg)] border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] text-center shadow-lg/5 transition-all duration-500 [transform-style:preserve-3d]"
+              :class="[
+                activeLeader === leader.name
+                  ? 'shadow-card-lg [transform:rotateY(180deg)]'
+                  : '',
+              ]"
             >
               <article
-                class="absolute inset-0 flex flex-col items-center justify-center gap-6 rounded-3xl p-8 [backface-visibility:hidden]"
+                class="absolute inset-0 flex flex-col rounded-[var(--corner-radius-lg)] p-8 [backface-visibility:hidden]"
               >
-                <div
-                  class="relative h-28 w-28 overflow-hidden rounded-full border border-[var(--color-tuco-line)] bg-[var(--color-tuco-sky)] shadow-inner"
-                >
-                  <img
-                    v-if="leader.photo"
-                    :src="leader.photo"
-                    :alt="leader.name"
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <div>
-                  <h3
-                    class="text-xl font-semibold text-[var(--color-tuco-navy)]"
+                <div class="flex flex-1 flex-col items-center justify-center gap-6">
+                  <div
+                    class="relative h-28 w-28 overflow-hidden rounded-full border border-[var(--color-tuco-line)] bg-[var(--color-tuco-sky)] shadow-inner"
                   >
-                    {{ leader.name }}
-                  </h3>
-                  <p class="mt-2 text-sm text-[var(--color-tuco-slate)]">
-                    {{ leader.role }}
-                  </p>
+                    <img
+                      v-if="leader.photo"
+                      :src="leader.photo"
+                      :alt="leader.name"
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3
+                      class="text-xl font-semibold text-[var(--color-tuco-navy)]"
+                    >
+                      {{ leader.name }}
+                    </h3>
+                    <p class="mt-2 text-sm text-[var(--color-tuco-slate)]">
+                      {{ leader.role }}
+                    </p>
+                  </div>
                 </div>
+                <span
+                  class="inline-flex items-center gap-2 self-end text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-tuco-blue)]"
+                >
+                  View bio
+                  <svg
+                    class="h-3.5 w-3.5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M3 10a.75.75 0 01.75-.75h10.69l-3.72-3.72a.75.75 0 111.06-1.06l5 5a.75.75 0 010 1.06l-5 5a.75.75 0 11-1.06-1.06l3.72-3.72H3.75A.75.75 0 013 10z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
               </article>
 
               <article
-                class="absolute inset-0 flex h-full flex-col justify-between rounded-3xl bg-[var(--color-tuco-navy)] p-8 text-left text-white shadow-lg [backface-visibility:hidden] [transform:rotateY(180deg)]"
+                class="absolute inset-0 flex h-full flex-col justify-between rounded-[var(--corner-radius-lg)] bg-[var(--color-tuco-navy)] p-8 text-left text-white shadow-lg [backface-visibility:hidden] [transform:rotateY(180deg)]"
               >
                 <div>
                   <h3 class="text-xl font-semibold text-white">
@@ -285,6 +319,7 @@
                   :href="leader.linkedin"
                   target="_blank"
                   rel="noopener"
+                  @click.stop
                   class="inline-flex w-fit items-center gap-2 rounded-full border border-white/40 px-4 py-2 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-tuco-blue)]"
                 >
                   <svg
@@ -318,6 +353,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
 import Button from "@/components/ui/Button.vue";
 import CallToAction from "@/components/ui/CallToAction.vue";
 import { useSEO } from "@/composables/useSEO";
@@ -528,4 +564,10 @@ const leadershipTeam = [
     linkedin: "https://www.linkedin.com/in/fiona-henderson-6b500353/",
   },
 ];
+
+const activeLeader = ref<string | null>(null);
+
+function toggleLeader(name: string) {
+  activeLeader.value = activeLeader.value === name ? null : name;
+}
 </script>

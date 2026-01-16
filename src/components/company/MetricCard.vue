@@ -1,6 +1,6 @@
 <template>
   <div
-    class="group relative overflow-hidden rounded-3xl border border-[#e9f5f7] bg-white p-7 shadow-card-soft transition duration-200 hover:-translate-y-1 hover:shadow-card-lg"
+    class="group relative overflow-hidden rounded-[var(--corner-radius-lg)] border border-[#e9f5f7] bg-white p-7 shadow-card-soft transition duration-200 hover:-translate-y-1 hover:shadow-card-lg"
   >
     <div
       class="pointer-events-none absolute inset-0 opacity-0 transition duration-200 group-hover:opacity-100"

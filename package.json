@@ -8,6 +8,7 @@
     "build": "vue-tsc --noEmit && vite build",
     "build:analyze": "vue-tsc --noEmit && vite build && open dist/stats.html",
     "preview": "vite preview",
+    "contact:local": "node scripts/contact-local-server.js",
     "proxy": "node server/proxy.js",
     "optimize:images": "node scripts/optimize-all-images.js",
     "test": "vitest",
@@ -23,6 +24,8 @@
   },
   "dependencies": {
     "@heroicons/vue": "^2.2.0",
+    "@azure/msal-node": "^2.9.2",
+    "dotenv": "^16.4.5",
     "@vueuse/core": "^10.7.2",
     "@vueuse/head": "^1.2.1",
     "axios": "^1.6.8",

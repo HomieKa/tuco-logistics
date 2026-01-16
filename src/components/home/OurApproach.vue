@@ -1,6 +1,6 @@
 <template>
   <section class="bg-[#f7f9fd] py-20">
-    <div class="container mx-auto px-6">
+    <div class="container mx-auto px-4">
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         <!-- Title Card -->
         <article
@@ -29,9 +29,9 @@
         <article
           v-for="feature in features"
           :key="feature.title"
-          class="group flex flex-col gap-4 rounded-2xl p-8"
+          class="group flex flex-col gap-4 rounded-[var(--corner-radius-lg)] py-8"
         >
-          <div v-if="feature.image" class="overflow-hidden rounded-xl">
+          <div v-if="feature.image" class="overflow-hidden rounded-[var(--corner-radius-md)]">
             <img
               :src="feature.image"
               :alt="feature.title"

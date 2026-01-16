@@ -11,7 +11,7 @@
         <article
           v-for="(item, index) in faqs"
           :key="item.q"
-          class="rounded-2xl border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] shadow-lg/5 transition hover:shadow-lg/10"
+          class="rounded-[var(--corner-radius-lg)] border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] shadow-lg/5 transition hover:shadow-lg/10"
         >
           <button
             :id="`faq-trigger-${index}`"

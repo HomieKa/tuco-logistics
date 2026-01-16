@@ -31,13 +31,14 @@
         </div>
       </div>
 
-      <div class="relative flex items-center justify-center lg:-mr-60">
+      <div class="relative flex items-center justify-center lg:-mr-70">
         <video
+          ref="videoEl"
           autoplay
-          loop
           muted
           playsinline
-          class="w-full max-w-6xl object-fill rounded-lg"
+          class="w-full max-w-6xl object-fill"
+          @timeupdate="checkTime"
         >
           <source :src="homeVideo" type="video/mp4" />
         </video>
@@ -49,4 +50,15 @@
 <script setup lang="ts">
 import Button from "@/components/ui/Button.vue";
 import homeVideo from "@/assets/videos/home-animation.mp4";
+import { ref } from 'vue'
+
+const videoEl = ref(null)
+const STOP_AT = 18 // seconds
+
+const checkTime = () => {
+  if (videoEl.value && videoEl.value.currentTime >= STOP_AT) {
+    videoEl.value.pause()
+  }
+}
+
 </script>

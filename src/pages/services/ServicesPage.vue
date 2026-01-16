@@ -23,7 +23,7 @@
       :class="isCondensed ? 'py-3 shadow-sm' : 'py-4'"
     >
       <div
-        class="mx-auto flex max-w-7xl flex-nowrap items-center gap-3 overflow-x-auto px-4 md:px-6 lg:px-8"
+        class="mx-auto grid max-w-7xl grid-cols-2 gap-3 px-4 md:px-6 lg:flex lg:flex-nowrap lg:items-center lg:overflow-x-auto lg:px-8"
       >
         <button
           v-for="section in sections"
@@ -31,7 +31,7 @@
           type="button"
           :aria-pressed="activeSection === section.id"
           @click="scrollToSection(section.id)"
-          class="shrink-0 min-w-[140px] rounded-lg border border-[var(--color-tuco-line)] bg-white px-4 py-3 text-left text-sm font-semibold text-[var(--color-tuco-navy)] shadow-sm transition hover:-translate-y-1 hover:shadow-lg/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38a2ca] sm:min-w-[160px]"
+          class="w-full min-w-0 rounded-[var(--corner-radius-md)] border border-[var(--color-tuco-line)] bg-white px-4 py-3 text-left text-sm font-semibold text-[var(--color-tuco-navy)] shadow-sm transition hover:-translate-y-1 hover:shadow-lg/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38a2ca] lg:w-auto lg:min-w-[160px] lg:shrink-0"
           :class="[
             activeSection === section.id
               ? 'border-[#38a2ca] bg-[#e9f5f7] text-[#38a2ca] shadow-md/20'
@@ -79,7 +79,7 @@
             <div
               v-for="group in freightGroups"
               :key="group.title"
-              class="flex flex-col rounded-xl bg-[#f9fafb] p-5"
+              class="flex flex-col rounded-[var(--corner-radius-md)] bg-[#f9fafb] p-5"
             >
               <h3 class="text-base font-semibold text-[var(--color-tuco-navy)]">
                 {{ group.title }}
@@ -107,7 +107,7 @@
           <!-- Closing statement with metrics strip -->
           <div class="mt-8 space-y-4">
             <div
-              class="flex flex-wrap items-center justify-center gap-3 rounded-lg bg-[#e9f5f7] px-4 py-3 text-xs font-semibold text-black"
+              class="flex flex-wrap items-center justify-center gap-3 rounded-[var(--corner-radius-md)] bg-[#e9f5f7] px-4 py-3 text-xs font-semibold text-black"
             >
               <template v-for="(metric, index) in freightMetrics" :key="metric">
                 <span>{{ metric }}</span>
@@ -136,7 +136,7 @@
             <button
               type="button"
               @click="openNetworkModal"
-              class="inline-flex items-center gap-2 rounded-md border border-[var(--color-tuco-blue)] px-4 py-2 text-sm font-semibold text-[var(--color-tuco-navy)] transition hover:bg-[var(--color-tuco-blue)]/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-tuco-blue)] focus-visible:ring-offset-2"
+              class="inline-flex items-center gap-2 rounded-[var(--corner-radius-md)] border border-[var(--color-tuco-blue)] px-4 py-2 text-sm font-semibold text-[var(--color-tuco-navy)] transition hover:bg-[var(--color-tuco-blue)]/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-tuco-blue)] focus-visible:ring-offset-2"
             >
               Explore our network & industries
             </button>
@@ -178,7 +178,7 @@
             <div
               v-for="bullet in managedFeatureBullets"
               :key="bullet"
-              class="flex flex-col rounded-xl bg-white p-5"
+              class="flex flex-col rounded-[var(--corner-radius-md)] bg-white p-5"
             >
               <p class="text-sm text-[var(--color-tuco-navy)] leading-relaxed">
                 {{ bullet }}
@@ -189,7 +189,7 @@
           <!-- Closing statement with metrics strip -->
           <div class="mt-8 space-y-4">
             <div
-              class="flex flex-wrap items-center justify-center gap-3 rounded-lg bg-[#e9f5f7] px-4 py-3 text-xs font-semibold text-black"
+              class="flex flex-wrap items-center justify-center gap-3 rounded-[var(--corner-radius-md)] bg-[#e9f5f7] px-4 py-3 text-xs font-semibold text-black"
             >
               <template v-for="(metric, index) in managedMetrics" :key="metric">
                 <span>{{ metric }}</span>
@@ -243,7 +243,7 @@
             <div
               v-for="bullet in warehousingFeatureBullets"
               :key="bullet"
-              class="flex flex-col rounded-xl bg-[#f9fafb] p-5"
+              class="flex flex-col rounded-[var(--corner-radius-md)] bg-[#f9fafb] p-5"
             >
               <p class="text-sm text-[var(--color-tuco-navy)] leading-relaxed">
                 {{ bullet }}
@@ -254,7 +254,7 @@
           <!-- Metrics strip -->
           <div class="mt-8">
             <div
-              class="flex flex-wrap items-center justify-center gap-3 rounded-lg bg-[#e9f5f7] px-4 py-3 text-xs font-semibold text-black"
+              class="flex flex-wrap items-center justify-center gap-3 rounded-[var(--corner-radius-md)] bg-[#e9f5f7] px-4 py-3 text-xs font-semibold text-black"
             >
               <template
                 v-for="(metric, index) in warehousingMetrics"
@@ -305,7 +305,7 @@
             <div
               v-for="bullet in fleetFeatureBullets"
               :key="bullet"
-              class="flex flex-col rounded-xl bg-white p-5"
+              class="flex flex-col rounded-[var(--corner-radius-md)] bg-white p-5"
             >
               <p class="text-sm text-[var(--color-tuco-navy)] leading-relaxed">
                 {{ bullet }}
@@ -316,7 +316,7 @@
           <!-- Closing statement with metrics strip -->
           <div class="mt-8 space-y-4">
             <div
-              class="flex flex-wrap items-center justify-center gap-3 rounded-lg bg-[#e9f5f7] px-4 py-3 text-xs font-semibold text-black"
+              class="flex flex-wrap items-center justify-center gap-3 rounded-[var(--corner-radius-md)] bg-[#e9f5f7] px-4 py-3 text-xs font-semibold text-black"
             >
               <template v-for="(metric, index) in fleetMetrics" :key="metric">
                 <span>{{ metric }}</span>
@@ -349,7 +349,7 @@
           />
           <div
             ref="modalRef"
-            class="relative z-10 w-full max-w-5xl overflow-hidden rounded-lg bg-white shadow-[0_20px_48px_rgba(12,35,63,0.25)]"
+            class="relative z-10 w-full max-w-5xl overflow-hidden rounded-[var(--corner-radius-md)] bg-white shadow-[0_20px_48px_rgba(12,35,63,0.25)]"
             tabindex="-1"
           >
             <header
@@ -520,7 +520,7 @@
                 >
                   <RouterLink
                     to="/contact"
-                    class="inline-flex items-center gap-2 rounded-md border border-[var(--color-tuco-blue)] px-5 py-2 text-sm font-semibold text-[var(--color-tuco-navy)] transition hover:bg-[var(--color-tuco-blue)]/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-tuco-blue)] focus-visible:ring-offset-2"
+                    class="inline-flex items-center gap-2 rounded-[var(--corner-radius-md)] border border-[var(--color-tuco-blue)] px-5 py-2 text-sm font-semibold text-[var(--color-tuco-navy)] transition hover:bg-[var(--color-tuco-blue)]/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-tuco-blue)] focus-visible:ring-offset-2"
                   >
                     Talk to us about your industry
                   </RouterLink>

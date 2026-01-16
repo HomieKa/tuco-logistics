@@ -21,7 +21,7 @@
           v-for="reason in reasons"
           :key="reason.title"
           tabindex="0"
-          class="rounded-[1.5rem] bg-white/80 px-6 py-5 text-left shadow-lg/5 transition hover:-translate-y-1 hover:bg-white hover:shadow-lg/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-tuco-blue)]"
+          class="rounded-[var(--corner-radius-lg)] bg-white/80 px-6 py-5 text-left shadow-lg/5 transition hover:-translate-y-1 hover:bg-white hover:shadow-lg/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-tuco-blue)]"
         >
           <span
             class="mb-3 inline-flex h-1 w-12 rounded-full bg-gradient-to-r from-sky-200 via-emerald-200 to-indigo-200"

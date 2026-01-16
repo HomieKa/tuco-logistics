@@ -36,7 +36,7 @@
 
       <div
         v-if="outcomeList.length"
-        class="flex flex-wrap items-center gap-3 rounded-lg bg-[#e9f5f7] px-4 py-3 text-xs font-semibold text-[var(--color-tuco-navy)] shadow-sm"
+        class="flex flex-wrap items-center gap-3 rounded-[var(--corner-radius-md)] bg-[#e9f5f7] px-4 py-3 text-xs font-semibold text-[var(--color-tuco-navy)] shadow-sm"
       >
         <template v-for="(metric, index) in outcomeList" :key="metric">
           <span>{{ metric }}</span>
@@ -54,7 +54,7 @@
       <img
         :src="image"
         :alt="imageAlt"
-        class="h-full w-full max-w-xl rounded-lg bg-white p-4 shadow-sm"
+        class="h-full w-full max-w-xl rounded-[var(--corner-radius-md)] bg-white p-4 shadow-sm"
       />
     </div>
   </section>

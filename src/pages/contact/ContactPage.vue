@@ -24,22 +24,18 @@
 
     <section class="bg-[#f3f5fb] white py-16">
       <div
-        class="container mx-auto grid gap-12 px-4 lg:grid-cols-[1.15fr_0.85fr]"
+        class="container mx-auto grid gap-12 px-3 sm:px-4 lg:grid-cols-[1.15fr_0.85fr]"
       >
-        <div
-          class="relative h-full min-h-[700px] overflow-hidden [perspective:1200px]"
-        >
+        <div class="flex justify-center px-2 sm:px-0">
           <div
+            class="flex w-full max-w-3xl flex-col overflow-hidden rounded-[var(--corner-radius-lg)] border shadow-[0_18px_40px_rgba(12,35,63,0.08)]"
             :class="[
-              'relative h-full transition duration-700 [transform-style:preserve-3d]',
-              submitted ? '[transform:rotateY(180deg)]' : '',
+              submitted ? 'bg-[#0c233f] border-transparent h-full' : 'bg-white border-[#e9f5f7]',
             ]"
           >
-            <div
-              class="absolute inset-0 flex flex-col rounded-[1.5rem] border border-[#e9f5f7] bg-white p-8 md:p-10 [backface-visibility:hidden]"
-            >
-              <div class="space-y-4">
-                <h3 class="text-2xl font-bold text-navy-500">
+            <div v-if="!submitted" class="flex flex-col p-5 sm:p-6 md:p-8">
+              <div class="space-y-3 sm:space-y-4">
+                <h3 class="text-xl sm:text-2xl font-bold text-navy-500">
                   Share your details and we'll line up the right specialists.
                 </h3>
                 <p class="text-[var(--color-tuco-slate)] leading-relaxed">
@@ -47,11 +43,8 @@
                   We'll reach out with a tailored walkthrough.
                 </p>
               </div>
-              <div class="mt-6">
-                <ContactForm
-                  @submitted="handleSubmitted"
-                  @error="handleError"
-                />
+              <div class="mt-5 sm:mt-6">
+                <ContactForm @submitted="handleSubmitted" @error="handleError" />
                 <p
                   v-if="submitState === 'error'"
                   class="mt-3 text-sm font-semibold text-red-600"
@@ -60,12 +53,12 @@
                 </p>
               </div>
             </div>
-
             <div
-              class="absolute inset-0 flex h-full flex-col justify-center rounded-[1.5rem] border border-[#e9f5f7] bg-[#0c233f] p-8 text-left text-white shadow-[0_22px_50px_rgba(12,35,63,0.18)] md:p-10 [backface-visibility:hidden] [transform:rotateY(180deg)]"
+              v-else
+              class="flex flex-1 flex-col justify-center bg-[#0c233f] p-5 sm:p-6 md:p-8 text-left text-white"
               aria-live="polite"
             >
-              <div class="space-y-4">
+              <div class="space-y-3 sm:space-y-4">
                 <p
                   class="text-sm font-semibold uppercase tracking-[0.28em] text-[#62bda5]"
                 >
@@ -83,7 +76,7 @@
           </div>
         </div>
         <div
-          class="flex h-full flex-col gap-6 rounded-[0.75rem] border border-[#e2e8f0] bg-[#f9f9f9] p-8 shadow-[0_12px_30px_rgba(12,35,63,0.08)]"
+          class="flex h-full flex-col gap-6 rounded-[var(--corner-radius-md)] border border-[#e2e8f0] bg-[#f9f9f9] p-5 sm:p-7 md:p-8 shadow-[0_12px_30px_rgba(12,35,63,0.08)]"
         >
           <div class="space-y-2">
             <p
@@ -102,7 +95,7 @@
 
           <div class="space-y-4">
             <div
-              class="flex items-center gap-4 rounded-[0.875rem] bg-white p-4 shadow-[0_4px_12px_rgba(0,0,0,0.04)]"
+              class="flex items-center gap-4 rounded-[var(--corner-radius-md)] bg-white p-4 shadow-[0_4px_12px_rgba(0,0,0,0.04)]"
             >
               <span
                 class="flex h-10 w-10 items-center justify-center rounded-full bg-[#e9f5f7] text-[#38a2ca]"
@@ -118,7 +111,7 @@
               </a>
             </div>
             <div
-              class="flex items-center gap-4 rounded-[0.875rem] bg-white p-4 shadow-[0_4px_12px_rgba(0,0,0,0.04)]"
+              class="flex items-center gap-4 rounded-[var(--corner-radius-md)] bg-white p-4 shadow-[0_4px_12px_rgba(0,0,0,0.04)]"
             >
               <span
                 class="flex h-10 w-10 items-center justify-center rounded-full bg-[#e9f5f7] text-[#62bda5]"
@@ -235,7 +228,7 @@
           <article
             v-for="location in locations"
             :key="location.city"
-            class="flex h-full flex-col overflow-hidden rounded-[1rem] border border-[var(--color-tuco-line)] bg-white shadow-card-soft"
+            class="flex h-full flex-col overflow-hidden rounded-[var(--corner-radius-md)] border border-[var(--color-tuco-line)] bg-white shadow-card-soft"
           >
             <img
               :src="location.image"

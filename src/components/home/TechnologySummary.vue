@@ -21,7 +21,7 @@
         <article
           v-for="highlight in freightmateHighlights"
           :key="highlight.title"
-          class="flex flex-col gap-4 rounded-3xl bg-white p-6 text-left shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-2xl"
+          class="flex flex-col gap-4 rounded-[var(--corner-radius-lg)] bg-white p-6 text-left shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-2xl"
         >
           <span
             class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-500"

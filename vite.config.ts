@@ -6,8 +6,9 @@ import { visualizer } from "rollup-plugin-visualizer";
 
 const proxyTarget =
   process.env.VITE_TRACK_PROXY_TARGET || "http://localhost:5050";
+  
 const appBase =
-  process.env.NODE_ENV === "production" ? "/tuco-logistics/" : "/";
+  process.env.NODE_ENV === "production" ? "/" : "/";
 
 export default defineConfig({
   plugins: [

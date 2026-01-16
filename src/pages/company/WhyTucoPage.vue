@@ -24,7 +24,7 @@
         </div>
 
         <div
-          class="overflow-hidden rounded-2xl border border-[#e9f5f7] bg-white shadow-[0_12px_30px_rgba(12,35,63,0.08)]"
+          class="overflow-hidden rounded-[var(--corner-radius-lg)] border border-[#e9f5f7] bg-white shadow-[0_12px_30px_rgba(12,35,63,0.08)]"
           aria-hidden="true"
         >
           <div class="aspect-[16/9] w-full max-h-[50vh]">
@@ -59,11 +59,11 @@
               <article
                 v-for="feature in leaderFeatures"
                 :key="feature.title"
-                class="flex h-full flex-col gap-3 rounded-xl bg-transparent p-3 text-white"
+                class="flex h-full flex-col gap-3 rounded-[var(--corner-radius-md)] bg-transparent p-3 text-white"
               >
                 <div class="flex items-start gap-3">
                   <span
-                    class="mt-1 inline-flex h-11 w-11 flex-none items-center justify-center rounded-xl bg-white/10"
+                    class="mt-1 inline-flex h-11 w-11 flex-none items-center justify-center rounded-[var(--corner-radius-md)] bg-white/10"
                   >
                     <component
                       :is="feature.icon"
@@ -100,7 +100,7 @@
               <article
                 v-for="metric in metrics"
                 :key="metric.title"
-                class="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 text-left transition duration-200 hover:-translate-y-1 hover:bg-white/10"
+                class="relative overflow-hidden rounded-[var(--corner-radius-lg)] border border-white/10 bg-white/5 p-6 text-left transition duration-200 hover:-translate-y-1 hover:bg-white/10"
               >
                 <span class="absolute left-0 top-6 h-14 w-[3px] bg-[#38a2ca]" />
                 <div class="pl-4">
@@ -145,7 +145,7 @@
             <article
               v-for="reasonGroup in reasonGroups"
               :key="reasonGroup.title"
-              class="flex h-full flex-col gap-4 rounded-xl border border-[#e9f5f7] bg-[#e9f5f7] p-6 shadow-[0_12px_28px_rgba(12,35,63,0.06)]"
+              class="flex h-full flex-col gap-4 rounded-[var(--corner-radius-md)] border border-[#e9f5f7] bg-[#e9f5f7] p-6 shadow-[0_12px_28px_rgba(12,35,63,0.06)]"
             >
               <div class="flex items-center gap-3">
                 <span
@@ -182,7 +182,7 @@
               <article
                 v-for="capability in capabilities"
                 :key="capability.title"
-                class="flex h-full flex-col gap-3 rounded-xl border border-[#e9f5f7] bg-[#e9f5f7] p-6 shadow-[0_12px_28px_rgba(12,35,63,0.06)]"
+                class="flex h-full flex-col gap-3 rounded-[var(--corner-radius-md)] border border-[#e9f5f7] bg-[#e9f5f7] p-6 shadow-[0_12px_28px_rgba(12,35,63,0.06)]"
               >
                 <span
                   class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white"
@@ -225,7 +225,7 @@
           </h2>
         </div>
         <div
-          class="mt-10 divide-y divide-[#e5ecf0] rounded-2xl border border-[#e5ecf0] bg-white"
+          class="mt-10 divide-y divide-[#e5ecf0] rounded-[var(--corner-radius-lg)] border border-[#e5ecf0] bg-white"
         >
           <div v-for="(item, idx) in faqs" :key="item.question">
             <button

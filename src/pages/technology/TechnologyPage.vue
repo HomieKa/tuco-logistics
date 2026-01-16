@@ -169,11 +169,11 @@
           <article
             v-for="module in modules"
             :key="module.title"
-            class="flex flex-col gap-4 rounded-2xl p-6"
+            class="flex flex-col gap-4 rounded-[var(--corner-radius-lg)] p-6"
           >
             <span
               :class="[
-                'inline-flex h-12 w-12 items-center justify-center rounded-xl ring-2 ring-white/60 shadow-sm',
+                'inline-flex h-12 w-12 items-center justify-center rounded-[var(--corner-radius-md)] ring-2 ring-white/60 shadow-sm',
                 module.iconBg,
               ]"
             >
@@ -218,7 +218,7 @@
             <li
               v-for="(stage, index) in onboarding"
               :key="stage.title"
-              class="relative flex gap-5 rounded-2xl bg-transparent p-2 pl-7"
+              class="relative flex gap-5 rounded-[var(--corner-radius-lg)] bg-transparent p-2 pl-7"
             >
               <span
                 class="absolute -left-[26px] top-2 flex h-10 w-10 flex-none items-center justify-center rounded-full border border-[var(--color-tuco-blue)] bg-white text-base font-semibold text-[var(--color-tuco-blue)] shadow-sm"
@@ -238,7 +238,7 @@
         </div>
 
         <div
-          class="w-full max-w-xl rounded-3xl bg-[#0c233f] p-8 text-white shadow-[0_18px_40px_rgba(12,35,63,0.25)] lg:self-center"
+          class="w-full max-w-xl rounded-[var(--corner-radius-lg)] bg-[#0c233f] p-8 text-white shadow-[0_18px_40px_rgba(12,35,63,0.25)] lg:self-center"
         >
           <h3 class="text-2xl font-semibold text-white">Customer outcomes</h3>
           <ul class="mt-6 space-y-4">

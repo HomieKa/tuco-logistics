@@ -25,7 +25,7 @@
         <div
           v-for="metric in metrics"
           :key="metric.label"
-          class="group relative overflow-hidden rounded-3xl bg-white/5 p-8 backdrop-blur transition duration-200 hover:-translate-y-1 hover:bg-white/10"
+          class="group relative overflow-hidden rounded-[var(--corner-radius-lg)] bg-white/5 p-8 backdrop-blur transition duration-200 hover:-translate-y-1 hover:bg-white/10"
         >
           <span class="absolute left-0 top-8 h-14 w-[3px] bg-sky-400"></span>
           <div class="pl-6">

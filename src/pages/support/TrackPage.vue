@@ -19,7 +19,7 @@
         </div>
 
         <div
-          class="rounded-2xl border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] p-6 shadow-lg/5"
+          class="rounded-[var(--corner-radius-lg)] border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] p-6 shadow-lg/5"
         >
           <form
             @submit.prevent="handleSubmit"
@@ -33,7 +33,7 @@
                 Enter connote number
               </label>
               <div
-                class="flex items-center gap-3 rounded-xl border border-[var(--color-tuco-line)] bg-white px-4 py-3 shadow-sm focus-within:ring-2 focus-within:ring-[var(--color-tuco-blue)] focus-within:ring-offset-2 focus-within:ring-offset-white"
+                class="flex items-center gap-3 rounded-[var(--corner-radius-md)] border border-[var(--color-tuco-line)] bg-white px-4 py-3 shadow-sm focus-within:ring-2 focus-within:ring-[var(--color-tuco-blue)] focus-within:ring-offset-2 focus-within:ring-offset-white"
               >
                 <input
                   id="connote-input"
@@ -92,13 +92,13 @@
           </form>
           <div
             v-if="errorMessage"
-            class="mt-4 rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700"
+            class="mt-4 rounded-[var(--corner-radius-md)] border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700"
           >
             {{ errorMessage }}
           </div>
           <div
             v-else-if="!trackingData && !loading"
-            class="mt-4 rounded-xl border border-[var(--color-tuco-line)] bg-[var(--color-tuco-sky)]/40 px-4 py-3 text-sm text-[var(--color-tuco-slate)]"
+            class="mt-4 rounded-[var(--corner-radius-md)] border border-[var(--color-tuco-line)] bg-[var(--color-tuco-sky)]/40 px-4 py-3 text-sm text-[var(--color-tuco-slate)]"
           >
             Enter a connote to view live tracking updates.
           </div>
@@ -107,7 +107,7 @@
 
       <section v-if="loading" class="mt-10">
         <div
-          class="rounded-2xl border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] p-6 shadow-lg/5"
+          class="rounded-[var(--corner-radius-lg)] border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] p-6 shadow-lg/5"
         >
           <div class="flex items-center gap-3 text-[var(--color-tuco-slate)]">
             <svg
@@ -137,7 +137,7 @@
 
       <section v-if="trackingData && !loading" class="mt-10 space-y-10">
         <div
-          class="rounded-2xl border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] p-6 shadow-lg/5"
+          class="rounded-[var(--corner-radius-lg)] border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] p-6 shadow-lg/5"
         >
           <div class="flex flex-wrap items-center gap-4">
             <span
@@ -161,9 +161,11 @@
               </dd>
             </div>
             <div>
-              <dd class="mt-1 text-[var(--color-tuco-navy)]">
-                {{ trackingData.carrierDisplayName || "-" }}
-              </dd>
+              <dt
+                class="text-xs font-semibold uppercase tracking-widest text-[var(--color-tuco-slate)]"
+              >
+                Carrier
+              </dt>
               <dd class="mt-1 text-[var(--color-tuco-navy)]">
                 {{ trackingData.carrierDisplayName || "-" }}
               </dd>
@@ -218,7 +220,7 @@
         </div>
 
         <section
-          class="rounded-2xl border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] p-6 shadow-lg/5"
+          class="rounded-[var(--corner-radius-lg)] border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] p-6 shadow-lg/5"
         >
           <h2 class="text-xl font-semibold text-[var(--color-tuco-navy)]">
             Tracking timeline
@@ -237,7 +239,7 @@
                 :class="timelineMarkerClass(event.UpdateStatus)"
               />
               <div
-                class="flex flex-col gap-2 rounded-xl border border-[var(--color-tuco-line)] bg-white px-4 py-3 shadow-sm"
+                class="flex flex-col gap-2 rounded-[var(--corner-radius-md)] border border-[var(--color-tuco-line)] bg-white px-4 py-3 shadow-sm"
               >
                 <div class="flex flex-wrap items-center gap-2">
                   <p
@@ -246,11 +248,21 @@
                     {{ event.Status }}
                   </p>
                   <span
-                    v-if="event.Location"
+                    v-if="event.Location && !event.mapUrl"
                     class="rounded-full bg-[var(--color-tuco-sky)] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-[var(--color-tuco-blue)]"
                   >
                     {{ event.Location }}
                   </span>
+                  <a
+                    v-else-if="event.Location && event.mapUrl"
+                    :href="event.mapUrl"
+                    target="_blank"
+                    rel="noopener"
+                    class="rounded-full bg-[var(--color-tuco-sky)] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-[var(--color-tuco-blue)] transition hover:underline"
+                    aria-label="Open location in Google Maps"
+                  >
+                    {{ event.Location }}
+                  </a>
                 </div>
                 <p
                   v-if="event.StatusDescription"
@@ -279,7 +291,7 @@
                   <img
                     :src="event.POD"
                     :alt="`POD - ${event.Status} - ${toLocal(event.DateTime)}`"
-                    class="h-20 w-24 rounded-lg border border-[var(--color-tuco-line)] object-cover transition group-hover:-translate-y-0.5 group-hover:shadow-lg"
+                    class="h-20 w-24 rounded-[var(--corner-radius-md)] border border-[var(--color-tuco-line)] object-cover transition group-hover:-translate-y-0.5 group-hover:shadow-lg"
                     referrerpolicy="no-referrer"
                   />
                   <span
@@ -292,7 +304,7 @@
           </ol>
           <p
             v-else
-            class="mt-6 rounded-xl border border-dashed border-[var(--color-tuco-line)] bg-[var(--color-tuco-sky)]/30 px-4 py-3 text-sm text-[var(--color-tuco-slate)]"
+            class="mt-6 rounded-[var(--corner-radius-md)] border border-dashed border-[var(--color-tuco-line)] bg-[var(--color-tuco-sky)]/30 px-4 py-3 text-sm text-[var(--color-tuco-slate)]"
           >
             No tracking events yet.
           </p>
@@ -310,7 +322,7 @@
         @click.self="closeModal"
       >
         <div
-          class="max-h-full max-w-3xl overflow-hidden rounded-2xl bg-[var(--color-tuco-card)] shadow-2xl focus:outline-none"
+          class="max-h-full max-w-3xl overflow-hidden rounded-[var(--corner-radius-lg)] bg-[var(--color-tuco-card)] shadow-2xl focus:outline-none"
         >
           <header
             class="flex items-center justify-between border-b border-[var(--color-tuco-line)] px-4 py-3"
@@ -395,6 +407,10 @@ type TrackingEvent = {
   ItemCode?: string;
 };
 
+type TrackingTimelineEvent = TrackingEvent & {
+  mapUrl?: string;
+};
+
 const route = useRoute();
 const router = useRouter();
 
@@ -411,14 +427,19 @@ const loading = ref(false);
 const errorMessage = ref<string | null>(null);
 const activeModal = ref<{ src: string; alt: string } | null>(null);
 
-const timelineEvents = computed<TrackingEvent[]>(() => {
+const timelineEvents = computed<TrackingTimelineEvent[]>(() => {
   const events = trackingData.value?.consignmentTracking ?? [];
-  return [...events].sort(
-    (a, b) => new Date(b.DateTime).getTime() - new Date(a.DateTime).getTime()
-  );
+  return [...events]
+    .sort(
+      (a, b) => new Date(b.DateTime).getTime() - new Date(a.DateTime).getTime()
+    )
+    .map((event) => ({
+      ...event,
+      mapUrl: locationMapUrl(event.Location),
+    }));
 });
 
-const latestEvent = computed<TrackingEvent | null>(() =>
+const latestEvent = computed<TrackingTimelineEvent | null>(() =>
   timelineEvents.value.length ? timelineEvents.value[0] : null
 );
 
@@ -644,6 +665,25 @@ function formatLocation(location?: TrackingRecord["senderAddressSuburb"]) {
     Boolean
   );
   return parts.join(", ") || "-";
+}
+
+function parseLatLng(value?: string) {
+  if (!value) return null;
+  const match = value
+    .trim()
+    .match(/^(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)$/);
+  if (!match) return null;
+  const lat = Number(match[1]);
+  const lng = Number(match[2]);
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
+  if (lat < -90 || lat > 90 || lng < -180 || lng > 180) return null;
+  return { lat, lng };
+}
+
+function locationMapUrl(value?: string) {
+  const coords = parseLatLng(value);
+  if (!coords) return undefined;
+  return `https://www.google.com/maps?q=${coords.lat},${coords.lng}`;
 }
 
 function openModal(src: string, alt: string) {

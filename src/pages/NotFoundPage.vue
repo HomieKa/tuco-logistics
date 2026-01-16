@@ -3,7 +3,7 @@
     <div
       class="mx-auto flex min-h-[70vh] max-w-6xl flex-col items-center justify-center px-4 py-16 md:px-6 lg:px-8"
     >
-      <div class="w-full max-w-3xl rounded-[1.5rem] p-10 text-center">
+      <div class="w-full max-w-3xl rounded-[var(--corner-radius-lg)] p-10 text-center">
         <h1
           class="mt-6 text-4xl font-semibold text-[var(--color-tuco-navy)] md:text-5xl"
         >

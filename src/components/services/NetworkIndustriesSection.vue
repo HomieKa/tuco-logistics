@@ -1,7 +1,7 @@
 <template>
   <section id="network-industries" class="bg-[#e9f5f7] py-14 md:py-18">
     <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 space-y-10">
-      <div class="rounded-lg bg-white/80 p-6 shadow-sm">
+      <div class="rounded-[var(--corner-radius-md)] bg-white/80 p-6 shadow-sm">
         <p
           class="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--color-tuco-blue)]"
         >
@@ -25,7 +25,7 @@
           </div>
           <RouterLink
             to="/contact"
-            class="inline-flex items-center gap-2 rounded-md bg-[#62bda5] px-4 py-2 text-sm font-semibold text-[#0c233f] shadow-sm transition hover:-translate-y-[2px] hover:shadow-md/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0c233f] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+            class="inline-flex items-center gap-2 rounded-[var(--corner-radius-md)] bg-[#62bda5] px-4 py-2 text-sm font-semibold text-[#0c233f] shadow-sm transition hover:-translate-y-[2px] hover:shadow-md/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0c233f] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
           >
             Talk to us about your industry
           </RouterLink>
@@ -75,7 +75,7 @@
               <div
                 v-for="carrier in partners"
                 :key="carrier.name"
-                class="flex h-16 w-44 flex-none items-center justify-center rounded-md bg-white px-4 py-2 shadow-sm transition hover:-translate-y-[2px]"
+                class="flex h-16 w-44 flex-none items-center justify-center rounded-[var(--corner-radius-md)] bg-white px-4 py-2 shadow-sm transition hover:-translate-y-[2px]"
                 style="scroll-snap-align: start"
               >
                 <img
@@ -116,7 +116,7 @@
             <article
               v-for="industry in industries"
               :key="industry.title"
-              class="flex items-start gap-3 rounded-md bg-white p-4 shadow-sm transition hover:-translate-y-[1px] hover:shadow-md/20"
+              class="flex items-start gap-3 rounded-[var(--corner-radius-md)] bg-white p-4 shadow-sm transition hover:-translate-y-[1px] hover:shadow-md/20"
             >
               <div
                 class="flex h-12 w-12 items-center justify-center rounded-full bg-[#e9f5f7]"

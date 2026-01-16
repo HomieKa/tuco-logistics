@@ -13,7 +13,7 @@
           <article
             v-for="article in articles"
             :key="article.title"
-            class="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+            class="flex h-full flex-col overflow-hidden rounded-[var(--corner-radius-lg)] border border-gray-100 bg-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
           >
             <div class="flex flex-1 flex-col p-6">
               <p

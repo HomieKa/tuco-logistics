@@ -26,10 +26,10 @@
         @mouseleave="startTestimonialTimer"
       >
         <div
-          class="pointer-events-none absolute -inset-1 rounded-[2.4rem] bg-sky-500/40 blur-3xl"
+          class="pointer-events-none absolute -inset-1 rounded-[var(--corner-radius-lg)] bg-sky-500/40 blur-3xl"
         ></div>
         <div
-          class="relative overflow-hidden rounded-[1rem] bg-white text-[var(--color-tuco-ink)] shadow-card-soft"
+          class="relative overflow-hidden rounded-[var(--corner-radius-md)] bg-white text-[var(--color-tuco-ink)] shadow-card-soft"
         >
           <transition name="fade-slide" mode="out-in">
             <div

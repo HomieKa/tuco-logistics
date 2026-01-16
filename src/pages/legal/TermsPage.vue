@@ -19,7 +19,7 @@
       </header>
 
       <article
-        class="mt-12 rounded-2xl border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] p-8 shadow-lg/5"
+        class="mt-12 rounded-[var(--corner-radius-lg)] border border-[var(--color-tuco-line)] bg-[var(--color-tuco-card)] p-8 shadow-lg/5"
       >
         <p class="text-[var(--color-tuco-slate)] leading-relaxed">
           Welcome to TUCO, your trusted partner in freight forwarding solutions.
